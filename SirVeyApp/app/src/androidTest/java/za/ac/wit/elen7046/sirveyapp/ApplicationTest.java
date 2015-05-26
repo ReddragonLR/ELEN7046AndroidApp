@@ -1,4 +1,4 @@
-package com.elen70462015.sirveyapp.app;
+package za.ac.wit.elen7046.sirveyapp;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
