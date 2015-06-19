@@ -28,10 +28,10 @@ public class MainActivity extends ActionBarActivity {
         server.getSurveys();
 
         // Creating The Toolbar and setting it as the Toolbar for the activity
-
         toolbar = (Toolbar) findViewById(R.id.tool_bar);
+        toolbar.setTitleTextColor(0xFFFFFFFF);
+        toolbar.setLogo(R.mipmap.ic_launcher);
         setSupportActionBar(toolbar);
-
 
         // Creating The ViewPagerAdapter and Passing Fragment Manager, Titles fot the Tabs and Number Of Tabs.
         adapter =  new ViewPagerAdapter(getSupportFragmentManager(),Titles,Numboftabs);
