@@ -14,14 +14,15 @@
          android:layout_alignParentTop="true"
          android:layout_centerHorizontal="true"
          android:textSize="@dimen/heading_font_size"
-         android:textIsSelectable="false" />
+         android:textIsSelectable="false"
+         android:textStyle="italic" />
 
 
     <View style="@style/Divider"
         android:layout_below="@+id/textView"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="10dp"
         android:id="@+id/view" />
 
     <TextView
@@ -67,11 +68,109 @@
         android:layout_height="wrap_content"
         android:text="CHANGE"
         android:textColor="@color/ColorPrimary"
+        android:textSize="@dimen/button_font_size"
         android:id="@+id/button"
         style="?android:attr/borderlessButtonStyle"
         android:layout_below="@+id/view"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="15dp"
         android:layout_marginRight="10dp"/>
+
+    <Button
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="REQUEST SURVEYS FROM SERVER"
+        android:textColor="@color/ColorPrimary"
+        android:textSize="@dimen/button_font_size"
+        android:id="@+id/button2"
+        android:layout_below="@+id/view2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:onClick="RequestSurveysFromServerButtonPressed"/>
+
+    <View style="@style/Divider"
+        android:id="@+id/view3"
+        android:layout_below="@+id/button2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="5dp"/>
+
+
+    <Button
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DELETE STORED LOCAL SURVEYS"
+        android:textColor="@color/ColorPrimary"
+        android:textSize="@dimen/button_font_size"
+        android:id="@+id/button3"
+        android:layout_below="@+id/view3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:onClick="DeleteLocalStorageSurveysButtonPressed" />
+
+
+    <View style="@style/Divider"
+        android:id="@+id/view4"
+        android:layout_below="@+id/button3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Surveys Locally Stored:"
+        android:id="@+id/textView4"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_below="@+id/view4"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="@dimen/subheading_font_size"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10"
+        android:id="@+id/textView5"
+        android:layout_alignTop="@+id/textView4"
+        android:layout_toRightOf="@+id/textView4"
+        android:textSize="@dimen/subheading_font_size"
+        android:layout_marginRight="20dp"/>
+    <View style="@style/Divider"
+        android:id="@+id/view5"
+        android:layout_below="@+id/textView4"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="5dp"/>
+
+    <Button
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SEND COMPLETED SURVEYS TO SERVER"
+        android:textColor="@color/ColorPrimary"
+        android:textSize="@dimen/button_font_size"
+        android:id="@+id/button5"
+        android:layout_below="@+id/view5"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"/>
+
+
+
+    <View style="@style/Divider"
+        android:id="@+id/view6"
+        android:layout_below="@+id/button5"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="5dp"/>
 </RelativeLayout>

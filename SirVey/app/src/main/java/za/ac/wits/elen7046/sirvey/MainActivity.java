@@ -4,12 +4,18 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
+import android.view.View;
+
+import java.util.List;
+
+import za.ac.wits.elen7046.sirvey.models.retrofit.Survey;
 
 
 public class MainActivity extends ActionBarActivity {
 
     // Declaring Your View and Variables
-
+    private static final String SETTINGSTAG = "SettingButtonPressed";
     Toolbar toolbar;
     ViewPager pager;
     ViewPagerAdapter adapter;
@@ -56,6 +62,19 @@ public class MainActivity extends ActionBarActivity {
         tabs.setViewPager(pager);
 
 
+    }
+
+    /** Called when the user touches the button */
+    public void RequestSurveysFromServerButtonPressed(View view) {
+        Log.wtf(SETTINGSTAG,"RequestSurveysFromServerButtonPressed");
+
+        Server server = new Server();
+        server.getSurveysFromRemoteServer();
+        List<Survey> surveysFromServer = server.getSurveys();
+    }
+
+    public void DeleteLocalStorageSurveysButtonPressed(View view) {
+        Log.wtf(SETTINGSTAG,"DeleteLocalStorageSurveysButtonPressed");
     }
 
 }
