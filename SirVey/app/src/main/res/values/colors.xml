@@ -4,5 +4,5 @@
     <color name="ColorPrimary">#4393B9</color>
     <color name="ColorPrimaryDark">#267BA4</color>
     <color name="tabsScrollColor">#0C648E</color>
-
+    <color name="subHeadingColor">#000</color>
 </resources>

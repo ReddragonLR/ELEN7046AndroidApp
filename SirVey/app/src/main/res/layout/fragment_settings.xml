@@ -8,10 +8,70 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Settings Tab says Hello :D"
+        android:text="@string/title_settings"
         android:id="@+id/textView"
          android:textColor="@color/tabsScrollColor"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+         android:layout_alignParentTop="true"
+         android:layout_centerHorizontal="true"
+         android:textSize="@dimen/heading_font_size"
+         android:textIsSelectable="false" />
 
+
+    <View style="@style/Divider"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="5dp"
+        android:id="@+id/view" />
+
+    <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textAppearance="?android:attr/textAppearanceMedium"
+    android:text="Server Address"
+    android:id="@+id/textView2"
+    android:textColor="@color/subHeadingColor"
+    android:textSize="@dimen/subheading_font_size"
+    android:textIsSelectable="false"
+    android:layout_marginTop="10dp"
+    android:layout_marginLeft="5dp"
+    android:layout_below="@+id/view"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="http://www.sivery.com"
+        android:id="@+id/textView3"
+        android:textColor="@color/subHeadingColor"
+        android:textSize="@dimen/value_font_size"
+        android:textIsSelectable="false"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_below="@+id/textView2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+
+    <View style="@style/Divider"
+        android:id="@+id/view2"
+        android:layout_below="@+id/textView3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="5dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CHANGE"
+        android:textColor="@color/ColorPrimary"
+        android:id="@+id/button"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_below="@+id/view"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"/>
 </RelativeLayout>
