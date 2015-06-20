@@ -18,7 +18,7 @@ public class QuestionAnswer {
     @Expose
     private String Answer; /// Does this field need to exist?
     @Expose
-    private List<Object> AnswerOptions = new ArrayList<Object>();
+    private List<String> AnswerOptions = new ArrayList<>();
 
     public String getQuestion() {
         return Question;
@@ -52,11 +52,11 @@ public class QuestionAnswer {
         this.Answer = Answer;
     }
 
-    public List<Object> getAnswerOptions() {
+    public List<String> getAnswerOptions() {
         return AnswerOptions;
     }
 
-    public void setAnswerOptions(List<Object> AnswerOptions) {
+    public void setAnswerOptions(List<String> AnswerOptions) {
         this.AnswerOptions = AnswerOptions;
     }
 }

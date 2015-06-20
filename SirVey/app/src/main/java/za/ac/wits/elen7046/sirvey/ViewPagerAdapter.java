@@ -4,6 +4,8 @@ package za.ac.wits.elen7046.sirvey;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
+import android.preference.PreferenceFragment;
+import android.support.v13.app.FragmentStatePagerAdapter;
 
 import za.ac.wits.elen7046.sirvey.fragments.SettingsFragment;
 import za.ac.wits.elen7046.sirvey.fragments.SurveysFragment;

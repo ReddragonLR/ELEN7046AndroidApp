@@ -9,6 +9,8 @@ import android.view.View;
 
 import java.util.List;
 
+import io.realm.Realm;
+import za.ac.wits.elen7046.sirvey.models.Translator;
 import za.ac.wits.elen7046.sirvey.models.retrofit.Survey;
 
 
@@ -21,17 +23,17 @@ public class MainActivity extends ActionBarActivity {
     ViewPagerAdapter adapter;
     SlidingTabLayout tabs;
     CharSequence Titles[]={"Surveys","Settings"};
-    int Numboftabs =2;
+    Translator translator;
+    int numberOfTabs =2;
+    Realm realm;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-        Server server = new Server();
-        server.getSurveysFromRemoteServer();
-        server.getSurveys();
+        translator = new Translator();
+        realm = Realm.getInstance(this);
 
         // Creating The Toolbar and setting it as the Toolbar for the activity
         toolbar = (Toolbar) findViewById(R.id.tool_bar);
@@ -40,7 +42,7 @@ public class MainActivity extends ActionBarActivity {
         setSupportActionBar(toolbar);
 
         // Creating The ViewPagerAdapter and Passing Fragment Manager, Titles fot the Tabs and Number Of Tabs.
-        adapter =  new ViewPagerAdapter(getSupportFragmentManager(),Titles,Numboftabs);
+        adapter =  new ViewPagerAdapter(getSupportFragmentManager(),Titles,numberOfTabs);
 
         // Assigning ViewPager View and setting the adapter
         pager = (ViewPager) findViewById(R.id.pager);
@@ -66,11 +68,11 @@ public class MainActivity extends ActionBarActivity {
 
     /** Called when the user touches the button */
     public void RequestSurveysFromServerButtonPressed(View view) {
-        Log.wtf(SETTINGSTAG,"RequestSurveysFromServerButtonPressed");
+        Log.wtf(SETTINGSTAG, "RequestSurveysFromServerButtonPressed");
 
         Server server = new Server();
-        server.getSurveysFromRemoteServer();
-        List<Survey> surveysFromServer = server.getSurveys();
+        server.getSurveysFromRemoteServer(translator,realm);
+
     }
 
     public void DeleteLocalStorageSurveysButtonPressed(View view) {
