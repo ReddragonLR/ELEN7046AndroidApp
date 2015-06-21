@@ -6,8 +6,10 @@ import za.ac.wits.elen7046.sirvey.models.retrofit.Survey;
 
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v4.content.LocalBroadcastManager;
 import android.util.Log;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,20 +21,20 @@ import retrofit.client.Response;
 
 
 public class Server {
-    private static final String SERVERTAG= "ServerClass";
-    //private static String API = "http://192.168.1.10:9000/api";
-    //private static final String API = "http://192.168.43.218:9000/api";
+    private static final String SERVER_TAG= "ServerClass";
     private static String API;
 
-    private static final RestAdapter restAdapter = new RestAdapter.Builder().setLogLevel(RestAdapter.LogLevel.FULL).setEndpoint(API).build();
-    private static final Api api = restAdapter.create(Api.class);
+    private static RestAdapter restAdapter;
+    private static Api api;
     private static List<Survey> surveys;
     private LocalBroadcastManager bManager;
 
-    public Server(LocalBroadcastManager bManager) {
+    public Server(LocalBroadcastManager bManager,String IPAddress) {
         surveys = new ArrayList<>();
         this.bManager = bManager;
-
+        API = IPAddress;
+        restAdapter = new RestAdapter.Builder().setLogLevel(RestAdapter.LogLevel.FULL).setEndpoint(API).build();
+        api = restAdapter.create(Api.class);
     }
 
     private static void log(RetrofitError e) {
@@ -43,7 +45,7 @@ public class Server {
          api.getFeed(new Callback<List<Survey>>() {
             @Override
             public void success(List<Survey> remoteSurveys, Response response) {
-                Log.wtf(SERVERTAG, "Started Call to server");
+                Log.wtf(SERVER_TAG, "Started Call to server");
 
                 ArrayList<String> surveyNames = new ArrayList<>();
                 for(Survey temp : remoteSurveys) {
@@ -51,15 +53,20 @@ public class Server {
                 }
                 Intent i = new Intent(MainActivity.UPDATE_SURVEYS_LIST_UI); //This should be getIntent();
 
-
+                Intent toastMessage = new Intent(MainActivity.TOAST);
                 i.putStringArrayListExtra("surveyNames", surveyNames);
-
+                toastMessage.putExtra("message","Successfully retrieve data from server!");
                 bManager.sendBroadcast(i);
-                Log.wtf(SERVERTAG, "Success call from server");
+                bManager.sendBroadcast(toastMessage);
+                Log.wtf(SERVER_TAG, "Success call from server");
             }
             @Override
             public void failure(RetrofitError error) {
                 log(error);
+
+                Intent toastMessage = new Intent(MainActivity.TOAST);
+                toastMessage.putExtra("message","Failed to retrieve data from server!");
+                bManager.sendBroadcast(toastMessage);
             }
         });
     }
@@ -77,6 +84,8 @@ public class Server {
 
     public void setIPAddress (String ipAddress) {
         API = ipAddress;
+        restAdapter = new RestAdapter.Builder().setLogLevel(RestAdapter.LogLevel.FULL).setEndpoint(API).build();
+        api = restAdapter.create(Api.class);
     }
     public String getIPAddress () {
         return API;

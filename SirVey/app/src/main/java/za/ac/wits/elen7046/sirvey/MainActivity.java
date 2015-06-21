@@ -7,6 +7,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.support.v4.content.LocalBroadcastManager;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBarActivity;
@@ -15,6 +16,7 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -26,8 +28,9 @@ import za.ac.wits.elen7046.sirvey.models.Translator;
 public class MainActivity extends ActionBarActivity {
 
     // Declaring Your View and Variables
-    private static final String SETTINGSTAG = "SettingButtonPressed";
+    private static final String MAIN_ACTIVITY_TAG = "MAIN_ACTIVITY";
     public static final String UPDATE_SURVEYS_LIST_UI = "za.ac.wits.elen7046.sirvey.MainActivity.UPDATE_SURVEYS_LIST_UI";
+    public static final String TOAST = "za.ac.wits.elen7046.sirvey.MainActivity.TOAST";
     Toolbar toolbar;
     ViewPager pager;
     ViewPagerAdapter adapter;
@@ -38,19 +41,27 @@ public class MainActivity extends ActionBarActivity {
     LocalBroadcastManager bManager;
     Realm realm;
     Server server;
-    public static final String MyPREFERENCES = "MyPrefs" ;
-    SharedPreferences sharedpreferences;
     public static final String ServerIP = "ServerIPKey";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //Intent
+        bManager = LocalBroadcastManager.getInstance(this);
+        IntentFilter intentFilter = new IntentFilter();
+        intentFilter.addAction(UPDATE_SURVEYS_LIST_UI);
+        intentFilter.addAction(TOAST);
+        bManager.registerReceiver(bReceiver, intentFilter);
+
+
         // Clear the realm from last time
         Realm.deleteRealmFile(this);
         translator = new Translator();
         realm = Realm.getInstance(this);
-        server = new Server(bManager);
+
+
         // Creating The Toolbar and setting it as the Toolbar for the activity
         toolbar = (Toolbar) findViewById(R.id.tool_bar);
         toolbar.setTitleTextColor(0xFFFFFFFF);
@@ -68,11 +79,6 @@ public class MainActivity extends ActionBarActivity {
         tabs = (SlidingTabLayout) findViewById(R.id.tabs);
         tabs.setDistributeEvenly(true); // To make the Tabs Fixed set this true, This makes the tabs Space Evenly in Available width
 
-        //Intent
-        bManager = LocalBroadcastManager.getInstance(this);
-        IntentFilter intentFilter = new IntentFilter();
-        intentFilter.addAction(UPDATE_SURVEYS_LIST_UI);
-        bManager.registerReceiver(bReceiver, intentFilter);
 
         // Setting Custom Color for the Scroll bar indicator of the Tab View
         tabs.setCustomTabColorizer(new SlidingTabLayout.TabColorizer() {
@@ -84,18 +90,19 @@ public class MainActivity extends ActionBarActivity {
         // Setting the ViewPager For the SlidingTabsLayout
         tabs.setViewPager(pager);
 
-        // Setting the address from server
-        sharedpreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
-
-        Settings settingsFragment = (Settings)getFragmentManager().findFragmentByTag(getFragmentTag(pager.getId(),1));
-        settingsFragment.changeServerAddressText(server.getIPAddress());
 
 
+        SharedPreferences sharedPreferences = this.getPreferences(0);
+        String IPAddress = sharedPreferences.getString(ServerIP, "Default ServerIP Address");
+
+        // Create server
+        server = new Server(bManager,IPAddress);
+        Log.wtf(MAIN_ACTIVITY_TAG,"Completed On create of MainAct");
     }
 
     /* Called when the user touches the button */
     public void RequestSurveysFromServerButtonPressed(View view) {
-        Log.wtf(SETTINGSTAG, "RequestSurveysFromServerButtonPressed");
+        Log.wtf(MAIN_ACTIVITY_TAG, "RequestSurveysFromServerButtonPressed");
 
 
         server.getSurveysFromRemoteServer(translator);
@@ -103,7 +110,7 @@ public class MainActivity extends ActionBarActivity {
 
 
     public void ChangeServerButtonPressed(View view) {
-        Log.wtf(SETTINGSTAG, "RequestSurveysFromServerButtonPressed");
+        Log.wtf(MAIN_ACTIVITY_TAG, "RequestSurveysFromServerButtonPressed");
 
         AlertDialog.Builder alert = new AlertDialog.Builder(this);
 
@@ -122,10 +129,8 @@ public class MainActivity extends ActionBarActivity {
                 server.setIPAddress(value);
                 Settings settingsFragment = (Settings)getFragmentManager().findFragmentByTag(getFragmentTag(pager.getId(),1));
                 settingsFragment.changeServerAddressText(value);
+                saveServerIPToPreferences(value) ;
 
-                SharedPreferences.Editor editor = sharedpreferences.edit();
-                editor.putString(ServerIP, value);
-                editor.commit();
             }
         });
         alert.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
@@ -136,10 +141,25 @@ public class MainActivity extends ActionBarActivity {
         alert.show();
     }
 
+    private void saveServerIPToPreferences(String value) {
+
+        SharedPreferences sharedPreferences =  this.getPreferences(0);
+
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+
+        editor.putString(ServerIP, value);
+
+        editor.commit();
+
+    }
+
+
+
+
 
     public void DeleteLocalStorageSurveysButtonPressed(View view) {
-        Log.wtf(SETTINGSTAG,"DeleteLocalStorageSurveysButtonPressed");
-        Log.wtf(SETTINGSTAG, "Successfully deleted from local db");
+        Log.wtf(MAIN_ACTIVITY_TAG,"DeleteLocalStorageSurveysButtonPressed");
+        Log.wtf(MAIN_ACTIVITY_TAG, "Successfully deleted from local db");
     }
     public void updateSurveysFragmentWithNewList(ArrayList<String> stringArrayList) {
         Surveys surveysFragment = (Surveys) getFragmentManager().findFragmentByTag(getFragmentTag(pager.getId(),0));
@@ -160,6 +180,11 @@ public class MainActivity extends ActionBarActivity {
                 ArrayList<String> serverListOfSurveys = intent.getStringArrayListExtra("surveyNames");
                 updateSurveysFragmentWithNewList(serverListOfSurveys);
             }
+
+            if(intent.getAction().equals((TOAST))) {
+                 Toast.makeText(getApplicationContext(), intent.getExtras().getString("message"), Toast.LENGTH_SHORT).show();
+            }
+
         }
     };
 
