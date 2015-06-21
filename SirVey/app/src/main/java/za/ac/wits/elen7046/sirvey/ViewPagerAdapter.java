@@ -1,28 +1,26 @@
 package za.ac.wits.elen7046.sirvey;
 
 
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentStatePagerAdapter;
-import android.preference.PreferenceFragment;
-import android.support.v13.app.FragmentStatePagerAdapter;
+import android.app.Fragment;
+import android.app.FragmentManager;
+import android.support.v13.app.FragmentPagerAdapter;
 
-import za.ac.wits.elen7046.sirvey.fragments.SettingsFragment;
-import za.ac.wits.elen7046.sirvey.fragments.SurveysFragment;
+import za.ac.wits.elen7046.sirvey.fragments.Settings;
+import za.ac.wits.elen7046.sirvey.fragments.Surveys;
 
-/**
- * Created by Edwin on 15/02/2015.
- */
-public class ViewPagerAdapter extends FragmentStatePagerAdapter {
+public class ViewPagerAdapter extends FragmentPagerAdapter {
 
     CharSequence Titles[]; // This will Store the Titles of the Tabs which are Going to be passed when ViewPagerAdapter is created
     int NumbOfTabs; // Store the number of tabs, this will also be passed when the ViewPagerAdapter is created
+    public Surveys surveysFragment;
 
+    public Settings settingsFragment;
 
     // Build a Constructor and assign the passed Values to appropriate values in the class
     public ViewPagerAdapter(FragmentManager fm,CharSequence mTitles[], int mNumbOfTabsumb) {
         super(fm);
-
+        settingsFragment = new Settings();
+        surveysFragment = new Surveys();
         this.Titles = mTitles;
         this.NumbOfTabs = mNumbOfTabsumb;
 
@@ -34,13 +32,13 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
 
         if(position == 0) // if the position is 0 we are returning the First tab
         {
-            SurveysFragment surveysFragment = new SurveysFragment();
-            return surveysFragment;
+return new Surveys();
+           // return surveysFragment;
         }
         else             // As we are having 2 tabs if the position is now 0 it must be 1 so we are returning second tab
         {
-            SettingsFragment settingsFragment = new SettingsFragment();
-            return settingsFragment;
+            return new Settings();
+            //return settingsFragment;
         }
 
     }
