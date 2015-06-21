@@ -7,7 +7,6 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.SharedPreferences;
-import android.preference.PreferenceManager;
 import android.support.v4.content.LocalBroadcastManager;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBarActivity;
@@ -24,6 +23,7 @@ import io.realm.Realm;
 import za.ac.wits.elen7046.sirvey.fragments.Settings;
 import za.ac.wits.elen7046.sirvey.fragments.Surveys;
 import za.ac.wits.elen7046.sirvey.models.Translator;
+import za.ac.wits.elen7046.sirvey.models.realm.Survey;
 
 public class MainActivity extends ActionBarActivity {
 
@@ -159,7 +159,14 @@ public class MainActivity extends ActionBarActivity {
 
     public void DeleteLocalStorageSurveysButtonPressed(View view) {
         Log.wtf(MAIN_ACTIVITY_TAG,"DeleteLocalStorageSurveysButtonPressed");
+
+        realm.beginTransaction();
+        realm.allObjects(Survey.class).clear();
+        realm.commitTransaction();
+
+        updateSurveysFragmentWithNewList(new ArrayList<String>());
         Log.wtf(MAIN_ACTIVITY_TAG, "Successfully deleted from local db");
+        Toast.makeText(getApplicationContext(), "Successfully deleted surveys", Toast.LENGTH_SHORT).show();
     }
     public void updateSurveysFragmentWithNewList(ArrayList<String> stringArrayList) {
         Surveys surveysFragment = (Surveys) getFragmentManager().findFragmentByTag(getFragmentTag(pager.getId(),0));

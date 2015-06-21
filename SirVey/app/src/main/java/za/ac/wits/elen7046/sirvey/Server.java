@@ -6,10 +6,8 @@ import za.ac.wits.elen7046.sirvey.models.retrofit.Survey;
 
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.support.v4.content.LocalBroadcastManager;
 import android.util.Log;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
