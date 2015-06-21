@@ -1,10 +1,12 @@
 package za.ac.wits.elen7046.sirvey;
 
+import io.realm.Realm;
 import retrofit.http.GET;
 import za.ac.wits.elen7046.sirvey.models.Translator;
 import za.ac.wits.elen7046.sirvey.models.retrofit.Survey;
 
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v4.content.LocalBroadcastManager;
 import android.util.Log;
@@ -24,11 +26,10 @@ public class Server {
 
     private static RestAdapter restAdapter;
     private static Api api;
-    private static List<Survey> surveys;
     private LocalBroadcastManager bManager;
 
+
     public Server(LocalBroadcastManager bManager,String IPAddress) {
-        surveys = new ArrayList<>();
         this.bManager = bManager;
         API = IPAddress;
         restAdapter = new RestAdapter.Builder().setLogLevel(RestAdapter.LogLevel.FULL).setEndpoint(API).build();
@@ -39,11 +40,15 @@ public class Server {
         Log.e("ServerAPI", "API call failed", e);
     }
 
-    public void getSurveysFromRemoteServer(final Translator translater ) {
+    public void getSurveysFromRemoteServer(final Translator translator ,final Realm realm) {
          api.getFeed(new Callback<List<Survey>>() {
             @Override
             public void success(List<Survey> remoteSurveys, Response response) {
                 Log.wtf(SERVER_TAG, "Started Call to server");
+
+                realm.beginTransaction();
+                realm.allObjects(za.ac.wits.elen7046.sirvey.models.realm.Survey.class).clear();
+                realm.commitTransaction();
 
                 ArrayList<String> surveyNames = new ArrayList<>();
                 for(Survey temp : remoteSurveys) {
@@ -53,9 +58,12 @@ public class Server {
 
                 Intent toastMessage = new Intent(MainActivity.TOAST);
                 i.putStringArrayListExtra("surveyNames", surveyNames);
-                toastMessage.putExtra("message","Successfully retrieve data from server!");
+                toastMessage.putExtra("message", "Successfully retrieve data from server!");
                 bManager.sendBroadcast(i);
                 bManager.sendBroadcast(toastMessage);
+
+                translator.translateRetrofitSurveysToRealmSurveys(remoteSurveys,realm);
+                realm.close();
                 Log.wtf(SERVER_TAG, "Success call from server");
             }
             @Override
@@ -67,10 +75,6 @@ public class Server {
                 bManager.sendBroadcast(toastMessage);
             }
         });
-    }
-
-    public List<Survey> getSurveys() {
-        return surveys;
     }
 
     private interface Api {

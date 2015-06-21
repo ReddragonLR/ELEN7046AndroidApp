@@ -1,28 +1,31 @@
 package za.ac.wits.elen7046.sirvey;
 
 
-import android.app.Fragment;
-import android.app.FragmentManager;
-import android.support.v13.app.FragmentPagerAdapter;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentStatePagerAdapter;
+import android.util.SparseArray;
+import android.view.ViewGroup;
+
 
 import za.ac.wits.elen7046.sirvey.fragments.Settings;
 import za.ac.wits.elen7046.sirvey.fragments.Surveys;
 
-public class ViewPagerAdapter extends FragmentPagerAdapter {
+public class ViewPagerAdapter extends FragmentStatePagerAdapter{
+
+    SparseArray<Fragment> registeredFragments = new SparseArray<Fragment>();
 
     CharSequence Titles[]; // This will Store the Titles of the Tabs which are Going to be passed when ViewPagerAdapter is created
     int NumbOfTabs; // Store the number of tabs, this will also be passed when the ViewPagerAdapter is created
-    public Surveys surveysFragment;
 
-    public Settings settingsFragment;
 
     // Build a Constructor and assign the passed Values to appropriate values in the class
     public ViewPagerAdapter(FragmentManager fm,CharSequence mTitles[], int mNumbOfTabsumb) {
         super(fm);
-        settingsFragment = new Settings();
-        surveysFragment = new Surveys();
+
         this.Titles = mTitles;
         this.NumbOfTabs = mNumbOfTabsumb;
+
 
     }
 
@@ -32,7 +35,10 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
 
         if(position == 0) // if the position is 0 we are returning the First tab
         {
-return new Surveys();
+            Surveys surveys = new Surveys();
+
+          //  mPageReferenceMap.put(position, myFragment);
+            return new Surveys();
            // return surveysFragment;
         }
         else             // As we are having 2 tabs if the position is now 0 it must be 1 so we are returning second tab
@@ -56,4 +62,29 @@ return new Surveys();
     public int getCount() {
         return NumbOfTabs;
     }
+//
+//    public void destroyItem(View container, int position, Object object) {
+//        super.destroyItem(container, position, object);
+//
+//        mPageReferenceMap.remove(position);
+//    }
+
+    @Override
+    public Object instantiateItem(ViewGroup container, int position) {
+        Fragment fragment = (Fragment) super.instantiateItem(container, position);
+        registeredFragments.put(position, fragment);
+        return fragment;
+    }
+
+    @Override
+    public void destroyItem(ViewGroup container, int position, Object object) {
+        registeredFragments.remove(position);
+        super.destroyItem(container, position, object);
+    }
+
+    public Fragment getRegisteredFragment(int position) {
+        return registeredFragments.get(position);
+    }
+
 }
+

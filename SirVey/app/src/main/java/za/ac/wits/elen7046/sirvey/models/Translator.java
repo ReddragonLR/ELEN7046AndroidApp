@@ -1,5 +1,8 @@
 package za.ac.wits.elen7046.sirvey.models;
 
+import android.content.Context;
+import android.util.Log;
+
 import java.util.List;
 
 import io.realm.Realm;
@@ -9,7 +12,10 @@ import za.ac.wits.elen7046.sirvey.models.realm.Survey;
 
 public class Translator {
 
+    private static final String TRANSLATOR = "TRANSLATOR" ;
+
     public void translateRetrofitSurveysToRealmSurveys (List<za.ac.wits.elen7046.sirvey.models.retrofit.Survey> retrofitSurveys,Realm realm) {
+
 
         realm.beginTransaction();
 
@@ -43,7 +49,10 @@ public class Translator {
             tempSurvey.setMongoId(temp.getId());
         }
         realm.commitTransaction();
-       realm.close();
+
+        // Implicit read transactions allow you to access your objects
+        String status = "\nNumber of Surveys: " + realm.allObjects(Survey.class).size();
+        Log.wtf(TRANSLATOR,status);
     }
 
 //    public RealmList<QuestionAnswer> translateRetrofitQAsToRealmQAs (List<za.ac.wits.elen7046.sirvey.models.retrofit.QuestionAnswer> retrofitQAs, Realm realm) {

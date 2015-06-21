@@ -81,7 +81,7 @@
         style="?android:attr/borderlessButtonStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="REQUEST SURVEYS FROM SERVER"
+        android:text="SYNC SURVEYS WITH SERVER"
         android:textColor="@color/ColorPrimary"
         android:textSize="@dimen/button_font_size"
         android:id="@+id/button2"
