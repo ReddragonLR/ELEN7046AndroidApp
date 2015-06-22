@@ -1,5 +1,6 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -11,5 +12,32 @@
         android:layout_width="match_parent"
         />
 
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_below="@+id/tool_bar"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView">
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/QALayout"
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Survey Title"
+        android:id="@+id/titleQA"
+        android:textColor="@color/tabsScrollColor"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="@dimen/heading_font_size"
+        android:textIsSelectable="false"
+        android:textStyle="italic"
+        android:layout_gravity="center_horizontal" />
+
+
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>

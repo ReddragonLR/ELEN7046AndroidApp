@@ -3,6 +3,7 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="title_settings"><u>Settings</u></string>
+    <string name="title_surveys"><u>Surveys</u></string>
     <string name="title_activity_surveys">SurveysActivity</string>
 
 

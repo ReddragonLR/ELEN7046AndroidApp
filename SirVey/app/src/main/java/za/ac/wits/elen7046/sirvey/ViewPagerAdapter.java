@@ -35,18 +35,12 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter{
 
         if(position == 0) // if the position is 0 we are returning the First tab
         {
-            Surveys surveys = new Surveys();
-
-          //  mPageReferenceMap.put(position, myFragment);
             return new Surveys();
-           // return surveysFragment;
         }
-        else             // As we are having 2 tabs if the position is now 0 it must be 1 so we are returning second tab
+        else // As we are having 2 tabs if the position is now 0 it must be 1 so we are returning second tab
         {
             return new Settings();
-            //return settingsFragment;
         }
-
     }
 
     // This method return the titles for the Tabs in the Tab Strip
@@ -56,18 +50,12 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter{
         return Titles[position];
     }
 
-    // This method return the Number of tabs for the tabs Strip
+
 
     @Override
     public int getCount() {
         return NumbOfTabs;
     }
-//
-//    public void destroyItem(View container, int position, Object object) {
-//        super.destroyItem(container, position, object);
-//
-//        mPageReferenceMap.remove(position);
-//    }
 
     @Override
     public Object instantiateItem(ViewGroup container, int position) {
