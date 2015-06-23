@@ -11,7 +11,7 @@ android {
 
     defaultConfig {
         applicationId "za.ac.wits.elen7046.sirvey"
-        minSdkVersion 16
+        minSdkVersion 13
         targetSdkVersion 22
         versionCode 1
         versionName "1.0"

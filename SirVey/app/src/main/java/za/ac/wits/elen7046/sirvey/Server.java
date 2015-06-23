@@ -38,14 +38,13 @@ public class Server {
     }
 
     private static void log(RetrofitError e) {
-        Log.e("ServerAPI", "API call failed", e);
+        Log.e(TAG, "API call failed", e);
     }
 
     public void getSurveysFromRemoteServer(final Translator translator ,final Realm realm) {
          api.getFeed(new Callback<List<Survey>>() {
              @Override
              public void success(List<Survey> remoteSurveys, Response response) {
-                 Log.wtf(TAG, "Started Call to server");
 
                  realm.beginTransaction();
                  realm.allObjects(za.ac.wits.elen7046.sirvey.models.realm.Survey.class).clear();
@@ -55,23 +54,16 @@ public class Server {
                  for (Survey temp : remoteSurveys) {
                      surveyNames.add(temp.getName());
                  }
-                 Intent i = new Intent(MainActivity.UPDATE_SURVEYS_LIST_UI); //This should be getIntent();
-
-                 Intent toastMessage = new Intent(MainActivity.TOAST);
-                 i.putStringArrayListExtra("surveyNames", surveyNames);
-                 toastMessage.putExtra("message", "Successfully retrieve data from server!");
+                 Intent i = new Intent(MainActivity.SUCCESSFULLY_SENT_COMPLETED_SURVEYS);
                  bManager.sendBroadcast(i);
-                 bManager.sendBroadcast(toastMessage);
 
                  translator.translateRetrofitSurveysToRealmSurveys(remoteSurveys, realm);
                  realm.close();
-                 Log.wtf(TAG, "Success call from server");
              }
 
              @Override
              public void failure(RetrofitError error) {
                  log(error);
-
                  Intent toastMessage = new Intent(MainActivity.TOAST);
                  toastMessage.putExtra("message", "Failed to retrieve data from server!");
                  bManager.sendBroadcast(toastMessage);
@@ -83,19 +75,14 @@ public class Server {
         api.sendSurveys(completedSurveys, new Callback<List<CompletedSurvey>>() {
             @Override
             public void success(List<CompletedSurvey> completedSurveys, Response response) {
-                int i;
-                int A;
-                Log.wtf(TAG,"SUCCESS SEND TO DATA");
                 Intent toastMessage = new Intent(MainActivity.TOAST);
                 toastMessage.putExtra("message", "Successfully send data to server!");
                 bManager.sendBroadcast(toastMessage);
+
             }
 
             @Override
             public void failure(RetrofitError error) {
-                int i;
-                int A;
-                Log.wtf(TAG,"FAIL SEND TO DATA");
                 Intent toastMessage = new Intent(MainActivity.TOAST);
                 toastMessage.putExtra("message", "Failed to send data to server!");
                 bManager.sendBroadcast(toastMessage);
@@ -106,7 +93,6 @@ public class Server {
 
     private interface Api {
         @GET("/surveys")
-            //here is the other url part.best way is to start using /
         void getFeed(Callback<List<Survey>> response);
 
         @POST("/completedSurveys/?option=bulkCompletedSurveyUpload")

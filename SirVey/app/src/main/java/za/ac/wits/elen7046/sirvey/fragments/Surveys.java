@@ -62,11 +62,9 @@ public class Surveys extends Fragment {
     @Override
     public void onAttach(Activity activity) {
         super.onAttach(activity);
-
         // Create Realm instance for the UI thread
         Context activityContext = getActivity().getApplicationContext();
         realm = Realm.getInstance(activityContext);
-        //realm = Realm.getInstance(getActivity());
     }
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -106,8 +104,6 @@ public class Surveys extends Fragment {
             }
 
         });
-
-
         return view;
     }
 
@@ -120,16 +116,13 @@ public class Surveys extends Fragment {
 
         numOfSurveys.setText(String.valueOf(completedSurveysCount));
         Log.wtf(TAG,"WTF");
-
     }
 
     @Override
     public void onPause() {
         super.onPause();
-
         // Disable UI refresh while the fragment is no longer active.
         realm.removeChangeListener(listener);
-
     }
     @Override
     public void onResume() {
@@ -140,28 +133,23 @@ public class Surveys extends Fragment {
 
 
     public void updateFragment1ListView(ArrayList<String> lst){
-
         arrayAdapter.clear();
 
         if (lst != null){
-
             for (Object object : lst) {
-
                 arrayAdapter.insert(object, arrayAdapter.getCount());
             }
         }
-
         arrayAdapter.notifyDataSetChanged();
     }
 
 
-@Override
-public void onDestroy() {
-    super.onDestroy();
-    // Remember to close the Realm instance when done with it.
-    realm.close();
-    Log.wtf("WTF", "DESTROUYED");
-}
-
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        // Remember to close the Realm instance when done with it.
+        realm.close();
+        Log.wtf("WTF", "DESTROUYED");
+    }
 }
 

@@ -1,16 +1,13 @@
 package za.ac.wits.elen7046.sirvey;
 
+import android.os.Bundle;
 import android.support.v4.app.NavUtils;
 import android.support.v7.app.ActionBarActivity;
-import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
-
-import android.view.ContextThemeWrapper;
 import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
@@ -76,32 +73,6 @@ public class AnswerSurveyActivity extends ActionBarActivity {
 
         QALayout= (LinearLayout)findViewById(R.id.QALayout);
 
-//
-//        for (int i = 0 ; i <30 ; i++){
-//            TextView label = new TextView(this);
-//
-//            label.setText("Hello");
-//
-//
-//            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
-//                    LinearLayout.LayoutParams.WRAP_CONTENT,
-//                    LinearLayout.LayoutParams.WRAP_CONTENT
-//            );
-//            params.setMargins(0, 30, 0, 0);
-//            params.gravity =
-//                    Gravity.CENTER;
-//            label.setLayoutParams(params);
-//            label.setTextSize(20);
-//
-//
-//            QALayout.addView(label);
-//      }
-//        TextView label = new TextView(this);
-//
-//        label.setText("END");
-//        label.setTextSize(20);
-//        label.setGravity(Gravity.CENTER_HORIZONTAL);
-//        QALayout.addView(label);
         for (Survey survey: results ) {
 
             for (int i = 0 ; i < survey.getQuestionAnswers().size() ;i++ ) {
@@ -166,8 +137,6 @@ public class AnswerSurveyActivity extends ActionBarActivity {
                     LinearLayout.LayoutParams.WRAP_CONTENT
             );
             params.setMargins(10, 15, 10, 0);
-            params.gravity =
-                    Gravity.CENTER;
         questionLabel.setLayoutParams(params);
         questionLabel.setTextSize(20);
 
@@ -177,8 +146,11 @@ public class AnswerSurveyActivity extends ActionBarActivity {
         EditText answer = new EditText(this);
         params = new LinearLayout.LayoutParams(
                 LinearLayout.LayoutParams.WRAP_CONTENT,
-                LinearLayout.LayoutParams.WRAP_CONTENT
+                LinearLayout.LayoutParams.WRAP_CONTENT,1f
         );
+        //params.width = 0;
+        //answer.setHint("Enter your answer...");
+
         addID(i);
         answer.setId(getIDAtIndex(i));
 
@@ -186,6 +158,7 @@ public class AnswerSurveyActivity extends ActionBarActivity {
         params.setMargins(10, 15, 10, 0);
         answer.setLayoutParams(params);
         answer.setTextSize(20);
+
         QALayout.addView(answer);
     }
 
@@ -198,14 +171,10 @@ public class AnswerSurveyActivity extends ActionBarActivity {
                 LinearLayout.LayoutParams.WRAP_CONTENT
         );
         params.setMargins(10, 15, 10, 0);
-        params.gravity =
-                Gravity.CENTER;
         questionLabel.setLayoutParams(params);
         questionLabel.setTextSize(20);
 
-
         QALayout.addView(questionLabel);
-
 
         RadioGroup radioGroup = new RadioGroup(this);
         addID(i);
@@ -230,8 +199,6 @@ public class AnswerSurveyActivity extends ActionBarActivity {
                 LinearLayout.LayoutParams.WRAP_CONTENT
         );
         params.setMargins(10, 15, 10, 0);
-        params.gravity =
-                Gravity.CENTER;
         questionLabel.setLayoutParams(params);
         questionLabel.setTextSize(20);
 

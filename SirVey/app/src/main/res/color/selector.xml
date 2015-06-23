@@ -5,3 +5,5 @@
     <item android:state_pressed="true" android:color="@android:color/white" />
     <item android:color="@color/tabsScrollColor" />
 </selector>
+
+

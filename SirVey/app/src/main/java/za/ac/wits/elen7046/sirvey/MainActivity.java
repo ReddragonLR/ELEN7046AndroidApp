@@ -32,6 +32,7 @@ public class MainActivity extends ActionBarActivity {
     private static final String TAG = MainActivity.class.getName();
     public static final String UPDATE_SURVEYS_LIST_UI = "za.ac.wits.elen7046.sirvey.MainActivity.UPDATE_SURVEYS_LIST_UI";
     public static final String TOAST = "za.ac.wits.elen7046.sirvey.MainActivity.TOAST";
+    public static final String SUCCESSFULLY_SENT_COMPLETED_SURVEYS = "za.ac.wits.elen7046.sirvey.MainActivity.SUCCESSFULLY_SENT_COMPLETED_SURVEYS";
     Toolbar toolbar;
     ViewPager pager;
     ViewPagerAdapter adapter;
@@ -56,6 +57,7 @@ public class MainActivity extends ActionBarActivity {
         IntentFilter intentFilter = new IntentFilter();
         intentFilter.addAction(UPDATE_SURVEYS_LIST_UI);
         intentFilter.addAction(TOAST);
+        intentFilter.addAction(SUCCESSFULLY_SENT_COMPLETED_SURVEYS);
         bManager.registerReceiver(bReceiver, intentFilter);
 
         translator = new Translator();
@@ -107,8 +109,6 @@ public class MainActivity extends ActionBarActivity {
     /* Called when the user touches the button */
     public void RequestSurveysFromServerButtonPressed(View view) {
         Log.wtf(TAG, "RequestSurveysFromServerButtonPressed");
-
-
         server.getSurveysFromRemoteServer(translator, realm);
     }
 
@@ -158,7 +158,6 @@ public class MainActivity extends ActionBarActivity {
     }
 
     public void DeleteLocalStorageSurveysQuestions() {
-
         realm.beginTransaction();
         realm.allObjects(Survey.class).clear();
         realm.commitTransaction();
@@ -166,47 +165,47 @@ public class MainActivity extends ActionBarActivity {
     }
 
     public void DeleteLocalCompletedSurveys() {
-
         realm.beginTransaction();
         realm.allObjects(CompletedSurvey.class).clear();
         realm.commitTransaction();
+        Toast.makeText(getApplicationContext(), "Successfully cleared locally stored completed surveys!", Toast.LENGTH_SHORT).show();
     }
 
     public void DeleteLocalStorageSurveysButtonPressed(View view) {
-        Log.wtf(TAG, "DeleteLocalStorageSurveysButtonPressed");
+        Log.d(TAG, "DeleteLocalStorageSurveysButtonPressed");
         DeleteLocalStorageSurveysQuestions();
 
-        Log.wtf(TAG, "Successfully deleted from local db");
+        Log.d(TAG, "Successfully deleted from local db");
         Toast.makeText(getApplicationContext(), "Successfully deleted surveys", Toast.LENGTH_SHORT).show();
     }
 
     private BroadcastReceiver bReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
-            if(intent.getAction().equals((TOAST))) {
-                 Toast.makeText(getApplicationContext(), intent.getExtras().getString("message"), Toast.LENGTH_SHORT).show();
+            if(intent.getAction().equals(TOAST)) {
+                Toast.makeText(getApplicationContext(), intent.getExtras().getString("message"), Toast.LENGTH_SHORT).show();
             }
+            if(intent.getAction().equals(SUCCESSFULLY_SENT_COMPLETED_SURVEYS)) {
+                DeleteLocalCompletedSurveys();
+            }
+
         }
     };
 
     public void DeleteLocalAnsweredSurveysButtonPressed(View view) {
-        Log.wtf(TAG, "DeleteLocalAnsweredSurveysButtonPressed");
+        Log.d(TAG, "DeleteLocalAnsweredSurveysButtonPressed");
         DeleteLocalCompletedSurveys();
-        Log.wtf(TAG, "DeleteLocalAnsweredSurveysButtonPressed");
+        Log.d(TAG, "DeleteLocalAnsweredSurveysButtonPressed");
         Toast.makeText(getApplicationContext(), "Successfully deleted completed surveys", Toast.LENGTH_SHORT).show();
 
     }
 
     public void SendCompletedSurveysToServerButtonPressed(View view) {
-        Log.wtf(TAG, "SendCompletedSurveysToServerButtonPressed");
+        Log.d(TAG, "SendCompletedSurveysToServerButtonPressed");
         RealmResults<CompletedSurvey> data = realm.allObjects(CompletedSurvey.class);
         List<za.ac.wits.elen7046.sirvey.models.retrofit.CompletedSurvey>  surveysToSubmit = translator.translateRealmQCompletedSurveysToRetrofitCompletedSurvey(data);
-       //' String temp = surveysToSubmit.
-        Log.wtf(TAG,"FUCK");
-            server.sendSurveys(surveysToSubmit);
-        Log.wtf(TAG, "SendCompletedSurveysToServerButtonPressed");
-
-
+        server.sendSurveys(surveysToSubmit);
+        Log.d(TAG, "SendCompletedSurveysToServerButtonPressed");
 
     }
 }
