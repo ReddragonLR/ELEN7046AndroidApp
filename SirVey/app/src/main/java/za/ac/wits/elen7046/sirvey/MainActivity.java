@@ -168,7 +168,6 @@ public class MainActivity extends ActionBarActivity {
         realm.beginTransaction();
         realm.allObjects(CompletedSurvey.class).clear();
         realm.commitTransaction();
-        Toast.makeText(getApplicationContext(), "Successfully cleared locally stored completed surveys!", Toast.LENGTH_SHORT).show();
     }
 
     public void DeleteLocalStorageSurveysButtonPressed(View view) {
@@ -176,7 +175,8 @@ public class MainActivity extends ActionBarActivity {
         DeleteLocalStorageSurveysQuestions();
 
         Log.d(TAG, "Successfully deleted from local db");
-        Toast.makeText(getApplicationContext(), "Successfully deleted surveys", Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(), "Successfully cleared locally stored completed surveys!", Toast.LENGTH_SHORT).show();
+
     }
 
     private BroadcastReceiver bReceiver = new BroadcastReceiver() {
@@ -187,6 +187,7 @@ public class MainActivity extends ActionBarActivity {
             }
             if(intent.getAction().equals(SUCCESSFULLY_SENT_COMPLETED_SURVEYS)) {
                 DeleteLocalCompletedSurveys();
+                Toast.makeText(getApplicationContext(), "Successfully sent completed surveys to server!", Toast.LENGTH_SHORT).show();
             }
 
         }

@@ -75,8 +75,7 @@ public class Server {
         api.sendSurveys(completedSurveys, new Callback<List<CompletedSurvey>>() {
             @Override
             public void success(List<CompletedSurvey> completedSurveys, Response response) {
-                Intent toastMessage = new Intent(MainActivity.TOAST);
-                toastMessage.putExtra("message", "Successfully send data to server!");
+                Intent toastMessage = new Intent(MainActivity.SUCCESSFULLY_SENT_COMPLETED_SURVEYS);
                 bManager.sendBroadcast(toastMessage);
 
             }
