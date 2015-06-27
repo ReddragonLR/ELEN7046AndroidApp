@@ -1,0 +1,827 @@
+\documentclass[12pt]{witseiepaper}
+\usepackage{KJN}
+\usepackage[a4paper,top=25mm, bottom=32mm, left=20mm, right=20mm]{geometry}
+
+\ifpdf
+\pdfinfo{
+% /Title (INSTRUCTIONS AND STYLE GUIDELINES FOR THE PREPARATION OF FINAL YEAR LABORATORY PROJECT PAPERS : 2005 VERSION)
+% /Author (Ken J Nixon)
+% /CreationDate (D:200309251200)
+% /ModDate (D:200510121530)
+% /Subject (ELEN417/455 Paper Format, 2005)
+% /Keywords (ELEN417, ELEN455, paper, instructions, style guidelines, laboratory project)
+}
+\fi
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+
+%----------------------------------------------------------------------------------------
+% TITLE PAGE
+%----------------------------------------------------------------------------------------
+\begin{titlepage}
+  
+  \newcommand{\HRule}{\rule{\linewidth}{0.5mm}} 
+  
+  % Defines a new command for the horizontal lines, change thickness here
+  \begin{center}
+    
+    % Center everythingn the page
+    \textsc{\LARGE ELEN7045}\\[1.5cm]
+    
+    % Name of your university/college
+    \textsc{\Large University of Witwatersrand}\\[0.5cm]
+    
+    % Major heading such as course name
+    \textsc{\large  Group Project Report}\\[0.5cm]
+    
+    % Minor heading such as course title
+    \HRule \\[0.4cm]
+    { \huge \bfseries SirVey}\\[0.5cm]
+    
+    % Title of your document
+    \HRule \\[1.5cm]
+    \begin{minipage}
+      {0.4
+      \textwidth} 
+      \begin{flushleft}
+        \large \emph{Author:}\\
+        Avanindra (Avy) \textsc{Singh} \\
+        Leslie \textsc{Dabrowsky} \\
+        Lishen \textsc{Ramsudh} \\
+        Peter \textsc{Cousins} \\
+
+        
+        % Your name
+      \end{flushleft}
+    \end{minipage}
+    ~ 
+    \begin{minipage}
+      {0.4
+      \textwidth} 
+      \begin{flushright}
+        \large \emph{Student Number:} \\
+        0704012 \textsc{N} \\
+        0704012 \textsc{N}  \\
+        0704012 \textsc{N} \\
+        0704012 \textsc{N} 
+        % Supervisor's Name
+      \end{flushright}
+    \end{minipage}
+    \\[2cm]
+    
+    {\large \today}\\[2cm]
+    
+    % Date, change the \today to a set date if you want to be precise
+  \end{center}
+  \large
+
+ % \textbf{Abstract}  \\[0.1cm]
+ %  This document focuses on mock objects. It defines mock objects as a technique in software development commonly used in unit testing. A brief list of when to use mock objects is presented. The differences and a clear definition of each type of ``simulated object'' is given for dummy objects, fake objects, stub objects and mock objects. Mock objects insist on behaviour verification as opposed to other types of objects which usually are state verification. A practical example is illustrated using EasyMock in Java. The application of mock objects in unit testing is then discussed. It is concluded that using mock objects can be a advantage or disadvantage depending on the context of the system under test.
+
+  \textbf{}
+  % Dummy text
+  %\end{flushleft}
+  %\includegraphics{Logo}\\[1cm] % Include a department/university logo - this will require the graphicx package
+  %\vfill % Fill the rest of the page with whitespace
+\end{titlepage}
+
+
+% \title{INSTRUCTIONS AND STYLE GUIDELINES FOR THE PREPARATION OF FINAL YEAR LABORATORY PROJECT PAPERS : 2005 VERSION}
+
+% \author{Ken J. Nixon
+% \thanks{School of Electrical \& Information Engineering, University of the
+% Witwatersrand, Private Bag 3, 2050, Johannesburg, South Africa}
+% }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%'
+
+%----------------------------------------------------------------------------------------
+% DECLARATION PAGE
+% Your institution may give you a different text to place here
+%----------------------------------------------------------------------------------------
+ \renewcommand\thesection{\Alph{section}}
+ \setcounter{section}{0}
+
+ \thispagestyle{empty}\pagestyle{empty}
+ \begin{center}
+ \section{DECLARATION}
+ % \textsc{\bfseries DECLARATION} \\ [1.0cm]
+ \end{center}
+I ALTER THIS TO PLEDGEARISM AND GROUP WORK BREAKDOWN, Avanindra Singh, declare that this thesis titled, 'My Thesis' and the work presented in it are my own. I confirm that:
+
+\begin{itemize} 
+\item This work was done wholly or mainly while in candidature for a research degree at this University. \\
+\item Where any part of this thesis has previously been submitted for a degree or any other qualification at this University or any other institution, this has been clearly stated. \\
+\item Where I have consulted the published work of others, this is always clearly attributed. \\
+\item Where I have quoted from the work of others, the source is always given. With the exception of such quotations, this thesis is entirely my own work. \\
+\item I have acknowledged all main sources of help. \\
+\item Where the thesis is based on work done by myself jointly with others, I have made clear exactly what was done by others and what I have contributed myself.\\ [1.5cm]
+\end{itemize}
+
+% Signed:\\
+% \rule[1em]{25em}{0.5pt} % This prints a line for the signature
+%  \\ [1.5cm]
+% Date:\\
+% \rule[1em]{25em}{0.5pt} % This prints a line to write the date
+
+
+
+\clearpage % Start a new page
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+% QUOTATION PAGE
+%----------------------------------------------------------------------------------------
+
+% \pagestyle{empty} % No headers or footers for the following pages
+
+% \null\vfill % Add some space to move the quote down the page a bit
+
+% \textit{``Thanks to my solid academic training, today I can write hundreds of words on virtually any topic without possessing a shred of information, which is how I got a good job in journalism."}
+
+% \begin{flushright}
+% Dave Barry
+% \end{flushright}
+
+% \vfill\vfill\vfill\vfill\vfill\vfill\null % Add some space at the bottom to position the quote just right
+
+% \clearpage % Start a new page
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ \thispagestyle{empty}\pagestyle{empty}
+ \begin{center}
+ % \textsc{\bfseries ABSTRACT} \\ [1.0cm]
+  \section{ABSTRACT}
+  \end{center}
+  This document focuses on mock objects. It defines mock objects as a technique in software development commonly used in unit testing. A brief list of when to use mock objects is presented. The differences and a clear definition of each type of ``simulated object'' is given for dummy objects, fake objects, stub objects and mock objects. Mock objects insist on behaviour verification as opposed to other types of objects which usually are state verification. A practical example is illustrated using EasyMock in Java. The application of mock objects in unit testing is then discussed. It is concluded that using mock objects can be a advantage or disadvantage depending on the context of the system under test.
+ \\
+
+{\bfseries Key Words: } Avy, Is, Cool.\\ [1.0cm]
+% %
+
+
+\keywords{Four to six key words in alphabetical order, separated by commas.}
+
+\clearpage % Start a new page
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  \thispagestyle{empty}\pagestyle{empty}
+%  \begin{center}
+%  % \textsc{\bfseries ACKNOWLEDGEMENTS} \\ [1.0cm]
+%  \section{ACKNOWLEDGEMENTS}
+%  \end{center}
+% The acknowledgements and the people to thank go here, don't forget to include your project advisor.
+% The preferred spelling of the word ``acknowledgement'' in British English is
+% with an ``e'' after the ``g.'' Use the singular heading even if you have
+% several acknowledgements. Use this section for sponsor and financial support
+% acknowledgments. This is also an ideal section to acknowledge the
+% contribution made by your fellow group member.
+
+% The authors would like to acknowledge the Department of Electronic and
+% Electrical Engineering at the University of Sheffield for the use of their
+% paper template for the LDIA2003 symposium proceedings as well as the South
+% African Institute of Electrical Engineers for parts of the style guidelines
+% for publications in the SAIEE transactions.  Additional thanks are extended to
+% Andr\'e van Zyl and Steve Levitt for their invaluable contributions.
+
+
+
+
+% \clearpage % Start a new page
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %
+% \abstract{The purpose of this document is to provide an easy-to-use
+% template/style sheet to enable authors to prepare papers in the correct format
+% and style for the final year laboratory project. This document may be
+% downloaded from the School of Electrical and Information Engineering web site
+% and can be used as a template. To ensure conformity of appearance it is
+% essential that these instructions are followed. The abstract should be limited
+% to 50-200 words, which should concisely summarise the paper.}
+
+% \keywords{Four to six key words in alphabetical order, separated by commas.}
+
+
+% \maketitle
+% \thispagestyle{empty}\pagestyle{empty}
+\pagestyle{plain}
+
+\pagenumbering{roman}
+
+\tableofcontents
+% test\index{test}
+
+\newpage
+\listoffigures % Write out the List of Figures
+\newpage
+\listoftables % Write out the List of Tables
+\newpage
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+ \setcounter{section}{0}
+\pagenumbering{arabic}
+\setcounter{page}{1}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\section{INTRODUCTION}
+In South Africa there are many services such as electricity, water and healthcare which are freely available to citizens or at low cost. The distribution of these basic resources could be defined as "service delivery". This project is aimed at providing a means to monitor service delivery in our country through the usage of a software application to conduct surveys and collect feed back from any citizen who utilises any service in healthcare. In South Africa, it has been publicised in media that healthcare service delivery has an impact on millions of peoples lives including their mortality \cite{InfantsDie}. Obtaining feedback on the health care system is critical to improving all citizens experiences of the health care system.
+
+The requirements of this project is to obtain feed back from the local community utilising the health care systems in order to improve them, specifically through developing a software application which can be used to conduct surveys. By conducting surveys efficiently and through a software application data can be obtained and analysed to provide appropriate reporting on how efficient the service delivery of health care in a particular area. South Africa as a third world country faces unique challenges such as connectivity to the internet \cite{Internet} which imposes challenges from a application development point of view. 
+
+\subsection{Project Requirements}
+The purpose of this project is to design a software application which will be used to gather information on the public health care service delivery and provide appropriate reporting. The surveys will be conducted in areas with little internet connectivity. This means that application must cater for capturing data "offline" and then uploaded centrally for reporting.
+
+\section{Literature Review}
+\subsection{Existing Solutions}
+There is a large number of solutions that exist in the market in terms of software applications which can be used to conduct surveys. Some of the solutions on the market do satisfy the basic project requirements \cite{ReviewSurvey}. SurveyGizmo \cite{SurveyGizmo} is a web application (software as a service) platform which features a 28 different customizable possible survey question and answer combinations. This solution also satisfies all requirements in particular off-line capability, features reporting and developer integration. SurveyMonkey \cite{SurveyMonkey} is similar to SurveyGizmo in that it offers a similar feature set. It also offers the ability to create custom reporting with text analysis. SurveyMonkey also features telephonic surveys where users are able to create surveys and have respondents answer using voice. 
+
+% Pricing options for this stuff means that existing solution is more effective than building your own app ???? 
+% Due to Economics of scale therefore pricing lower, verses building specific solution .... Scale is 1 to 1 for client for our POC prototype instead survey monkey supports Every client  Survey features are Customizable price lower due to volume .... 
+
+
+\subsection{Standards, Regulations and Policy}
+
+Reference HIPAA
+
+Reference 
+
+\section{Project Framework} % BAKS REQUIREMENT
+\subsection{Project Inception}
+\subsubsection{Business Case} % ETC
+
+\subsubsection{Scope of the Application}
+
+
+% KEY USERS
+%  STAKEHOLDERS STUFF
+
+
+\subsection{Project Requirements}
+\subsubsection{Specification By Example}
+% ALL OF BAKS FUNKY SHIT
+% TABLE GOES HERE FOR SPECS OF EXAMPLE
+
+
+\subsection{Project Constraints}
+
+\subsection{Project Assumptions}
+
+\subsection{Success Criteria}
+
+\subsubsection{For the users}
+
+
+
+
+\subsubsection{For the project}
+
+% 
+
+
+
+
+
+
+
+
+
+
+
+
+\subsection{Licensing Requirements}
+
+% THIS IS WHERE BAKS STUFF GOES 
+\section{Project Execution}
+A software project's successful execution relies heavily on the project team coming together to achieve a common goal CITE. To make sure the project team remains on track a specially role is required within the project team, this is commonly known as a project manager. 
+
+The project manager role is to manage all of the organizing and planning of a project. This may entail formalizing task allocation and tracking the estimated effort vs. the actual effort expended.
+While tracking the team’s effort the budget and cost analysis also needs to be considered as business or sponsors of the initiative require the PM to report back on progress vs. project budget spent. CITE
+
+The effective communication to all project stakeholders forms part of the project manager’s base responsibilities. Clearly and regularly communicating the risks, concerns and progress on a project to the appropriate stakeholders, allows for adjustments and decisions to be made in smaller increments thus allowing the team to adapt and remain on track to achieve the project’s goals.
+
+\subsection{Project Methodology}
+Project methodologies in the author's opinion should not be dictated but should rather be discussed and adapted to the team's preferences. During the first meeting the team members stated numerous technologies could achieve the business vision and requirements. However this also lead to scope discussions and possible future scope changes as early as the first planning session.
+
+Due to the highly volatile scope discussions within the team the decision to adopt a crafted quality methodology CITE started to present itself as front runner and methodology of choice. The project team agreed that the SCRUM methodology CITE would be implemented and the role of the project manager would change to be a SCRUM master.
+
+\subsection{Sprints}
+With the project vision and project deadline defined the high level planning allowed for allowed for eleven sprints CITE where one sprint would run for seven days. While deconstructing the requirements the high level deliverables were prioritized in the backlog and marked for delivery in specific sprints. These high level deliverables are shown in figure CITE and the detailed sprint planning can be viewed in appendixCITE.
+
+\subsection{Project Tools}
+Various tools were used to enable communication and collaboration within the
+group. A high focus was placed on this as the size of the group, distributed resource location, current work commitments, scope changes, technology challenge specifically the upskilling required on the chosen technology all required real time communication to the project team. The tools the project team agreed to use are listed in Table CITE.
+
+
+%  TABLE GOES HERE 
+
+Project Communication was implemented via gathering all the contact details for the project team, these were shared and used to create email and whatsappCITE groups for real time feedback. Formal Meetings where held weekly to track progress against the sprint planning vs the resource progress and formal meeting minutes where then sent. The formal meeting minutes are detailed in AppendixCITE. The team Collaboration was controlled by the use of trello boards CITEthis allowed task assignment, task tracking and progress updates without the need for formal face to face meetings. Managing the developers source code, the development resources agreed to implement GitHub. This tool allows the resources to align source code, track changes and backup source code.
+
+\section{Engineering the project solution}
+\subsection{Overall Architecture}
+
+% WE GO INTO WEB SERVER + WEB CLIENT + ANDROID 
+
+\subsection{Web Client}
+
+
+\subsubsection{Reporting}
+%  ANGULAR CAPTURE 
+% ALL FUNCTIONALITY OF WEB CLIENT
+%  ALSO INCLUDE REPORTING
+
+\subsection{Web Server}
+\subsubsection{Database Design}
+% ALL FUNCTIONALITY OF BACKEND
+% MONGODB AND DATA MODEL ETC ETC 
+
+
+\subsection{Android Application}
+
+
+\subsection{Testing}
+%  USER ACCEPTANCE TESTING DONE BY SCRUM TEAM
+%  MEETING ALL REQUIREMENTS SPECIFICATIONS BY EXAMPLES 
+%  ITERATIVELY ETC ETC UNIT TESTING ON NODE
+%  USER TESTING  BAKS STUFF GOES HERE 
+
+\section{Overall Critical Analysis and Evaluation}
+
+\subsection{Critical Analysis}
+
+\subsubsection{Project Execution}
+% SCRUM VS WATERFALL
+% ESTIMATION ? UNDER ESTIMATED 
+
+%  COMMS COLLOCATION
+
+%  
+
+\subsubsection{Project Solution}
+%  TRADE OFFS MUST BE MENTIONED
+%  SQL VS MONGO 
+% NATIVE VS HYBRID
+
+% WEB OFFLINE VS ANDROID OFFLINE
+
+% HIGHCHARTS AS REPORTING
+
+
+
+\subsection{Cost Model}
+\subsubsection{Economics of Scale}
+
+\subsubsection{Licensing of Prototype}
+
+
+\subsection{Evaluation of Output Solution}
+% SAY DOES IT MEET SUCCESS CRITERIA .....
+
+
+\section{Future Work}
+Future features of the application might include geospatial information, most modern devices are equipped with a built in GPS.The coordinates can be used to plot the location where every survey has been captured. This information can be plotted onto a map showing the exact location where the survey was captured. This will provide a quick overview of how many surveys have been conducted in a specific area.
+
+
+
+%  PLACE GEOPOSITION IMAGE
+
+As an enhancement to the current application it should be able to translate the survey questions into the relevant language of the person being surveyed. This will allow people to describe a situation they have experienced in their mother tongue and assist the customers in understanding the problems better.
+
+The project needed to be flexible so that it can easily be adapted to any other survey that the customer may be required to do in the future.
+
+People were allocated roles based on their strengths , some people were more technical and were assigned the developers role whilst other people were more suited to report writing. 
+
+Using proprietary software can be very expensive , often large organizations are given massive discounts and are encouraged to use a certain vendors software. Universities and academic organizations are often allowed to use software free of charge.
+This project is intended for for use by the public sector so hence the budgets will not be available for expensive proprietary systems. The goal has been to use open source and free software as far as possible to keep the solution relatively cost efficient. Using open source and free software the solution is able to avoid unnecessary software licensing costs and ensures that the application can be easily distributed on any platform.
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %
+% \section{PAPER FORMAT}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \subsection{Type sizes and type faces}
+
+% If you are using a typesetting package other than \LaTeX please follow these
+% instructions as closely as possible. The type sizes and fonts are specified in
+% \tabref{tab:fonts}.  Please use Times New Roman font, or other Roman font with
+% serifs, as close as possible in appearance to Times New Roman in which these
+% guidelines have been set.
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \subsection{Format}
+
+% The paper size is A4 (210 mm $\times$ 297 mm). The text length is 250 mm. The
+% left and right margins are 20 mm, the top margin is 25 mm and the bottom margin
+% is 32 mm. Do not use headers and footers. Do not include page numbers.  Apart
+% from the title, authors, affiliation, abstract and key words, the paper is in
+% two column format. The column width is 82 mm with a gutter between the columns
+% of 6mm. Left- and right-justify the columns. There must be no paragraph
+% indentation. All figures should be included electronically.
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \subsection{Title and subtitle}
+
+% The title at the top of the first page should be capitalised in a bold,
+% 12-point, Times New Roman font, with right and left justified text of no more
+% than three lines, as shown above. The title should be followed by a one
+% 12-point line spacing.  To distinguish the contribution made by each group
+% member, the project title may be followed by a colon and an appropriate
+% subtitle. For example, for a project titled ``INTELLIGENT IMPULSE
+% GENERATORS'', the first group member's subtitle could be ``: HARDWARE
+% CONSIDERATIONS'' and the second could be ``: SOFTWARE CONSIDERATIONS''.
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \subsection{Author}
+
+% The full name of the author should be listed as shown above. Use the author's
+% forename, middle initial(s) and surname in bold capital and lower case letters
+% (i.e. {\msbf John S. Smith}). Do not include titles, degrees or qualifications.
+% The author's name and initials should be in a bold, 10-point, Times New Roman
+% font, with right and left justified text. The author's details should be
+% followed by one 12-point line spacing.
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \subsection{Affiliation}
+
+% The affiliation of the author should be listed as shown above. This should be
+% in an italic, 9-point, Times New Roman font, with right and left justified
+% text. The affiliation should be followed by three 9-point line spacings.
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \subsection{Abstract}
+
+% The abstract should commence with the word {\msbf Abstract:} (with a colon), in
+% a bold (not italics), 9-point, Times New Roman font, followed by a maximum of
+% eight lines describing the essence of the paper, in a standard (not bold or
+% italics), 9-point, Times New Roman font, with right and left justified text, as
+% shown above. The abstract should be followed by one 9-point line spacing.
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \subsection{Keywords}
+
+% The keywords should commence with the words {\msbf Key words:} (with a colon),
+% in a bold (not italics), 9-point, Times New Roman font, followed by a maximum
+% of two lines of keywords or phrases, separated by commas, in a standard (not
+% bold or italics), 9-point, Times New Roman font, with right and left justified
+% text, as shown above.  The key words should be followed by three 9-point line
+% spacings.
+
+
+% \begin{table}[htb]
+%     \caption{Font size and styles for laboratory project papers.\label{tab:fonts}}
+%     \begin{center}
+%         \begin{tabular}{p{26mm}cp{35mm}}
+%         \hline
+%                                 &   {\msbf Type} & {\msbf Style -- Times New Roman} \\
+%                                 &   {\msbf Size} & \\
+%         \hline
+%           Title : Subtitle      & 12 & Capitals, bold, fully justified \\
+%           Author name           & 10 & Bold, fully justified \\
+%           Author affiliation    &  9 & Italics, fully justified \\
+%           Abstract              &  9 & Fully justified \\
+%           Main section heading  & 10 & Bold, capitalised, centred \\
+%           Second heading        & 10 & Italics, fully justified \\
+%           Main text             & 10 & Fully justified \\
+%                                 &    & No indent on 1st line \\
+%           Figure captions       & 10 & Centred below figure \\
+%           Table captions        & 10 & Centred above table \\
+%           References            & 10 & Fully justified \\
+%         \hline
+%         \end{tabular}
+%     \end{center}
+% \end{table}
+
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %
+% \section{HEADINGS AND BODY}
+
+% Number headings and sub-headings as shown. Number the Introduction but do not
+% number the Acknowledgment or References.
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \subsection{Main (first level) headings}
+
+% First level headings, starting with INTRODUCTION and ending with CONCLUSION,
+% should be sequentially numbered (1., 2., 3., etc.) and capitalised, in a bold,
+% 10-point, Times New Roman font, with centred text, as shown above. Each first
+% level heading should be followed by one 10-point line spacing.
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \subsection{Subheadings (second and third level headings)}
+
+% \subsubsection*{Second level headings:} These should be sequentially numbered
+% (e.g. 8.1, 8.2, etc.) and not capitalised, in an italics (not bold), 10-point,
+% Times New Roman font, with left and right justified text, as shown above.
+% Second level headings should not be indented, and each should be followed by
+% one 10-point line spacing.
+
+% \subsubsection*{Third level headings:} These should be in an italics (not bold),
+% 10-point, Times New Roman font, not be numbered, capitalised or indented,
+% followed by a colon and character space, and then immediately by the left and
+% right justified body of the subheading, as shown above.
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \subsection{Body}
+
+% The body of the paper should be in a standard (not bold or italics), 10-point,
+% Times New Roman font, with left and right justified text, as shown above.
+
+% Paragraphs within the body of the paper should be separated by a 10-point line
+% spacing, and the last paragraph under a heading or subheading should be
+% followed by one 10-point line spacing.
+
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %
+% \section{UNITS}
+
+% Use SI (Standard International - MKS) as a primary unit.  Other units may be
+% used as secondary units (in parenthesis) after the primary unit. One character
+% space should be left between the numerical value and its associated unit(s).
+
+% Care should be taken to ensure that the numerical value and its associated
+% unit(s) appear on the same line (e.g. by the use of a hard character space
+% between the numerical value and its associated units).
+
+% Note that there is a useful package available for \LaTeX~ called \verb|siunits|
+% -- access the nearest CTAN archive to obtain it.
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %
+% \section{EQUATIONS AND REFERENCES}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \subsection{Equations}
+
+% Number the equations consecutively with equation numbers in parentheses flush
+% with the right margin as in \eqnref{eqn:In}.
+
+% \begin{equation}
+%     I_n = \sum\limits_{q=1}^\infty \hat{I}_{n} \cos (s_q\omega t - \phi_{bq})
+%     \label{eqn:In}
+% \end{equation}
+
+% Where:
+
+% \begin{tabular}{lll}
+% $\hat{I}_{n}$  & = peak magnitude of current [A] \\
+% $s_{q}$        & = the per unit slip of harmonic $q$ \\
+% $\omega$       & = the supply frequency [rad/s] \\
+% $\phi_{eq} $   & = phase angle for harmonic $q$ [rad] \\
+% \end{tabular}
+
+% And:
+
+% \begin{equation}
+%     \lambda = \sqrt{\left|3.\frac{z_b}{R_c}\right|}
+%     \label{eqn:lambda}
+% \end{equation}
+
+
+% To make your equations more compact you may use the solidus (/), the exp
+% function or appropriate exponents.  Italicise symbols for quantities and
+% variables. Ensure that the symbols in your equation have been defined before or
+% immediately after the equation appears. Refer to \eqnref{eqn:In} rather than ``eq. \eqnref{eqn:In}'' or
+% ``equation \eqnref{eqn:In}'' except at the beginning of a sentence.
+
+% A 1.5-line spacing should be included above and below the equation for clarity.
+% Where possible, indent the equation.
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \subsection{References}
+
+% A testing \cite{muller:2003:dbr} numbered list of references should be provided at the end of the paper. The
+% list should be arranged in the order of citation in the text. List only one
+% reference per reference number. Number citations consecutively in square
+% brackets \cite{muller:2003:dbr}. The sentence punctuation follows the brackets
+% \cite{finn:2003:dip}. Multiple references are each numbered within one pair of
+% brackets \cite{finn:2003:dip,vas:1992:smi}. In sentences, refer to the
+% reference number, as in \cite{vas:1992:smi}. Do not use ``Ref.
+% \cite{vas:1992:smi}'' or ``reference \cite{vas:1992:smi}'' except at the
+% beginning of a sentence: ``Reference \cite{vas:1992:smi} shows \ldots''. Do
+% not use footnotes for references.
+
+% When citing references in the text, the corresponding reference number(s) in
+% square brackets should be given e.g. \cite{muller:2003:dbr},
+% \cite{muller:2003:dbr,vas:1992:smi,abdel-salam:1990:elf} or
+% \cite{muller:2003:dbr,finn:2003:dip,vas:1992:smi,abdel-salam:1990:elf}. Only
+% references that are actually cited in the text should be listed. References
+% should be complete, in IEEE style, and in a 10-point, Times New Roman font.
+
+% \subsubsection*{Style for published papers:} Author(s) (initials and surnames),
+% title (in inverted commas), periodical (italics), volume and issue number, page
+% numbers (inclusive), month and year (optional) \cite{muller:2003:dbr,finn:2003:dip}.
+
+% \subsubsection*{Style for conference papers:} Author(s) (initials and surnames),
+% title (in inverted commas), full conference name (italics), location, page
+% numbers (inclusive), month and year \cite{vas:1992:smi}.
+
+% \subsubsection*{Style for books:} Author(s) (initials and surnames), title
+% (italics), publisher, location, edition number, chapters and/or page numbers
+% (inclusive), month and year (optional) \cite{abdel-salam:1990:elf}.
+
+% The references at the end of this document are in the preferred referencing
+% style.
+
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %
+% \section{FIGURES AND TABLES}
+
+% Figures, illustrations, tables and graphs should be embedded within the body of
+% the document as close as possible to the first reference to the figure or
+% table. Where possible, these should fit within a single column width.  However,
+% if essential for the appearance and readability of the text, figures and tables
+% may span two column widths. Alternatively, if this is not possible, figures and
+% tables may be included at the end of the paper.  Figures and tables should be
+% sequentially numbered and a title should be included under the figure or above
+% the table in a standard (not bold or italics), 10-point, Times New Roman font,
+% with centred text, as shown in \figref{fig:example} below.
+
+% \inputfig{img\example}{Example figure for laboratory project paper.}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \subsection{Figures}
+
+% Figures should be centred horizontally in the column.  Large figures may span
+% both columns. Figure captions should be below the figures, which should be
+% numbered consecutively as they appear in the text. Do not abbreviate ``Figure''.
+% The caption should read ``Figure 1: \ldots''. Ensure that the text within the
+% figures is not too small and is legible when printed.
+
+% Figure legends and axes labels should be legible. Use words rather than symbols
+% on figure axes. Put units in parenthesis. Do not label axes only with units.
+% Colour printing is not available. Ensure all figures are clear when printed in
+% greyscale. Photographs and greyscale figures should be prepared with a
+% resolution no greater than 300 dpi. Black and white line art should be prepared
+% with a resolution no greater than 1000 dpi. Avoid including colour photographs.
+
+% If your figure has two parts, include the labels ``(a)'' and ``(b)'' as part of
+% the figure. Do not put captions in text boxes linked to the figures. Do not put
+% borders around the outside of your figures. All figures should be included
+% electronically.
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \subsection{Tables}
+
+% Table captions should be above the tables, which should be numbered
+% consecutively as they appear in the text. Do not abbreviate ``Table.'' Vertical
+% lines in the table are unnecessary. Each column should be clearly headed and
+% appropriate symbols and units included.
+
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %
+% \section{HELPFUL HINTS}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \subsection{General}
+
+% Use a zero before the decimal point, and a full-stop (period) for the decimal
+% point, rather than a comma.  Remember to check spelling. If your native
+% language is not English, try to get a native English-speaking colleague to
+% proof-read your paper.
+
+% If you need to include snippets of source code in the paper, have a look at the
+% package for \LaTeX called \verb|listings|.
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \subsection{Abbreviations and Acronyms}
+
+% Define abbreviations and acronyms the first time they are used in the text. Do
+% not use abbreviations in the title unless they are unavoidable. The
+% abbreviation for ``seconds'' is ``s,'' not ``sec.'' Do not mix complete
+% spellings and abbreviations of units: use ``Wb/m$^2$'' or ``Webers per square
+% metre,'' not ``Webers/m$^2$'' .
+
+% %%%
+% % Automatically balance the output of the last page
+% \balance
+% %%%
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %
+% \section{EDITORIAL POLICY}
+
+% Do not submit a reworked version of a paper you have submitted or published
+% elsewhere. It is the responsibility of the authors to determine whether
+% disclosure of the material requires the prior consent of other parties, such as
+% sponsors, and if so, to obtain it.
+
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %
+% \section{PAPER SUBMISSION}
+
+% The electronic version of the final paper must be submitted in Portable
+% Document Format (PDF), on or before the project submission deadline, using the
+% submission system available at:
+
+% \begin{center}
+% \ahref{http://dept.ee.wits.ac.za/labproj/submission/}
+% \end{center}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\section{CONCLUSION}
+
+A conclusion may review the main points of the paper, but do not replicate the
+abstract as the conclusion.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+
+\newpage
+\newcommand{\summary}[1]{\addtocontents{toc}{#1\par}}
+\phantomsection
+\addcontentsline{toc}{section}{REFERENCES}
+
+
+\renewcommand{\bibname}{REFERENCES}
+\renewcommand*{\bibfont}{\raggedright}
+
+\bibliographystyle{witseie}
+\bibliography{sample}
+
+\newpage
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\pagestyle{plain}
+\pagenumbering{Alph}
+\renewcommand\thesection{\Alph{section}}
+\setcounter{section}{0}
+
+\section{Appendix A:Use Case Diagrams}
+asdadasdas.
+\end{document}
+
+% Appendix
+
+%   A - Use case diagrams
+%   B - ScreenShots of Application sections that meet key requirements
+%   C - Dev User Guide
+%   D - User Training Guide
+%   E - Report Demo / Example
+%   F - Meeting Minutes
+%   G - Group Timesheets
+%   H - Licenses
