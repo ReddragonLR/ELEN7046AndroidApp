@@ -1,0 +1,46 @@
+\begin{thebibliography}{1}
+\newcommand{\enquote}[1]{``#1''}
+\providecommand{\url}[1]{{\tt #1}}
+\providecommand{\urlprefix}{URL }
+
+\bibitem{InfantsDie}
+Z.~M.~C. Press.
+\newblock \enquote{Infants die in droves due to negligence, poor healthcare
+  facilities.}
+\newblock
+  http://www.news24.com/SouthAfrica/News/Infants-die-in-droves-due-to-negligence-poor-healthcare-facilities-20150524.
+\newblock Last accessed: 27-June-2015.
+
+\bibitem{Internet}
+MyBroadBand.
+\newblock \enquote{South Africa’s Internet access stats revealed.}
+\newblock
+  http://mybroadband.co.za/news/internet/85165-south-africas-internet-access-stats-revealed.html.
+\newblock Last accessed: 27-June-2015.
+
+\bibitem{ReviewSurvey}
+TopTenReviews.
+\newblock \enquote{2015 Best Survey Software Reviews and Comparisons.}
+\newblock http://survey-software-review.toptenreviews.com/.
+\newblock Last accessed: 27-June-2015.
+
+\bibitem{SurveyGizmo}
+S.~C.~W. Unknown~Author.
+\newblock \enquote{SurveyGizmo.}
+\newblock http://www.surveygizmo.com/.
+\newblock Last accessed: 27-June-2015.
+
+\bibitem{SurveyMonkey}
+S.~C.~W. Unknown~Author.
+\newblock \enquote{SurveyMonkey.}
+\newblock http://www.surveymonkey.com/.
+\newblock Last accessed: 27-June-2015.
+
+\bibitem{HIPAA}
+TopTenReviews.
+\newblock \enquote{HIPAA General Information. Centres for Medicare Medicaid
+  Services Website. Federal Government Website.}
+\newblock http://www.cms.gov/.
+\newblock Last accessed: 27-June-2015.
+
+\end{thebibliography}
