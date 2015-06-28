@@ -390,7 +390,7 @@ Table ~\ref{tbl:use} shows a list of the specifications by example that are appl
 This project should utilise MIT licenses and free licences where possible.
 
 \section{Project Execution}
-A software project's successful execution relies heavily on the project team coming together to achieve a common goal CITE. To make sure the project team remains on track a specially role is required within the project team, this is commonly known as a project manager. 
+A software project's successful execution relies heavily on the project team meeting all desired success criteria defined in the project requirements. To make sure the project team remains on track a specially role is required within the project team, this is commonly known as a software project manager. 
 
 The project manager role is to manage all of the organizing and planning of a project. This may entail formalizing task allocation and tracking the estimated effort vs. the actual effort expended.
 While tracking the team’s effort the budget and cost analysis also needs to be considered as business or sponsors of the initiative require the PM to report back on progress vs. project budget spent. CITE
@@ -405,11 +405,49 @@ Due to the highly volatile scope discussions within the team the decision to ado
 \subsection{Sprints}
 With the project vision and project deadline defined the high level planning allowed for allowed for eleven sprints CITE where one sprint would run for seven days. While de-constructing the requirements the high level deliverables were prioritized in the backlog and marked for delivery in specific sprints. These high level deliverables are shown in figure CITE and the detailed sprint planning can be viewed in appendixCITE.
 
+\subsection{Project Team}
+
+% asdadasdas  this adds the image of the team
+
+
+\subsection{Project Estimation and Costing}
+During the project initiation the business stakeholders will review estimations and high level costing before committing to assigning the budget. The estimations for the proof of concept where based on variable scope and requirements. Due to the variability in requirements the estimation accuracy will not be at a high confidence level. Therefore the POC could result in either an over estimation or under estimating. The proof of concept was estimated at a total of 825 effort hours and 5 resources were assigned. The team calculated that a single weekly sprint would consist of 75 hours, this would in turn be the project teams weekly burn rate. Therefore if we assume an average blended resource rate of R500 an hour the cost per sprint can be calculate as follows.
+
+
+
+% MAKE THE TABLE LEFT JUSTIFIED
+\begin{table}[htb] \caption{Table showing the effort placed into the project and its cost.} \label{tbl:cost} 
+    \begin{center}
+  \begin{tabular}
+     {|c|c|} %\textbf{Use} &\textbf{Description}\\
+    % \textbf{Case} &\\
+    \hline Total Project Estimation &825 Hours\\
+    \hline Total Sprint Effort Hours &75 Hours\\
+    \hline Total Cost per Sprint &R 37 500\\
+    \hline Total Cost of POC & R 412 500 \\
+    \hline 
+  \end{tabular}
+      \end{center}
+\end{table}
+
+With the POC costing R 412 500 as an estimate the project continued and executed at the required weekly burn rate. However as the requirements become more detailed and clear the project team realized that the estimation had been under quoted. In this scenario depending on the how the contract for this project was drawn up the whether it be a Fixed price or time and materials based contract, would have a direct impact on the teams involved in the project. In the fixed price contract the business stakeholder would pay a single fee regardless of the under or over estimation. The benefit to the software team would be the quicker and cheaper they deliver the working POC the more profit they would make from this software application. If the contract was time and material, specifically with variable requirements the software team will be able to request further funding and the business would need to manage the allocation of additional funding via a formal process (Change request or change note).
+
 \subsection{Project Tools}
 Various tools were used to enable communication and collaboration within the
 group. A high focus was placed on this as the size of the group, distributed resource location, current work commitments, scope changes, technology challenge specifically the upskilling required on the chosen technology all required real time communication to the project team. The tools the project team agreed to use are listed in Table CITE.
 
 Project Communication was implemented via gathering all the contact details for the project team, these were shared and used to create email and whatsappCITE groups for real time feedback. Formal Meetings where held weekly to track progress against the sprint planning vs the resource progress and formal meeting minutes where then sent. The formal meeting minutes are detailed in AppendixCITE. The team Collaboration was controlled by the use of trello boards CITEthis allowed task assignment, task tracking and progress updates without the need for formal face to face meetings. Managing the developers source code, the development resources agreed to implement GitHub. This tool allows the resources to align source code, track changes and backup source code.
+
+\subsection{Testing}
+Testing for the project is performed from an acceptance testing level, where the project requirements are directly used to create acceptance tests (http://www.extremeprogramming.org/rules/functionaltests.html). In the context of this project, this level of testing is deemed appropriate as the goal of this project is to identify that the software is capable of achieving the desired client functionality.
+The executable specifications produced in the requirement specification are directly utilised in defining the test cases. The advantage noted by doing this is that no additional test case creation phase is required at acceptance level phase and the software is tested using what was jointly agreed upon as the scope and functionality of the project.
+
+
+
+%  USER ACCEPTANCE TESTING DONE BY SCRUM TEAM
+%  MEETING ALL REQUIREMENTS SPECIFICATIONS BY EXAMPLES 
+%  USER TESTING  BAKS STUFF GOES HERE
+
 
 \section{Engineering the project solution}
 \subsection{Overall Architecture}
@@ -433,16 +471,9 @@ Project Communication was implemented via gathering all the contact details for 
 \subsection{Android Application}
 
 
-\subsection{Testing}
-%  USER ACCEPTANCE TESTING DONE BY SCRUM TEAM
-%  MEETING ALL REQUIREMENTS SPECIFICATIONS BY EXAMPLES 
-%  ITERATIVELY ETC ETC UNIT TESTING ON NODE
-%  USER TESTING  BAKS STUFF GOES HERE
-
 \subsection{Licences used in solution}
  
-Testing for the project is performed from an acceptance testing level, where the project requirements are directly used to create acceptance tests (http://www.extremeprogramming.org/rules/functionaltests.html). In the context of this project, this level of testing is deemed appropriate as the goal of this project is to identify that the software is capable of achieving the desired client functionality.
-The executable specifications produced in the requirement specification are directly utilised in defining the test cases. The advantage noted by doing this is that no additional test case creation phase is required at acceptance level phase and the software is tested using what was jointly agreed upon as the scope and functionality of the project.
+
 \section{Overall Critical Analysis and Evaluation}
 
 \subsection{Critical Analysis}
@@ -465,9 +496,12 @@ The executable specifications produced in the requirement specification are dire
 % HIGHCHARTS AS REPORTING
 
 
+\subsection{Estimates verses Actual effort}
+asdadasdas
 
-\subsection{Cost Model}
-\subsubsection{Economics of Scale}
+\subsection{Economics and Cost Model}
+The last element to the cost model is to look at Commercial Off The Shelf Solutions (COTS),  please refer to the section titled Existing solutions. In this case the business stakeholders should be guided by the software architects as perhaps the cost of starting the POC compared to purchasing a COTS product might not make financial sense. The reason for this is due to the economics of scale, the POC would be a custom application and assumingly used by only the business entity. Whereby the COTS products are used by numerous customers globally that have the same basic requirements. In this case the research into the existing solutions has confirmed that they meet the expected minimum requirements therefore the benefit of adopting a COTS would mean that the solution would be available immediately instead of the 825 estimated hours to build the POC and the COTS software teams would be maintain the application and support the business stakeholders via the annual subscription fees. The current assumption is that the business stakeholder would be able to use the COTS products for +-37 years for the same price the POC cost.
+
 
 \subsubsection{Licensing of Prototype}
 

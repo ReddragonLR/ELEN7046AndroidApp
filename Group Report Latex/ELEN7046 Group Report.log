@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.10.5)  28 JUN 2015 14:51
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.10.5)  28 JUN 2015 17:13
 entering extended mode
 **C:/development/University/ELEN7046/Android*Client/ELEN7046AndroidApp/Group*Re
 port*Latex/ELEN7046*Group*Report.tex
@@ -496,13 +496,13 @@ Missing character: There is no ™ in font cmr12!
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no ™ in font cmr12!
- [4]
-Overfull \hbox (110.1289pt too wide) in paragraph at lines 444--446
+ [4] [5]
+Overfull \hbox (110.1289pt too wide) in paragraph at lines 445--447
 \OT1/cmr/m/n/12 ments are di-rectly used to cre-ate ac-cep-tance tests (http://
 www.extremeprogramming.org/rules/functionaltests.html).
  []
 
-[5] [6] [7]
+[6] [7]
 ("C:\development\University\ELEN7046\Android Client\ELEN7046AndroidApp\Group Re
 port Latex\ELEN7046 Group Report.bbl"
 Missing character: There is no â in font cmr12!
@@ -512,30 +512,30 @@ Missing character: There is no ™ in font cmr12!
 1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.861 ...: Requirements Engineering Documentation}
+l.895 ...: Requirements Engineering Documentation}
                                                   pdfTeX warning (ext4): destin
 ation with the same identifier (name{subsection.1.1}) has been already used, du
 plicate ignored
 <to be read again> 
                    \relax 
-l.863 \subsection{Key Examples}
+l.897 \subsection{Key Examples}
                                
-Underfull \hbox (badness 10000) in paragraph at lines 905--909
+Underfull \hbox (badness 10000) in paragraph at lines 939--943
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 910--913
+Underfull \hbox (badness 10000) in paragraph at lines 944--947
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 914--917
+Underfull \hbox (badness 10000) in paragraph at lines 948--951
 
  []
 
 [1]
-Underfull \hbox (badness 10000) in paragraph at lines 918--921
+Underfull \hbox (badness 10000) in paragraph at lines 952--955
 
  []
 
@@ -543,126 +543,127 @@ Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no ™ in font cmr12!
 
-Underfull \hbox (badness 10000) in paragraph at lines 922--929
+Underfull \hbox (badness 10000) in paragraph at lines 956--963
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 930--934
+Underfull \hbox (badness 10000) in paragraph at lines 964--968
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 935--940
+Underfull \hbox (badness 10000) in paragraph at lines 969--974
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 941--946
+Underfull \hbox (badness 10000) in paragraph at lines 975--980
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 947--950
+Underfull \hbox (badness 10000) in paragraph at lines 981--984
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 951--954
+Underfull \hbox (badness 10000) in paragraph at lines 985--988
 
  []
 
-<./Specs/1.pdf, id=312, 845.1575pt x 597.23125pt>
+<./Specs/1.pdf, id=324, 845.1575pt x 597.23125pt>
 File: ./Specs/1.pdf Graphic file (type pdf)
  <use ./Specs/1.pdf>
-Package pdftex.def Info: ./Specs/1.pdf used on input line 955.
+Package pdftex.def Info: ./Specs/1.pdf used on input line 989.
 (pdftex.def)             Requested size: 845.15544pt x 597.22978pt.
 File: ./Specs/1.pdf Graphic file (type pdf)
 
 <use ./Specs/1.pdf>
-Package pdftex.def Info: ./Specs/1.pdf used on input line 955.
+Package pdftex.def Info: ./Specs/1.pdf used on input line 989.
 (pdftex.def)             Requested size: 845.15544pt x 597.22978pt.
  [2]
-<./Specs/1.pdf, id=319, page=1, 845.1575pt x 597.23125pt>
+<./Specs/1.pdf, id=331, page=1, 845.1575pt x 597.23125pt>
 File: ./Specs/1.pdf Graphic file (type pdf)
 
 <use ./Specs/1.pdf, page 1>
-Package pdftex.def Info: ./Specs/1.pdf, page1 used on input line 955.
+Package pdftex.def Info: ./Specs/1.pdf, page1 used on input line 989.
 (pdftex.def)             Requested size: 845.15544pt x 597.22978pt.
 File: ./Specs/1.pdf Graphic file (type pdf)
  <use ./Specs/1.pdf, page 1>
-Package pdftex.def Info: ./Specs/1.pdf, page1 used on input line 955.
+Package pdftex.def Info: ./Specs/1.pdf, page1 used on input line 989.
 (pdftex.def)             Requested size: 597.61578pt x 422.30568pt.
 File: ./Specs/1.pdf Graphic file (type pdf)
 
 <use ./Specs/1.pdf, page 1>
-Package pdftex.def Info: ./Specs/1.pdf, page1 used on input line 955.
+Package pdftex.def Info: ./Specs/1.pdf, page1 used on input line 989.
 (pdftex.def)             Requested size: 597.61578pt x 422.30568pt.
 File: ./Specs/1.pdf Graphic file (type pdf)
  <use ./Specs/1.pdf, page 1>
-Package pdftex.def Info: ./Specs/1.pdf, page1 used on input line 955.
+Package pdftex.def Info: ./Specs/1.pdf, page1 used on input line 989.
 (pdftex.def)             Requested size: 597.61578pt x 422.30568pt.
 File: ./Specs/1.pdf Graphic file (type pdf)
 
 <use ./Specs/1.pdf, page 1>
-Package pdftex.def Info: ./Specs/1.pdf, page1 used on input line 955.
+Package pdftex.def Info: ./Specs/1.pdf, page1 used on input line 989.
 (pdftex.def)             Requested size: 597.61578pt x 422.30568pt.
  [3 <C:/development/University/ELEN7046/Android Client/ELEN7046AndroidApp/Group
- Report Latex/Specs/1.pdf, page is rotated 90 degrees>] <./Specs/1.pdf, id=335,
+ Report Latex/Specs/1.pdf, page is rotated 90 degrees>] <./Specs/1.pdf, id=347,
  page=2, 845.1575pt x 597.23125pt>
 File: ./Specs/1.pdf Graphic file (type pdf)
 
 <use ./Specs/1.pdf, page 2>
-Package pdftex.def Info: ./Specs/1.pdf, page2 used on input line 955.
+Package pdftex.def Info: ./Specs/1.pdf, page2 used on input line 989.
 (pdftex.def)             Requested size: 597.61578pt x 422.30568pt.
 File: ./Specs/1.pdf Graphic file (type pdf)
  <use ./Specs/1.pdf, page 2>
-Package pdftex.def Info: ./Specs/1.pdf, page2 used on input line 955.
+Package pdftex.def Info: ./Specs/1.pdf, page2 used on input line 989.
 (pdftex.def)             Requested size: 597.61578pt x 422.30568pt.
 File: ./Specs/1.pdf Graphic file (type pdf)
 
 <use ./Specs/1.pdf, page 2>
-Package pdftex.def Info: ./Specs/1.pdf, page2 used on input line 955.
+Package pdftex.def Info: ./Specs/1.pdf, page2 used on input line 989.
 (pdftex.def)             Requested size: 597.61578pt x 422.30568pt.
  [4 <C:/development/University/ELEN7046/Android Client/ELEN7046AndroidApp/Group
- Report Latex/Specs/1.pdf, page is rotated 90 degrees>] <./Specs/1.pdf, id=341,
+ Report Latex/Specs/1.pdf, page is rotated 90 degrees>] <./Specs/1.pdf, id=353,
  page=3, 845.1575pt x 597.23125pt>
 File: ./Specs/1.pdf Graphic file (type pdf)
 
 <use ./Specs/1.pdf, page 3>
-Package pdftex.def Info: ./Specs/1.pdf, page3 used on input line 955.
+Package pdftex.def Info: ./Specs/1.pdf, page3 used on input line 989.
 (pdftex.def)             Requested size: 597.61578pt x 422.30568pt.
 File: ./Specs/1.pdf Graphic file (type pdf)
  <use ./Specs/1.pdf, page 3>
-Package pdftex.def Info: ./Specs/1.pdf, page3 used on input line 955.
+Package pdftex.def Info: ./Specs/1.pdf, page3 used on input line 989.
 (pdftex.def)             Requested size: 597.61578pt x 422.30568pt.
 File: ./Specs/1.pdf Graphic file (type pdf)
 
 <use ./Specs/1.pdf, page 3>
-Package pdftex.def Info: ./Specs/1.pdf, page3 used on input line 955.
+Package pdftex.def Info: ./Specs/1.pdf, page3 used on input line 989.
 (pdftex.def)             Requested size: 597.61578pt x 422.30568pt.
  [5 <C:/development/University/ELEN7046/Android Client/ELEN7046AndroidApp/Group
  Report Latex/Specs/1.pdf, page is rotated 90 degrees>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 958.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 958.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 992.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 992.
 
 ("C:\development\University\ELEN7046\Android Client\ELEN7046AndroidApp\Group Re
 port Latex\ELEN7046 Group Report.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 958.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 958.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 992.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 992.
 Package rerunfilecheck Info: File `ELEN7046*Group*Report.out' has not changed.
 (rerunfilecheck)             Checksum: <no file>.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 958.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 992.
  )
+(\end occurred when \ifx on line 419 was incomplete)
 (\end occurred when \ifx on line 328 was incomplete) 
 Here is how much of TeX's memory you used:
- 7325 strings out of 493921
- 107419 string characters out of 3147252
- 199889 words of memory out of 3000000
- 10435 multiletter control sequences out of 15000+200000
+ 7331 strings out of 493921
+ 107486 string characters out of 3147252
+ 199971 words of memory out of 3000000
+ 10438 multiletter control sequences out of 15000+200000
  24648 words of font info for 90 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 39i,18n,43p,1137b,444s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 39i,18n,43p,1250b,444s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.
 9/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/publ
 ic/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfo
@@ -672,9 +673,9 @@ cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb
 gram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program File
 s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Program Files/MiKTeX
  2.9/fonts/type1/urw/times/utmb8a.pfb>
-Output written on "ELEN7046 Group Report.pdf" (20 pages, 217248 bytes).
+Output written on "ELEN7046 Group Report.pdf" (20 pages, 221768 bytes).
 PDF statistics:
- 390 PDF objects out of 1000 (max. 8388607)
- 70 named destinations out of 1000 (max. 500000)
- 383 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 404 PDF objects out of 1000 (max. 8388607)
+ 73 named destinations out of 1000 (max. 500000)
+ 399 words of extra memory for PDF output out of 10000 (max. 10000000)
 
