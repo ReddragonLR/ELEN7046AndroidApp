@@ -320,7 +320,7 @@ Depending on the information that is captured through survey questions there cou
 \noindent By conducting surveys, one can identify the misalignment between services required by communities and services rendered by its designated service providers. The result of gathering information about service delivery (in this scenario specifically health care) is that insights and observations can be gained in order to improve service delivery. This could have a variety of impacts including improving people's ability to receive high levels of service and possibly have an impact on their quality of life. Increasing the amount of engagement with the community allows for feedback to be provided to improve service delivery.
 
 \subsection{Scope of the Application:}
-The scope of the application will progressively change with each iteration. As an iteration is successful more features and improvements can be added to each version of the project.
+The scope of the application progressively changes with each iteration. As an iteration is successful more features and improvements can be added to each version of the project.
 
 \emph{Key Users} 
 \begin{itemize}
@@ -339,10 +339,10 @@ The scope of the application will progressively change with each iteration. As a
 
 \subsection{Project Requirements}
 \subsubsection{Specification By Example}
-Specification by example (SBE) is a collaborative approach where by the team defines requirements and business orientated functional tests for software based on capturing and illustrating requirements using realistic examples. This method was utilised to obtain the specific requirements of the project.
-Table ~\ref{tbl:use} shows a list of the specifications by example that are applicable to the project. Appendix A features the detailed specifications by example.
+Specification by Example (SBE) is a collaborative approach where by the team defines requirements and business orientated functional tests for software based on capturing and illustrating requirements using realistic examples. This method is utilised to obtain the specific requirements of the project.
+Table ~\ref{tbl:use} shows a list of the specifications by example that are applicable to the project. Appendix A features the detailed requirement specifications artefacts including key examples as well as the specifications by example.
 
-\begin{table}[htb] \caption{Table showing a list of specifications by example.} \label{tbl:use} 
+\begin{table}[htb] \caption{Table showing a list of the key examples.} \label{tbl:use} 
     \begin{center}
   \begin{tabular}
     {|c|c|} \hline \textbf{Use} &\textbf{Description}\\
@@ -382,7 +382,7 @@ Table ~\ref{tbl:use} shows a list of the specifications by example that are appl
   \item Surveyors are able to capture answers in the form of yes/no questions, free form text and a selection with predefined answers.
   \end{itemize}
     \item Administrators \begin{itemize}
-  \item Administrators should be create any surveys with the desired answer options.
+  \item Administrators should be able to create any surveys with the desired answer options.
   \item They should be able to authenticate and login in to the platform.
   \item Administrators should be able to view reporting information on the surveys which have successfully uploaded to the system.
   \end{itemize}
@@ -568,7 +568,10 @@ The web client utilizes a variety of technologies that allow for rapid front-end
 
 \subsection{Critical Analysis}
 
+
 \subsubsection{Project Execution}
+
+
 % SCRUM VS WATERFALL
 % ESTIMATION ? UNDER ESTIMATED 
 %  COMMS COLLOCATION
@@ -601,17 +604,33 @@ While critically analysing the project execution phase of the project the team i
 % HIGHCHARTS AS REPORTING
 \textit{Positives}
 
-<<<<<<< HEAD
-\textit{Negatives}
-=======
-\subsection{Advantages and dissadvantages} 
-
-The current application is written in native android sdk which makes the application faster to run on android devices. The android and web application are multi-channel architecture which leverage on new technology and can be run on hand held devices. Developing and running the application on an android device makes the GUI very fast and responsive \cite{AndroidNative} to speed on native android]. The application makes use of on device provisioning, there is no setup required or the need for surveyors to go to a central location to install the software. The application can simply be downloaded and installed onto most devices running the android OS. The android and web application can easily be deployed to a live or cloud environment. The way of working is highly collaborative, each team member is able to work independently and share work with other team members by using technologies such as github \cite{GitHub}. The technology stack uses the same language for all the layers within the stack from the front end to the database, a developer with java script knowledge will be able to use the software effectively, there is no need to employ developers with different skill sets. 
-
-Due to time constraints on the project the delivery of the project superseded the requirement to implement industry best practices and standards. The API (Application programming interface) has no security and can essentially be called by any browser or web service, security will have to be enforced using token based authentication. Although the software stack allows for excellent automated testing the application lacks significant automated tests mainly due to time constraints with the project. Most of the testing has been done manually. The native android application will require constant maintenance to keep it up to date, As soon as a new version of the android OS is released there is a chance that the application be become deprecated. Future sprints will be required to keep the mobile platform up to date. 
 
 
->>>>>>> 62ab412b5558c87aeb4c9c476672eca89558da7a
+\subsubsection{Project Engineering}
+
+Critical analysis of the project engineering has identified some positives and negatives the team can take advantage of the positives and learn from the negatives for future projects. 
+
+\textit{Positives:}
+
+\begin{itemize}
+\item The current application is written in native android sdk which makes the application faster to run on android devices. 
+\item The android and web application are multi-channel architecture which leverage on new technology and can be run on hand held devices. Developing and running the application on an android device makes the GUI very fast and responsive \cite{AndroidNative}.
+\item The application makes use of on device provisioning, there is no setup required or the need for surveyors to go to a central location to install the software. The application can simply be downloaded and installed onto most devices running the android OS. 
+\item The android and web application can easily be deployed to a live or cloud environment. 
+\item The way of working is highly collaborative, each team member is able to work independently and share work with other team members by using technologies such as github \cite{GitHub}. 
+\item The technology stack uses the same language for all the layers within the stack from the front end to the database, a developer with java script knowledge will be able to use the software effectively, there is no need to employ developers with different skill sets. 
+\end{itemize}
+
+\textit{Negatives:}
+
+\begin{itemize}
+\item Due to time constraints on the project the delivery of the project superseded the requirement to implement industry best practices and standards.
+\item The API (Application programming interface) has no security and can essentially be called by any browser or web service, security will have to be enforced using token based authentication.
+\item Although the software stack allows for excellent automated testing the application lacks significant automated tests mainly due to time constraints with the project. Most of the testing has been done manually.
+\item The native android application will require constant maintenance to keep it up to date, As soon as a new version of the android OS is released there is a chance that the application be become deprecated. Future sprints will be required to keep the mobile platform up to date. 
+\end{itemize}
+
+
 
 \subsection{Estimates verses Actual effort}
 The total effort of the POC amounted to 1139 hours, this total was collected from all the timesheets that the resources assigned to the project captured (See Appendix Group Timesheets). This meant the project under estimated by a total of 314 hours and over spent on the budget by R 157 000.  The additional time was due to underestimation of the external factors faced by the software team, such as planned leave, other commitments, family emergencies and the under estimation in attaining the required skills on the new technology. This was the largest contributor as ever team member had to learn the basics of the technology to be able to contribute effectively to the overall solution.
