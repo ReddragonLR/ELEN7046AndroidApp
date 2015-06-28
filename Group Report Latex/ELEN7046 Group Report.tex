@@ -8,8 +8,17 @@
 % Required for including pictures
 \usepackage{float} 
 
-% Allows putting an [H] in \begin{figure} to specify the exact location of the figure
+
 \usepackage{wrapfig} 
+
+%%%%%%%%%%%%%%%
+\usepackage{fancyhdr}
+\usepackage{pdfpages}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\thepage}
+
 \ifpdf
 \pdfinfo{
 % /Title (INSTRUCTIONS AND STYLE GUIDELINES FOR THE PREPARATION OF FINAL YEAR LABORATORY PROJECT PAPERS : 2005 VERSION)
@@ -114,13 +123,13 @@
 % DECLARATION PAGE
 % Your institution may give you a different text to place here
 %----------------------------------------------------------------------------------------
- \renewcommand\thesection{\Alph{section}}
- \setcounter{section}{0}
+ % \renewcommand\thesection{\Alph{section}}
+ % \setcounter{section}{0}
 
  \thispagestyle{empty}\pagestyle{empty}
  \begin{center}
- \section{DECLARATION}
- % \textsc{\bfseries DECLARATION} \\ [1.0cm]
+ % \section{DECLARATION}
+  \textsc{\bfseries DECLARATION} \\ [1.0cm]
  \end{center}
 I ALTER THIS TO PLEDGEARISM AND GROUP WORK BREAKDOWN, Avanindra Singh, declare that this thesis titled, 'My Thesis' and the work presented in it are my own. I confirm that:
 
@@ -174,8 +183,8 @@ I ALTER THIS TO PLEDGEARISM AND GROUP WORK BREAKDOWN, Avanindra Singh, declare t
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
  \thispagestyle{empty}\pagestyle{empty}
  \begin{center}
- % \textsc{\bfseries ABSTRACT} \\ [1.0cm]
-  \section{ABSTRACT}
+  \textsc{\bfseries ABSTRACT} \\ [1.0cm]
+  % \section{ABSTRACT}
   \end{center}
   This document focuses on mock objects. It defines mock objects as a technique in software development commonly used in unit testing. A brief list of when to use mock objects is presented. The differences and a clear definition of each type of ``simulated object'' is given for dummy objects, fake objects, stub objects and mock objects. Mock objects insist on behaviour verification as opposed to other types of objects which usually are state verification. A practical example is illustrated using EasyMock in Java. The application of mock objects in unit testing is then discussed. It is concluded that using mock objects can be a advantage or disadvantage depending on the context of the system under test.
  \\
@@ -977,12 +986,12 @@ abstract as the conclusion.
 
 
 
-\pagestyle{plain}
-\pagenumbering{Alph}
-\renewcommand\thesection{\Alph{section}}
-\setcounter{section}{0}
+% \pagestyle{plain}
+% \pagenumbering{Alph}
+% \renewcommand\thesection{\Alph{section}}
+% \setcounter{section}{0}
 
-\section{Appendix: Requirements Engineering Documentation}
+\section{Appendix A: Requirements Engineering Documentation}
 
 \subsection{Key Examples}
 
@@ -1075,8 +1084,11 @@ then the user can register on the system\\
 Given that the user has registered on the system\\
 then the user can log into the system using their username and password\\
 and the user can change their password\\
-\setboolean{@twoside}{false}
- \includepdf[pages=-]{./Specs/1.pdf}
+
+
+\newpage
+\includepdf[pages=-,pagecommand={\pagestyle{fancy}}]{./Specs/1.pdf}
+
 % \begin{figure}
 %  \centering 
 %  \includegraphics{./Specs/1.pdf}
