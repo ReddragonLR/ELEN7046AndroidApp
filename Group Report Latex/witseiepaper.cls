@@ -597,7 +597,7 @@ page \thepage \space undefined}}%
    {\z@}%                             % indent
    {0.5ex}%                  % beforeskip
    {0.2ex}%                % afterskip
-   {\centering\kenf}}% style
+   {\centering\normalsize\bf}}% style
 
 \def\subsection{\@startsection
    {subsection}%                      % name
@@ -611,8 +611,10 @@ page \thepage \space undefined}}%
    {subsubsection}%                   % name
    {3}%                               % level
    {\z@}%                             % indent
-   {0.75\baselineskip}%               % beforeskip
-   {-1em}%                            % afterskip
+   {0.5ex}%                  % beforeskip
+   {0.2ex}%                % afterskip
+   %{0.75\baselineskip}%               % beforeskip
+   %{-1em}%                            % afterskip
    {\normalfont\normalsize\textsl}}% % style
 
 \def\refname{REFERENCES}
