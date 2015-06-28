@@ -378,7 +378,7 @@ Depending on the information that is captured through survey questions there cou
 \noindent By conducting surveys, one can identify the misalignment between services required by communities and services rendered by its designated service providers. The result of gathering information about service delivery (in this scenario specifically health care) is that insights and observations can be gained in order to improve service delivery. This could have a variety of impacts including improving people's ability to receive high levels of service and possibly have an impact on their quality of life. Increasing the amount of engagement with the community allows for feedback to be provided to improve service delivery.
 
 \subsection{Scope of the Application:}
-The scope of the application will progressively change with each iteration. As an iteration is successful more features and improvements can be added to each version of the project.
+The scope of the application progressively changes with each iteration. As an iteration is successful more features and improvements can be added to each version of the project.
 
 \emph{Key Users} 
 \begin{itemize}
@@ -397,10 +397,10 @@ The scope of the application will progressively change with each iteration. As a
 
 \subsection{Project Requirements}
 \subsubsection{Specification By Example}
-Specification by example (SBE) is a collaborative approach where by the team defines requirements and business orientated functional tests for software based on capturing and illustrating requirements using realistic examples. This method was utilised to obtain the specific requirements of the project.
-Table ~\ref{tbl:use} shows a list of the specifications by example that are applicable to the project. Appendix A features the detailed specifications by example.
+Specification by Example (SBE) is a collaborative approach where by the team defines requirements and business orientated functional tests for software based on capturing and illustrating requirements using realistic examples. This method is utilised to obtain the specific requirements of the project.
+Table ~\ref{tbl:use} shows a list of the specifications by example that are applicable to the project. Appendix A features the detailed requirement specifications artefacts including key examples as well as the specifications by example.
 
-\begin{table}[htb] \caption{Table showing a list of specifications by example.} \label{tbl:use} 
+\begin{table}[htb] \caption{Table showing a list of the key examples.} \label{tbl:use} 
     \begin{center}
   \begin{tabular}
     {|c|c|} \hline \textbf{Use} &\textbf{Description}\\
@@ -440,7 +440,7 @@ Table ~\ref{tbl:use} shows a list of the specifications by example that are appl
   \item Surveyors are able to capture answers in the form of yes/no questions, free form text and a selection with predefined answers.
   \end{itemize}
     \item Administrators \begin{itemize}
-  \item Administrators should be create any surveys with the desired answer options.
+  \item Administrators should be able to create any surveys with the desired answer options.
   \item They should be able to authenticate and login in to the platform.
   \item Administrators should be able to view reporting information on the surveys which have successfully uploaded to the system.
   \end{itemize}
@@ -586,46 +586,50 @@ The architecture still comprises of the basic 3-tier fundamental framework which
 
 
 \subsection{Web Server}
+The web-server is based on a typical client-server communication pattern. The web-based solution is platform independent and 
 \subsubsection{Web Server Technology and Design Considerations:} 
 The web server utilises a variety of different open source technologies which are all based on Javascript. This allows the entire web stack to be written in one language.
 
-\emph{Technologies used} 
+\subsubsection{Technologies used} 
 \begin{itemize}
-  \item \textbf{MongoDB:} This is a non relational database which would be used .
-  \item \textbf{ExpressJS:} This is the actual server API.
-  \item \textbf{NodeJS:} This is the actual server API.
-  \item \textbf{Yeoman:} This is the actual server API.
-  \item \textbf{Angular-Fullstack template from Yeoman:} This is the actual server API.
+  \item \textbf{MongoDB:} MongoDB is a document based database that utilises a flexible schema \cite{MongoDB}. It stores data in JSON format where each document is a set of key-value pairs that describe the data. Mongo DB is a free and open-source technology.
+  \item \textbf{NodeJS:} NodeJS uses Google Chrome's V8 runtime engine to compile javascript on the server on which Node JS is installed and running. It uses an event-driven, non-blocking I/O approach that makes it efficient and lightweight \cite{NodeJS}
+  \item \textbf{ExpressJS:} Express JS is a minimal web framework for Node JS applications. It provides libraries that allow the developer to easily develop web solutions using NodeJS \cite{ExpressJS}.
+  \item \textbf{Yeoman:} Yeoman allows you to quickly start-up new projects. It prescribes best practices and tools to allow the developer the ability to create applications as quickly as possible \cite{Yeoman}. It makes use of open-source generators to scaffold sections of code that would otherwise be repetitive in nature and take time from building in the business logic which makes up the crux of any application.
+  \item \textbf{Angular-Fullstack template from Yeoman:} The angular-fullstack generator is a generator adapted from the angular generator initially created by the yeoman team \cite{AngularFullstack}. It links all the layers of the M.E.A.N stack and allows for easy scaffolding of ExpressJS API endpoints and AngularJS routes. From the scaffolded elements, a developer can then adapt the generated elements as they require.
 \end{itemize}
 
-\emph{Design Considerations} 
+\subsubsection{Design Considerations} 
+The time-frame of the given project indicated that speed of development needed to be a consideration when building the solution. The \textit{flexible schema} of the Mongo database allows for a schema to be defined in the actual application code and thus results in improved speed of development. Using Mongo in conjunction with Yeoman and the Angular-Fullstack generator, the team were able to leverage off of the advantages offered by these technologies in terms of speed to improve the time of delivery of the solution. The use of NodeJS and javascript as the common language across the entire stack also added to the speed of development.
 
 \subsection{Web Client}
 %  ANGULAR CAPTURE 
 % ALL FUNCTIONALITY OF WEB CLIENT
 %  ALSO INCLUDE REPORTING
 \textit{Web Client Technology and Design Considerations:} \\
-afasdfasdfasdf
+The web client utilizes a variety of technologies that allow for rapid front-end development and styling. In using javascript as the common language across the stack, some considerations were made in order to conform to the javascript usage. Some of the below mentioned technologies also come packaged as part of the Angular-Fullstack generator mentioned above.
 
-\emph{Technologies used} 
+\subsubsection{Technologies used} 
 \begin{itemize}
-	\item \textbf{AngularJS:} This is a non relational database which would be used .
+	\item \textbf{AngularJS:} Angular JS allows the developer to extend the HTML vocabulary. The result of the extended vocabulary is an readable, expressive,  and quick to develop.
 	\item \textbf{Twitter Bootstrap:} This is the actual server API.
 	\item \textbf{Highcharts-ng:} This is the actual server API.
 \end{itemize}
 
-\emph{Design Considerations} 
+\subsubsection{Design Considerations} 
 
 \subsection{Android Client}
 
 \subsection{Licences used in solution}
- 
 
 \section{Overall Critical Analysis and Evaluation}
 
 \subsection{Critical Analysis}
 
-\textit{Project Execution}\\
+
+\subsubsection{Project Execution}
+
+
 % SCRUM VS WATERFALL
 % ESTIMATION ? UNDER ESTIMATED 
 %  COMMS COLLOCATION
@@ -649,20 +653,29 @@ While critically analysing the project execution phase of the project the team i
 \item The team underestimated the amount of effort that would go into the development of the final solution and the time required to introduce 
 \end{itemize}
 
-\subsubsection{Project Solution}
-%  TRADE OFFS MUST BE MENTIONED
-%  SQL VS MONGO 
-% NATIVE VS HYBRID
+\subsubsection{Project Engineering}
 
-% WEB OFFLINE VS ANDROID OFFLINE
+Critical analysis of the project engineering has identified some positives and negatives the team can take advantage of the positives and learn from the negatives for future projects. 
 
-% HIGHCHARTS AS REPORTING
+\textit{Positives:}
 
-\subsection{Advantages and dissadvantages} 
+\begin{itemize}
+\item The current application is written in native android sdk which makes the application faster to run on android devices. 
+\item The android and web application are multi-channel architecture which leverage on new technology and can be run on hand held devices. Developing and running the application on an android device makes the GUI very fast and responsive \cite{AndroidNative}.
+\item The application makes use of on device provisioning, there is no setup required or the need for surveyors to go to a central location to install the software. The application can simply be downloaded and installed onto most devices running the android OS. 
+\item The android and web application can easily be deployed to a live or cloud environment. 
+\item The way of working is highly collaborative, each team member is able to work independently and share work with other team members by using technologies such as github \cite{GitHub}. 
+\item The technology stack uses the same language for all the layers within the stack from the front end to the database, a developer with java script knowledge will be able to use the software effectively, there is no need to employ developers with different skill sets. 
+\end{itemize}
 
-The current application is written in native android sdk which makes the application faster to run on android devices. The android and web application are multi-channel architecture which leverage on new technology and can be run on hand held devices. Developing and running the application on an android device makes the GUI very fast and responsive \cite{AndroidNative} to speed on native android]. The application makes use of on device provisioning, there is no setup required or the need for surveyors to go to a central location to install the software. The application can simply be downloaded and installed onto most devices running the android OS. The android and web application can easily be deployed to a live or cloud environment. The way of working is highly collaborative, each team member is able to work independently and share work with other team members by using technologies such as github \cite{GitHub}. The technology stack uses the same language for all the layers within the stack from the front end to the database, a developer with java script knowledge will be able to use the software effectively, there is no need to employ developers with different skill sets. 
+\textit{Negatives:}
 
-Due to time constraints on the project the delivery of the project superseded the requirement to implement industry best practices and standards. The API (Application programming interface) has no security and can essentially be called by any browser or web service, security will have to be enforced using token based authentication. Although the software stack allows for excellent automated testing the application lacks significant automated tests mainly due to time constraints with the project. Most of the testing has been done manually. The native android application will require constant maintenance to keep it up to date, As soon as a new version of the android OS is released there is a chance that the application be become deprecated. Future sprints will be required to keep the mobile platform up to date. 
+\begin{itemize}
+\item Due to time constraints on the project the delivery of the project superseded the requirement to implement industry best practices and standards.
+\item The API (Application programming interface) has no security and can essentially be called by any browser or web service, security will have to be enforced using token based authentication.
+\item Although the software stack allows for excellent automated testing the application lacks significant automated tests mainly due to time constraints with the project. Most of the testing has been done manually.
+\item The native android application will require constant maintenance to keep it up to date, As soon as a new version of the android OS is released there is a chance that the application be become deprecated. Future sprints will be required to keep the mobile platform up to date. 
+\end{itemize}
 
 
 
@@ -1174,6 +1187,7 @@ and the user can change their password\\
 
 \newpage
 \section{Appendix D: Developer Guide}
+
 \includepdf[pages=-,pagecommand={\pagestyle{fancy}}]{./Guides/DevelopersGuide.pdf}
 
 \newpage
