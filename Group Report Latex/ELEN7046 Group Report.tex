@@ -478,6 +478,10 @@ The executable specifications produced in the requirement specification are dire
 
 
 \section{Engineering the project solution}
+
+
+
+
 \subsection{Overall Architecture}
 The project team had created multiple proof of concepts which eventually lead to the final solution which comprises of three major components:
 \begin{itemize}
@@ -539,6 +543,13 @@ The web server utilises a variety of different open source technologies which ar
 
 % HIGHCHARTS AS REPORTING
 
+\subsection{Advantages and dissadvantages} 
+
+The current application is written in native android sdk which makes the application faster to run on android devices. The android and web application are multi-channel architecture which leverage on new technology and can be run on hand held devices. Developing and running the application on an android device makes the GUI very fast and responsive \cite{AndroidNative} to speed on native android]. The application makes use of on device provisioning, there is no setup required or the need for surveyors to go to a central location to install the software. The application can simply be downloaded and installed onto most devices running the android OS. The android and web application can easily be deployed to a live or cloud environment. The way of working is highly collaborative, each team member is able to work independently and share work with other team members by using technologies such as github \cite{GitHub}. The technology stack uses the same language for all the layers within the stack from the front end to the database, a developer with java script knowledge will be able to use the software effectively, there is no need to employ developers with different skill sets. 
+
+Due to time constraints on the project the delivery of the project superseded the requirement to implement industry best practices and standards. The API (Application programming interface) has no security and can essentially be called by any browser or web service, security will have to be enforced using token based authentication. Although the software stack allows for excellent automated testing the application lacks significant automated tests mainly due to time constraints with the project. Most of the testing has been done manually. The native android application will require constant maintenance to keep it up to date, As soon as a new version of the android OS is released there is a chance that the application be become deprecated. Future sprints will be required to keep the mobile platform up to date. 
+
+
 
 \subsection{Estimates verses Actual effort}
 The total effort of the POC amounted to 1139 hours, this total was collected from all the timesheets that the resources assigned to the project captured (See Appendix Group Timesheets). This meant the project under estimated by a total of 314 hours and over spent on the budget by R 157 000.  The additional time was due to underestimation of the external factors faced by the software team, such as planned leave, other commitments, family emergencies and the under estimation in attaining the required skills on the new technology. This was the largest contributor as ever team member had to learn the basics of the technology to be able to contribute effectively to the overall solution.
@@ -568,7 +579,7 @@ Using proprietary software can be very expensive , often large organizations are
 This project is intended for for use by the public sector so hence the budgets will not be available for expensive proprietary systems. The goal has been to use open source and free software as far as possible to keep the solution relatively cost efficient. Using open source and free software the solution is able to avoid unnecessary software licensing costs and ensures that the application can be easily distributed on any platform.
 
 The application currently uses the http protocol which is not secure, when the application is production ready it should use the https protocol. This will ensure that traffic between the application and database will be secure. 
-Data stored on the database should also be encrypted with at least 128 Bit Advanced Encryption Standard (AES). Advanced Encryption Standard (AES) is a federal information processing standard (FIPS) and is categorized as computer security standard [1]. 
+Data stored on the database should also be encrypted with at least 128 Bit Advanced Encryption Standard (AES). Advanced Encryption Standard (AES) is a federal information processing standard (FIPS) and is categorized as computer security standard \cite{AES}. 
 The current application requires the android operating system to run and cannot run on OS X (apple operating system) for a full production version the application will have to be developed in objective C for OS X. 
 
 
