@@ -24,23 +24,21 @@
 \BOOKMARK [2][-]{subsection.4.6}{Testing}{section.4}% 24
 \BOOKMARK [1][-]{section.5}{Engineering the project solution}{}% 25
 \BOOKMARK [2][-]{subsection.5.1}{Overall Architecture}{section.5}% 26
-\BOOKMARK [2][-]{subsection.5.2}{Web Client}{section.5}% 27
-\BOOKMARK [3][-]{subsubsection.5.2.1}{Reporting}{subsection.5.2}% 28
-\BOOKMARK [2][-]{subsection.5.3}{Web Server}{section.5}% 29
-\BOOKMARK [3][-]{subsubsection.5.3.1}{Database Design}{subsection.5.3}% 30
-\BOOKMARK [2][-]{subsection.5.4}{Android Application}{section.5}% 31
-\BOOKMARK [2][-]{subsection.5.5}{Licences used in solution}{section.5}% 32
-\BOOKMARK [1][-]{section.6}{Overall Critical Analysis and Evaluation}{}% 33
-\BOOKMARK [2][-]{subsection.6.1}{Critical Analysis}{section.6}% 34
-\BOOKMARK [3][-]{subsubsection.6.1.1}{Project Execution}{subsection.6.1}% 35
-\BOOKMARK [3][-]{subsubsection.6.1.2}{Project Solution}{subsection.6.1}% 36
-\BOOKMARK [2][-]{subsection.6.2}{Estimates verses Actual effort}{section.6}% 37
-\BOOKMARK [2][-]{subsection.6.3}{Economics and Cost Model}{section.6}% 38
-\BOOKMARK [3][-]{subsubsection.6.3.1}{Licensing of Prototype}{subsection.6.3}% 39
-\BOOKMARK [2][-]{subsection.6.4}{Evaluation of Output Solution}{section.6}% 40
-\BOOKMARK [1][-]{section.7}{Future Work}{}% 41
-\BOOKMARK [1][-]{section.8}{CONCLUSION}{}% 42
-\BOOKMARK [1][-]{section*.4}{REFERENCES}{}% 43
-\BOOKMARK [1][-]{section.1}{Appendix: Requirements Engineering Documentation}{}% 44
-\BOOKMARK [2][-]{subsection.1.1}{Key Examples}{section.1}% 45
-\BOOKMARK [2][-]{subsection.1.2}{Specification with Examples}{section.1}% 46
+\BOOKMARK [2][-]{subsection.5.2}{Web Server}{section.5}% 27
+\BOOKMARK [2][-]{subsection.5.3}{Web Client}{section.5}% 28
+\BOOKMARK [2][-]{subsection.5.4}{Android Client}{section.5}% 29
+\BOOKMARK [2][-]{subsection.5.5}{Licences used in solution}{section.5}% 30
+\BOOKMARK [1][-]{section.6}{Overall Critical Analysis and Evaluation}{}% 31
+\BOOKMARK [2][-]{subsection.6.1}{Critical Analysis}{section.6}% 32
+\BOOKMARK [3][-]{subsubsection.6.1.1}{Project Execution}{subsection.6.1}% 33
+\BOOKMARK [3][-]{subsubsection.6.1.2}{Project Solution}{subsection.6.1}% 34
+\BOOKMARK [2][-]{subsection.6.2}{Estimates verses Actual effort}{section.6}% 35
+\BOOKMARK [2][-]{subsection.6.3}{Economics and Cost Model}{section.6}% 36
+\BOOKMARK [3][-]{subsubsection.6.3.1}{Licensing of Prototype}{subsection.6.3}% 37
+\BOOKMARK [2][-]{subsection.6.4}{Evaluation of Output Solution}{section.6}% 38
+\BOOKMARK [1][-]{section.7}{Future Work}{}% 39
+\BOOKMARK [1][-]{section.8}{CONCLUSION}{}% 40
+\BOOKMARK [1][-]{section*.4}{REFERENCES}{}% 41
+\BOOKMARK [1][-]{section.1}{Appendix: Requirements Engineering Documentation}{}% 42
+\BOOKMARK [2][-]{subsection.1.1}{Key Examples}{section.1}% 43
+\BOOKMARK [2][-]{subsection.1.2}{Specification with Examples}{section.1}% 44
