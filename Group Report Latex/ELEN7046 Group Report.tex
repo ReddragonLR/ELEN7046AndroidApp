@@ -571,6 +571,9 @@ The application has been built dynamically so that the application can be used f
 Using proprietary software can be very expensive , often large organizations are given massive discounts and are encouraged to use a certain vendors software. Universities and academic organizations are often allowed to use software free of charge.
 This project is intended for for use by the public sector so hence the budgets will not be available for expensive proprietary systems. The goal has been to use open source and free software as far as possible to keep the solution relatively cost efficient. Using open source and free software the solution is able to avoid unnecessary software licensing costs and ensures that the application can be easily distributed on any platform.
 
+The application currently uses the http protocol which is not secure, when the application is production ready it should use the https protocol. This will ensure that traffic between the application and database will be secure. 
+Data stored on the database should also be encrypted with at least 128 Bit Advanced Encryption Standard (AES). Advanced Encryption Standard (AES) is a federal information processing standard (FIPS) and is categorized as computer security standard [1]. 
+The current application requires the android operating system to run and cannot run on OS X (apple operating system) for a full production version the application will have to be developed in objective C for OS X. 
 
 
 
