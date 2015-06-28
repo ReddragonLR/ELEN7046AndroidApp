@@ -8,8 +8,17 @@
 % Required for including pictures
 \usepackage{float} 
 
-% Allows putting an [H] in \begin{figure} to specify the exact location of the figure
+
 \usepackage{wrapfig} 
+
+%%%%%%%%%%%%%%%
+\usepackage{fancyhdr}
+\usepackage{pdfpages}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\thepage}
+
 \ifpdf
 \pdfinfo{
 % /Title (INSTRUCTIONS AND STYLE GUIDELINES FOR THE PREPARATION OF FINAL YEAR LABORATORY PROJECT PAPERS : 2005 VERSION)
@@ -114,13 +123,13 @@
 % DECLARATION PAGE
 % Your institution may give you a different text to place here
 %----------------------------------------------------------------------------------------
- \renewcommand\thesection{\Alph{section}}
- \setcounter{section}{0}
+ % \renewcommand\thesection{\Alph{section}}
+ % \setcounter{section}{0}
 
  \thispagestyle{empty}\pagestyle{empty}
  \begin{center}
- \section{DECLARATION}
- % \textsc{\bfseries DECLARATION} \\ [1.0cm]
+ % \section{DECLARATION}
+  \textsc{\bfseries DECLARATION} \\ [1.0cm]
  \end{center}
 I ALTER THIS TO PLEDGEARISM AND GROUP WORK BREAKDOWN, Avanindra Singh, declare that this thesis titled, 'My Thesis' and the work presented in it are my own. I confirm that:
 
@@ -174,13 +183,13 @@ I ALTER THIS TO PLEDGEARISM AND GROUP WORK BREAKDOWN, Avanindra Singh, declare t
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
  \thispagestyle{empty}\pagestyle{empty}
  \begin{center}
- % \textsc{\bfseries ABSTRACT} \\ [1.0cm]
-  \section{ABSTRACT}
+  \textsc{\bfseries ABSTRACT} \\ [1.0cm]
+  % \section{ABSTRACT}
   \end{center}
   This document focuses on mock objects. It defines mock objects as a technique in software development commonly used in unit testing. A brief list of when to use mock objects is presented. The differences and a clear definition of each type of ``simulated object'' is given for dummy objects, fake objects, stub objects and mock objects. Mock objects insist on behaviour verification as opposed to other types of objects which usually are state verification. A practical example is illustrated using EasyMock in Java. The application of mock objects in unit testing is then discussed. It is concluded that using mock objects can be a advantage or disadvantage depending on the context of the system under test.
  \\
 
-{\bfseries Key Words: } Avy, Is, Cool.\\ [1.0cm]
+{\bfseries Key Words: } Software Prototype, Survey, SCRUM .\\ [1.0cm]
 % %
 
 
@@ -348,7 +357,6 @@ Table ~\ref{tbl:use} shows a list of the specifications by example that are appl
       \end{center}
 \end{table}
 
-\newpage
 \subsection{Project Constraints}
 \begin{itemize}
   \item The project has a time constraint. 
@@ -412,16 +420,20 @@ Due to the highly volatile scope discussions within the team the decision to ado
 
 \subsection{Project Team}
 
-Witht he methodlogy choosen the team formed to take the key roles required to exectute the SCRUM methodlogy. The 
+With the preferred methodology chosen the team formed to take the key roles required to execute the SCRUM methodology. The three primary roles the team required where the SCRUM Master, Product Owner and technical experts.\\
 
-% asdadasdas  this adds the image of the team
+\begin{figure}[H]
+	\center{\includegraphics[width=.55\linewidth]{./images/SCRUMTeam}} 
+	\caption{SCRUM Team Roles.} 
+	\label{fig:SCRUMTeam}
+\end{figure}
 
 
 \subsection{Technology Selection}
 
 
 \subsection{Sprints}
-With the project vision and project deadline defined the high level planning allowed for eleven sprints \cite{ExpertJudgement} where one sprint would run for seven days or 75 effort hours. While de-constructing the requirements the high level deliverables were prioritized in the backlog and marked for delivery in specific sprints. These high level deliverables are shown in figure CITE and the detailed sprint planning can be viewed in appendix CITE.
+With the project vision and project deadline defined the high level planning allowed for eleven sprints \cite{ExpertJudgement} where one sprint would run for seven days or 75 effort hours. While de-constructing the requirements the high level deliverables were prioritized in the backlog and marked for delivery in specific sprints. These high level deliverables are shown in figure CITE and the detailed sprint planning can be viewed in appendix C.
 
 
 
@@ -492,6 +504,10 @@ In terms of the test execution on the project, acceptance tests are run on each 
 
 
 \section{Engineering the project solution}
+
+
+
+
 \subsection{Overall Architecture}
 The project team had created multiple proof of concepts which eventually lead to the final solution which comprises of three major components:
 \begin{itemize}
@@ -584,7 +600,17 @@ While critically analysing the project execution phase of the project the team i
 % HIGHCHARTS AS REPORTING
 \textit{Positives}
 
+<<<<<<< HEAD
 \textit{Negatives}
+=======
+\subsection{Advantages and dissadvantages} 
+
+The current application is written in native android sdk which makes the application faster to run on android devices. The android and web application are multi-channel architecture which leverage on new technology and can be run on hand held devices. Developing and running the application on an android device makes the GUI very fast and responsive \cite{AndroidNative} to speed on native android]. The application makes use of on device provisioning, there is no setup required or the need for surveyors to go to a central location to install the software. The application can simply be downloaded and installed onto most devices running the android OS. The android and web application can easily be deployed to a live or cloud environment. The way of working is highly collaborative, each team member is able to work independently and share work with other team members by using technologies such as github \cite{GitHub}. The technology stack uses the same language for all the layers within the stack from the front end to the database, a developer with java script knowledge will be able to use the software effectively, there is no need to employ developers with different skill sets. 
+
+Due to time constraints on the project the delivery of the project superseded the requirement to implement industry best practices and standards. The API (Application programming interface) has no security and can essentially be called by any browser or web service, security will have to be enforced using token based authentication. Although the software stack allows for excellent automated testing the application lacks significant automated tests mainly due to time constraints with the project. Most of the testing has been done manually. The native android application will require constant maintenance to keep it up to date, As soon as a new version of the android OS is released there is a chance that the application be become deprecated. Future sprints will be required to keep the mobile platform up to date. 
+
+
+>>>>>>> 62ab412b5558c87aeb4c9c476672eca89558da7a
 
 \subsection{Estimates verses Actual effort}
 The total effort of the POC amounted to 1139 hours, this total was collected from all the timesheets that the resources assigned to the project captured (See Appendix Group Timesheets). This meant the project under estimated by a total of 314 hours and over spent on the budget by R 157 000.  The additional time was due to underestimation of the external factors faced by the software team, such as planned leave, other commitments, family emergencies and the under estimation in attaining the required skills on the new technology. This was the largest contributor as ever team member had to learn the basics of the technology to be able to contribute effectively to the overall solution.
@@ -614,7 +640,7 @@ Using proprietary software can be very expensive , often large organizations are
 This project is intended for for use by the public sector so hence the budgets will not be available for expensive proprietary systems. The goal has been to use open source and free software as far as possible to keep the solution relatively cost efficient. Using open source and free software the solution is able to avoid unnecessary software licensing costs and ensures that the application can be easily distributed on any platform.
 
 The application currently uses the http protocol which is not secure, when the application is production ready it should use the https protocol. This will ensure that traffic between the application and database will be secure. 
-Data stored on the database should also be encrypted with at least 128 Bit Advanced Encryption Standard (AES). Advanced Encryption Standard (AES) is a federal information processing standard (FIPS) and is categorized as computer security standard [1]. 
+Data stored on the database should also be encrypted with at least 128 Bit Advanced Encryption Standard (AES). Advanced Encryption Standard (AES) is a federal information processing standard (FIPS) and is categorized as computer security standard \cite{AES}. 
 The current application requires the android operating system to run and cannot run on OS X (apple operating system) for a full production version the application will have to be developed in objective C for OS X. 
 
 
@@ -978,12 +1004,12 @@ abstract as the conclusion.
 
 
 
-\pagestyle{plain}
-\pagenumbering{Alph}
-\renewcommand\thesection{\Alph{section}}
-\setcounter{section}{0}
+% \pagestyle{plain}
+% \pagenumbering{Alph}
+% \renewcommand\thesection{\Alph{section}}
+% \setcounter{section}{0}
 
-\section{Appendix: Requirements Engineering Documentation}
+\section{Appendix A: Requirements Engineering Documentation}
 
 \subsection{Key Examples}
 
@@ -1076,22 +1102,52 @@ then the user can register on the system\\
 Given that the user has registered on the system\\
 then the user can log into the system using their username and password\\
 and the user can change their password\\
-\setboolean{@twoside}{false}
- \includepdf[pages=-]{./Specs/1.pdf}
-% \begin{figure}
-%  \centering 
-%  \includegraphics{./Specs/1.pdf}
-% \end{figure}
+
+
+\newpage
+\includepdf[pages=-,pagecommand={\pagestyle{fancy}}]{./Specs/1.pdf}
+
+\begin{figure}[H]
+	\center{\includegraphics[width=.95\linewidth]{./images/SirVeyUMLDiagram.png}} 
+	\caption{Use Case Diagram for SirVey Application.} 
+	\label{fig:UseCase}
+\end{figure}
+
+\newpage
+\section{Appendix C: Sprint Planning}
+\includepdf[pages=-,pagecommand={\pagestyle{fancy}}]{./sprint_planning/ProjectPlanning.pdf}
+
+
+\newpage
+\section{Appendix D: Developer Guide}
+\includepdf[pages=-,pagecommand={\pagestyle{fancy}}]{./Guides/DevelopersGuide.pdf}
+
+\newpage
+\section{Appendix E: User Training Guide}
+\includepdf[pages=-,pagecommand={\pagestyle{fancy}}]{./Guides/UserGuide.pdf}
+
+\newpage
+\section{Appendix F: Final prototype Reports}
+\includepdf[pages=-,pagecommand={\pagestyle{fancy}}]{./Guides/FinalReports.pdf}
+
+\newpage
+\section{Appendix H: Group Timesheet}
+\includepdf[pages=-,pagecommand={\pagestyle{fancy}}]{./Guides/GroupTimeSheet.pdf}
+
+\newpage
+\section{Appendix I: MIT License}
+\includepdf[pages=-,pagecommand={\pagestyle{fancy}}]{./Guides/MIT.pdf}
 
 \end{document}
 
 % Appendix
 
-%   A - Use case diagrams
-%   B - ScreenShots of Application sections that meet key requirements
-%   C - Dev User Guide
-%   D - User Training Guide
-%   E - Report Demo / Example
-%   F - Meeting Minutes
-%   G - Group Timesheets
-%   H - Licenses
+%   A - Requirements Engineering Documentation 
+% 	B - Use case diagrams
+%   C - Sprint Planning / Project Planning
+%   D - Dev User Guide
+%   E - User Training Guide
+%   F - Report Demo / Example
+%   G - Meeting Minutes
+%   H - Group Timesheets
+%   I - Licenses

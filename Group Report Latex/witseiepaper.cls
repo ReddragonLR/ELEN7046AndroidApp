@@ -597,7 +597,7 @@ page \thepage \space undefined}}%
    {\z@}%                             % indent
    {0.5ex}%                  % beforeskip
    {0.2ex}%                % afterskip
-   {\centering\kenf}}% style
+   {\centering\normalsize\bf}}% style
 
 \def\subsection{\@startsection
    {subsection}%                      % name
