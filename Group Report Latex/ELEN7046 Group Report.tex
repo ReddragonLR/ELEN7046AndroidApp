@@ -1,7 +1,7 @@
 \documentclass[12pt]{witseiepaper}
 \usepackage{KJN}
 \usepackage[a4paper,top=25mm, bottom=32mm, left=20mm, right=20mm]{geometry}
-
+\usepackage{pdfpages}
 \ifpdf
 \pdfinfo{
 % /Title (INSTRUCTIONS AND STYLE GUIDELINES FOR THE PREPARATION OF FINAL YEAR LABORATORY PROJECT PAPERS : 2005 VERSION)
@@ -277,7 +277,7 @@ I ALTER THIS TO PLEDGEARISM AND GROUP WORK BREAKDOWN, Avanindra Singh, declare t
 \setcounter{page}{1}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-\section{INTRODUCTION}
+\section{Introduction}
 In South Africa there are many services such as electricity, water and healthcare which are freely available to citizens or at low cost. The distribution of these basic resources could be defined as "service delivery". This project is aimed at providing a means to monitor service delivery in our country through the usage of a software application to conduct surveys and collect feed back from any citizen who utilises any service in healthcare. In South Africa, it has been publicised in media that healthcare service delivery has an impact on millions of peoples lives including their mortality \cite{InfantsDie}. Obtaining feedback on the health care system is critical to improving all citizens experiences of the health care system.
 
 The requirements of this project is to obtain feed back from the local community utilising the health care systems in order to improve them, specifically through developing a software application which can be used to conduct surveys. By conducting surveys efficiently and through a software application data can be obtained and analysed to provide appropriate reporting on how efficient the service delivery of health care in a particular area. South Africa as a third world country faces unique challenges such as connectivity to the internet \cite{Internet} which imposes challenges from a application development point of view. 
@@ -287,17 +287,14 @@ The purpose of this project is to design a software application which will be us
 
 \section{Literature Review}
 \subsection{Existing Solutions}
-There is a large number of solutions that exist in the market in terms of software applications which can be used to conduct surveys. Some of the solutions on the market do satisfy the basic project requirements \cite{ReviewSurvey}. SurveyGizmo \cite{SurveyGizmo} is a web application (software as a service) platform which features a 28 different customizable possible survey question and answer combinations. This solution also satisfies all requirements in particular off-line capability, features reporting and developer integration. SurveyMonkey \cite{SurveyMonkey} is similar to SurveyGizmo in that it offers a similar feature set. It also offers the ability to create custom reporting with text analysis. SurveyMonkey also features telephonic surveys where users are able to create surveys and have respondents answer using voice. 
+There is a large number of solutions that exist in the market in terms of software applications which can be used to conduct surveys. Some of the solutions on the market do satisfy the basic project requirements \cite{ReviewSurvey}. SurveyGizmo \cite{SurveyGizmo} is a web application (software as a service) platform which features 28 different customizable possible survey question and answer combinations. This solution satisfies all requirements in particular the off-line capability, custom reporting and developer integration. SurveyMonkey \cite{SurveyMonkey} is similar to SurveyGizmo in that it offers a similar feature set. It also offers the ability to create custom reporting with text analysis. SurveyMonkey also features telephonic surveys where users are able to create surveys and have respondents answer using voice. 
 
 % Pricing options for this stuff means that existing solution is more effective than building your own app ???? 
 % Due to Economics of scale therefore pricing lower, verses building specific solution .... Scale is 1 to 1 for client for our POC prototype instead survey monkey supports Every client  Survey features are Customizable price lower due to volume .... 
 
 
 \subsection{Standards, Regulations and Policy}
-
-Reference HIPAA
-
-Reference 
+Depending on the information that is captured through survey questions there could be standards, regulations and policies which need to be adhered to. An example of this would be in the health care sector where the Act of 1996 (HIPAA) could be applied. The Act of 1996 (HIPAA) is a set of rules to be followed by health plans, doctors, hospitals and other health care providers \cite{HIPAA}. It is essential to adopt the standards for electronic health care transactions and identifiers for providers, health plans, and employers. To date, the implementation of HIPAA standards has increased the use of electronic data interchange \cite{HIPAA}. HIPAA also contains a privacy rule which protects any data gathered from patients in the health care environment. Therefore to comply with HIPAA it essential for any software to have security so that patients are not compromised in terms of the act. Software should comply completely with HIPAA if it is to be used in a health service delivery environment. \\
 
 \section{Project Framework} 
 
@@ -306,31 +303,30 @@ Reference
 \noindent By conducting surveys, one can identify the misalignment between services required by communities and services rendered by its designated service providers. The result of gathering information about service delivery (in this scenario specifically health care) is that insights and observations can be gained in order to improve service delivery. This could have a variety of impacts including improving people's ability to receive high levels of service and possibly have an impact on their quality of life. Increasing the amount of engagement with the community allows for feedback to be provided to improve service delivery.
 
 \subsection{Scope of the Application:}
-The scope of the application will progressively change with each iteration. As a iteration is successful more features and improvements on existing features can added to each version.
-
+The scope of the application will progressively change with each iteration. As an iteration is successful more features and improvements can be added to each version of the project.
 
 \emph{Key Users} 
 \begin{itemize}
   \item \textbf{Surveyors:} These are the individuals who will utilise the application to capture surveys and get responses from the community.
-  \item \textbf{Administrators:} Users that will create surveys and utilise the reporting features of the application to gain insights from the communities responses.
+  \item \textbf{Administrators:} These are the business owners who define questions and will create surveys and utilise the reporting features of the application to gain insights from the communities responses.
 \end{itemize}
 
 \emph{Stakeholders} 
 \begin{itemize}
-  \item \textbf{Community:} These are the actual people who utilise services and who will provide feedback on the services which are rendered. The community will enjoy improved health care services provided by the hospital as the feedback is gathered and service delivery is improved.
-  \item \textbf{Application Administrators:} Provide administrator services, maintenance and creation of surveys. 
-  \item \textbf{Development Team:} Responsible for creating the entire platform. 
+  \item \textbf{Community:} These are the actual people who utilise services and who will provide feedback on the service delivery through the survey project. The community by voicing their concerns and opinions will enjoy improved services (e.g. health care) provided by the service provider based on the feedback gathered.
+  \item \textbf{Application Administrators:} Provide administrator services, maintenance and creation of surveys.
+  \item \textbf{Surveyors:} Users who conduct surveys through the platform.
+  \item \textbf{Development Team:} Responsible for creating and maintaining the platform. 
 \end{itemize}
 
 
 \subsection{Project Requirements}
-\emph{Specification By Example}
-% ALL OF BAKS FUNKY SHIT
-% TABLE GOES HERE FOR SPECS OF EXAMPLE
+\emph{Specification By Example}\\
+Specification by example (SBE) is a collaborative approach where by the team defines requirements and business orientated functional tests for software based on capturing and illustrating requirements using realistic examples. This method was utilised to obtain the specific requirements of the project.
+Table ~\ref{tbl:use} shows a list of the specifications by example that are applicable to the project. Appendix A features the detailed specifications by example.
 
-\subsection{List of Examples} Table ~\ref{tbl:use} shows a list of the specifications by example that are applicable to the project. 
-\begin{table}
-  [h] \centering \caption{Table showing a list of specifications by example.} \label{tbl:use} 
+\begin{table}[htb] \caption{Table showing a list of specifications by example.} \label{tbl:use} 
+    \begin{center}
   \begin{tabular}
     {|c|c|} \hline \textbf{Use} &\textbf{Description}\\
     \textbf{Case} &\\
@@ -341,8 +337,10 @@ The scope of the application will progressively change with each iteration. As a
     \hline 5 &User Access\\
     \hline 
   \end{tabular}
+      \end{center}
 \end{table}
 
+\newpage
 \subsection{Project Constraints}
 \begin{itemize}
   \item The project has a time constraint. 
@@ -370,22 +368,27 @@ The scope of the application will progressively change with each iteration. As a
     \item Administrators \begin{itemize}
   \item Administrators should be create any surveys with the desired answer options.
   \item They should be able to authenticate and login in to the platform.
-  \item Administrators should be able to get reporting information on the surveys which have successfully uploaded to the system.
+  \item Administrators should be able to view reporting information on the surveys which have successfully uploaded to the system.
   \end{itemize}
 
 \end{itemize}
 
-
-
 \subsubsection{For the project}
 \begin{itemize}
-  \item The solution must be able to capture surveys in a offline mode with the ability to upload to a central point for reporting.
-  \item 
+  \item The solution must be able to capture surveys in a off-line mode with the ability to upload to a central point for reporting.
+  \item Be able to capture surveys on multiple channels and multiple devices.
+  \item The device of choice preferably being Android should support as many devices as possible.
+  \item Analytics of the data should be centralised.
+  \item Surveys are dynamic and can be refreshed in field (given internet connectivity).
+  \item There is no custom configuration necessary on any device that the surveyors utilise. This means they can be provisioned in-field.
+  \item The system can handle multiple surveyors in the field gathering responses.
+  \item The system can also handle multiple types of surveys.
+  \item Training guides and development guides should be documented.
 \end{itemize}
 
 \subsection{Licensing Requirements}
+This project should utilise MIT licenses and free licences where possible.
 
-% THIS IS WHERE BAKS STUFF GOES 
 \section{Project Execution}
 A software project's successful execution relies heavily on the project team coming together to achieve a common goal CITE. To make sure the project team remains on track a specially role is required within the project team, this is commonly known as a project manager. 
 
@@ -400,14 +403,11 @@ Project methodologies in the author's opinion should not be dictated but should 
 Due to the highly volatile scope discussions within the team the decision to adopt a crafted quality methodology CITE started to present itself as front runner and methodology of choice. The project team agreed that the SCRUM methodology CITE would be implemented and the role of the project manager would change to be a SCRUM master.
 
 \subsection{Sprints}
-With the project vision and project deadline defined the high level planning allowed for allowed for eleven sprints CITE where one sprint would run for seven days. While deconstructing the requirements the high level deliverables were prioritized in the backlog and marked for delivery in specific sprints. These high level deliverables are shown in figure CITE and the detailed sprint planning can be viewed in appendixCITE.
+With the project vision and project deadline defined the high level planning allowed for allowed for eleven sprints CITE where one sprint would run for seven days. While de-constructing the requirements the high level deliverables were prioritized in the backlog and marked for delivery in specific sprints. These high level deliverables are shown in figure CITE and the detailed sprint planning can be viewed in appendixCITE.
 
 \subsection{Project Tools}
 Various tools were used to enable communication and collaboration within the
 group. A high focus was placed on this as the size of the group, distributed resource location, current work commitments, scope changes, technology challenge specifically the upskilling required on the chosen technology all required real time communication to the project team. The tools the project team agreed to use are listed in Table CITE.
-
-
-%  TABLE GOES HERE 
 
 Project Communication was implemented via gathering all the contact details for the project team, these were shared and used to create email and whatsappCITE groups for real time feedback. Formal Meetings where held weekly to track progress against the sprint planning vs the resource progress and formal meeting minutes where then sent. The formal meeting minutes are detailed in AppendixCITE. The team Collaboration was controlled by the use of trello boards CITEthis allowed task assignment, task tracking and progress updates without the need for formal face to face meetings. Managing the developers source code, the development resources agreed to implement GitHub. This tool allows the resources to align source code, track changes and backup source code.
 
@@ -437,8 +437,12 @@ Project Communication was implemented via gathering all the contact details for 
 %  USER ACCEPTANCE TESTING DONE BY SCRUM TEAM
 %  MEETING ALL REQUIREMENTS SPECIFICATIONS BY EXAMPLES 
 %  ITERATIVELY ETC ETC UNIT TESTING ON NODE
-%  USER TESTING  BAKS STUFF GOES HERE 
+%  USER TESTING  BAKS STUFF GOES HERE
 
+\subsection{Licences used in solution}
+ 
+Testing for the project is performed from an acceptance testing level, where the project requirements are directly used to create acceptance tests (http://www.extremeprogramming.org/rules/functionaltests.html). In the context of this project, this level of testing is deemed appropriate as the goal of this project is to identify that the software is capable of achieving the desired client functionality.
+The executable specifications produced in the requirement specification are directly utilised in defining the test cases. The advantage noted by doing this is that no additional test case creation phase is required at acceptance level phase and the software is tested using what was jointly agreed upon as the scope and functionality of the project.
 \section{Overall Critical Analysis and Evaluation}
 
 \subsection{Critical Analysis}
@@ -554,7 +558,7 @@ This project is intended for for use by the public sector so hence the budgets w
 % italics), 9-point, Times New Roman font, with right and left justified text, as
 % shown above. The abstract should be followed by one 9-point line spacing.
 
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % \subsection{Keywords}
 
 % The keywords should commence with the words {\msbf Key words:} (with a colon),
@@ -576,7 +580,7 @@ This project is intended for for use by the public sector so hence the budgets w
 %           Title : Subtitle      & 12 & Capitals, bold, fully justified \\
 %           Author name           & 10 & Bold, fully justified \\
 %           Author affiliation    &  9 & Italics, fully justified \\
-%           Abstract              &  9 & Fully justified \\
+%           Abstract              &  9 & Fully justified \\Appendix A Figure ~\ref{fig:USECASE}.
 %           Main section heading  & 10 & Bold, capitalised, centred \\
 %           Second heading        & 10 & Italics, fully justified \\
 %           Main text             & 10 & Fully justified \\
@@ -590,60 +594,60 @@ This project is intended for for use by the public sector so hence the budgets w
 % \end{table}
 
 
+% % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %
+% \section{HEADINGS AND BODY}
+
+% Number headings and sub-headings as shown. Number the Introduction but do not
+% number the Acknowledgment or References.
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \subsection{Main (first level) headings}
+
+% First level headings, starting with INTRODUCTION and ending with CONCLUSION,
+% should be sequentially numbered (1., 2., 3., etc.) and capitalised, in a bold,
+% 10-point, Times New Roman font, with centred text, as shown above. Each first
+% level heading should be followed by one 10-point line spacing.
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \subsection{Subheadings (second and third level headings)}
+
+% \subsubsection*{Second level headings:} These should be sequentially numbered
+% (e.g. 8.1, 8.2, etc.) and not capitalised, in an italics (not bold), 10-point,
+% Times New Roman font, with left and right justified text, as shown above.
+% Second level headings should not be indented, and each should be followed by
+% one 10-point line spacing.
+
+% \subsubsection*{Third level headings:} These should be in an italics (not bold),
+% 10-point, Times New Roman font, not be numbered, capitalised or indented,
+% followed by a colon and character space, and then immediately by the left and
+% right justified body of the subheading, as shown above.
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \subsection{Body}
+
+% The body of the paper should be in a standard (not bold or italics), 10-point,
+% Times New Roman font, with left and right justified text, as shown above.
+
+% Paragraphs within the body of the paper should be separated by a 10-point line
+% spacing, and the last paragraph under a heading or subheading should be
+% followed by one 10-point line spacing.
+
+
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-\section{HEADINGS AND BODY}
+% %
+% \section{UNITS}
 
-Number headings and sub-headings as shown. Number the Introduction but do not
-number the Acknowledgment or References.
+% Use SI (Standard International - MKS) as a primary unit.  Other units may be
+% used as secondary units (in parenthesis) after the primary unit. One character
+% space should be left between the numerical value and its associated unit(s).
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Main (first level) headings}
+% Care should be taken to ensure that the numerical value and its associated
+% unit(s) appear on the same line (e.g. by the use of a hard character space
+% between the numerical value and its associated units).
 
-First level headings, starting with INTRODUCTION and ending with CONCLUSION,
-should be sequentially numbered (1., 2., 3., etc.) and capitalised, in a bold,
-10-point, Times New Roman font, with centred text, as shown above. Each first
-level heading should be followed by one 10-point line spacing.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Subheadings (second and third level headings)}
-
-\subsubsection*{Second level headings:} These should be sequentially numbered
-(e.g. 8.1, 8.2, etc.) and not capitalised, in an italics (not bold), 10-point,
-Times New Roman font, with left and right justified text, as shown above.
-Second level headings should not be indented, and each should be followed by
-one 10-point line spacing.
-
-\subsubsection*{Third level headings:} These should be in an italics (not bold),
-10-point, Times New Roman font, not be numbered, capitalised or indented,
-followed by a colon and character space, and then immediately by the left and
-right justified body of the subheading, as shown above.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Body}
-
-The body of the paper should be in a standard (not bold or italics), 10-point,
-Times New Roman font, with left and right justified text, as shown above.
-
-Paragraphs within the body of the paper should be separated by a 10-point line
-spacing, and the last paragraph under a heading or subheading should be
-followed by one 10-point line spacing.
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-\section{UNITS}
-
-Use SI (Standard International - MKS) as a primary unit.  Other units may be
-used as secondary units (in parenthesis) after the primary unit. One character
-space should be left between the numerical value and its associated unit(s).
-
-Care should be taken to ensure that the numerical value and its associated
-unit(s) appear on the same line (e.g. by the use of a hard character space
-between the numerical value and its associated units).
-
-Note that there is a useful package available for \LaTeX~ called \verb|siunits|
--- access the nearest CTAN archive to obtain it.
+% Note that there is a useful package available for \LaTeX~ called \verb|siunits|
+% -- access the nearest CTAN archive to obtain it.
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % %
@@ -854,8 +858,103 @@ abstract as the conclusion.
 \renewcommand\thesection{\Alph{section}}
 \setcounter{section}{0}
 
-\section{Appendix A:Use Case Diagrams}
-asdadasdas.
+\section{Appendix: Requirements Engineering Documentation}
+
+\subsection{Key Examples}
+
+\textbf{Key Examples: Conducting a Survey}
+\begin{itemize}
+\item Surveyor asks a yes/no question 
+\item Surveyor ask a question with pre-defined answers
+\item Surveyor asks a free form question
+\end{itemize}
+
+
+\textbf{Key Examples: Reporting}
+\begin{itemize}
+\item The number of yes/no answers are tallied and displayed per question
+\item The number of each pre-defined answer are tallied and displayed per question
+\item The number of key phrases are tallied and displayed per free-form answer
+\end{itemize}
+
+
+\textbf{Key Examples: Offline Mode}
+\begin{itemize}
+\item The surveyor conducts a single survey in offline mode and syncs with the system
+\item The surveyor conducts multiple surveys in offline mode and syncs all of them with the system
+\end{itemize}
+
+\textbf{Key Examples: Survey Administration}
+\begin{itemize}
+\item The administrator adds a new survey
+\item The administrator edits an existing survey
+\item The administrator removes an existing survey
+\end{itemize}
+
+\textbf{Key Examples: User Access}
+\begin{itemize}
+\item A new user of the system registers
+\item An existing user logs into the system as an administrator
+\item An existing user logs into the system as a non-administrator
+\item An existing user changes password
+\end{itemize}
+
+
+\subsection{Specification with Examples}
+
+\textbf{Conducting a Survey}\\
+Given that a yes/no question has been defined \\
+when the surveyor asks the respondent the question\\
+then the surveyor can only capture an answer from the given options\\
+
+Given that a pre-defined question has been defined\\
+when the surveyor asks the respondent the question\\
+then the surveyor can only capture an answer from the given options\\
+
+Given that a free-form question has been defined\\
+when the surveyor as the respondent the question\\
+then the surveyor can capture a text answer, limited to 1500 characters\\
+
+\textbf{Reporting}\\
+Given that the user is logged in as an administrator\\
+then the user has access to the reporting functionality\\
+
+Given that the user is logged in as an administrator\\
+and a survey has been conducted\\
+and the survey has been submitted\\
+and the survey contains yes/no questions\\
+or the survey contains pre-defined answers\\
+when the survey’s results are selected\\
+then a graph showing the responses received is displayed\\
+
+\textbf{Offline Mode}\\
+Given the system has no access to the internet \\
+and the surveyor has submitted a completed survey \\
+then the system should show how many offline surveys have been completed\\
+
+Given that the system has no access to the internet\\
+and the system has stored surveys \\
+when the administrator syncs the system\\
+and there is an internet connection \\
+then the surveys get submitted with server\\
+
+\textbf{Survey Administration}\\
+Given that a user is logged in as an administrator\\
+then the user has access to the create survey functionality\\
+and the user has access to the edit survey functionality\\
+and the user has access to the delete survey functionality\\
+
+\textbf{User Access}\\
+Given that a user has not been registered on the system\\
+then the user can register on the system\\
+
+Given that the user has registered on the system\\
+then the user can log into the system using their username and password\\
+and the user can change their password\\
+
+\includepdf[pages=-]{./Specs/1.pdf}
+
+
 \end{document}
 
 % Appendix
