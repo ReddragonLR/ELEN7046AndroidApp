@@ -416,6 +416,10 @@ Witht he methodlogy choosen the team formed to take the key roles required to ex
 
 % asdadasdas  this adds the image of the team
 
+
+\subsection{Technology Selection}
+
+
 \subsection{Sprints}
 With the project vision and project deadline defined the high level planning allowed for eleven sprints \cite{ExpertJudgement} where one sprint would run for seven days or 75 effort hours. While de-constructing the requirements the high level deliverables were prioritized in the backlog and marked for delivery in specific sprints. These high level deliverables are shown in figure CITE and the detailed sprint planning can be viewed in appendix CITE.
 
@@ -467,9 +471,19 @@ group. A high focus was placed on this as the size of the group, distributed res
 Project Communication was implemented via gathering all the contact details for the project team, these were shared and used to create email and a Whatsapp group for real time feedback. Formal Meetings where held weekly to track progress against the sprint planning vs the resource progress and formal meeting minutes where then sent. The formal meeting minutes are detailed in Appendix B. The team Collaboration was controlled by the use of trello boards \cite{Trello} this allowed task assignment, task tracking and progress updates without the need for formal face to face meetings. Managing the developers source code, the development resources agreed to implement GitHub.\cite{GitHubRef} This tool allows the resources to align source code, track changes and backup source code. 
 
 \subsection{Testing}
-Testing for the project is performed from an acceptance testing level, where the project requirements are directly used to create acceptance tests (http://www.extremeprogramming.org/rules/functionaltests.html). In the context of this project, this level of testing is deemed appropriate as the goal of this project is to identify that the software is capable of achieving the desired client functionality.
-The executable specifications produced in the requirement specification are directly utilised in defining the test cases. The advantage noted by doing this is that no additional test case creation phase is required at acceptance level phase and the software is tested using what was jointly agreed upon as the scope and functionality of the project.
+Testing the project is performed from an acceptance testing level, where the project requirements are directly used to create acceptance tests. \cite{AcceptanceTest} In the context of this project, this level of testing was deemed appropriate as the goal of this project is to identify that the software is capable of achieving the desired client functionality.
+The executable specifications produced in the requirement specification are directly utilised in defining the test cases. The advantage noted by executing in this fashion this is that no additional test case creation phase is required at the acceptance level phase and the software is tested using what was jointly agreed upon but all the project stakeholders. The testing is therefore objective in that way.
 
+In terms of the test execution on the project, acceptance tests are run on each of the Sprints in the following manner:
+
+
+
+\begin{itemize}
+	\item Acceptance testing slots where run at the conclusion of each weekly sprint.
+	\item On completion of each specification, the functionality is produced to the project team and is critiqued using the specifications as test cases.
+	\item Regression tests are run using specifications to ensure new features do not hamper previously tested functionality.
+	\item Failing tests are marked as non-conforming and are re-worked by the developer; re-testing occurs at the next available acceptance testing slot. 
+\end{itemize}
 
 
 %  USER ACCEPTANCE TESTING DONE BY SCRUM TEAM
@@ -505,13 +519,28 @@ The web server utilises a variety of different open source technologies which ar
 \begin{itemize}
   \item \textbf{MongoDB:} This is a non relational database which would be used .
   \item \textbf{ExpressJS:} This is the actual server API.
-  \item \
+  \item \textbf{NodeJS:} This is the actual server API.
+  \item \textbf{Yeoman:} This is the actual server API.
+  \item \textbf{Angular-Fullstack template from Yeoman:} This is the actual server API.
 \end{itemize}
+
+\emph{Design Considerations} 
 
 \subsection{Web Client}
 %  ANGULAR CAPTURE 
 % ALL FUNCTIONALITY OF WEB CLIENT
 %  ALSO INCLUDE REPORTING
+\textit{Web Client Technology and Design Considerations:} \\
+afasdfasdfasdf
+
+\emph{Technologies used} 
+\begin{itemize}
+	\item \textbf{AngularJS:} This is a non relational database which would be used .
+	\item \textbf{Twitter Bootstrap:} This is the actual server API.
+	\item \textbf{Highcharts-ng:} This is the actual server API.
+\end{itemize}
+
+\emph{Design Considerations} 
 
 \subsection{Android Client}
 
@@ -522,13 +551,29 @@ The web server utilises a variety of different open source technologies which ar
 
 \subsection{Critical Analysis}
 
-\subsubsection{Project Execution}
+\textit{Project Execution}\\
 % SCRUM VS WATERFALL
 % ESTIMATION ? UNDER ESTIMATED 
-
 %  COMMS COLLOCATION
 
-%  
+While critically analysing the project execution phase of the project the team identified some key positives and negatives. These in retrospect should be used as lessons learnt for the next project and guide the team to repeat the positives and reduce the negatives.
+
+\textit{Positives:}
+
+
+\begin{itemize}
+\item The first of which was how the initial POCs were explored: four concurrent POCs were developed in support of “fail fast” strategy. This was done so that a failing technology choice could be identified as soon as possible and resources reallocated efficiently.
+\item The team utilised collocation to its advantage with regards to requirement specifications and refinements, project progress tracking, acceptance testing, misunderstanding resolution and general team development. 
+\item The freedom to attempt any tasks at random provided self organisation within the team and the collocation assisted in seeing any of the more challenging tasks through.
+\item The skills brought into the team by individuals from different working environments are seen as a major positive. These skills and perspectives are leveraged in order to produce the solution provided.
+\end{itemize}
+
+\textit{Negatives:}
+
+\begin{itemize}
+\item The first being that even though opting to go with many POCs provided valuable insight as to which technology would prove successful as early as possible, time was lost that could have been used to focus on one specific technology stack.
+\item The team underestimated the amount of effort that would go into the development of the final solution and the time required to introduce 
+\end{itemize}
 
 \subsubsection{Project Solution}
 %  TRADE OFFS MUST BE MENTIONED
@@ -567,6 +612,9 @@ The application has been built dynamically so that the application can be used f
 Using proprietary software can be very expensive , often large organizations are given massive discounts and are encouraged to use a certain vendors software. Universities and academic organizations are often allowed to use software free of charge.
 This project is intended for for use by the public sector so hence the budgets will not be available for expensive proprietary systems. The goal has been to use open source and free software as far as possible to keep the solution relatively cost efficient. Using open source and free software the solution is able to avoid unnecessary software licensing costs and ensures that the application can be easily distributed on any platform.
 
+The application currently uses the http protocol which is not secure, when the application is production ready it should use the https protocol. This will ensure that traffic between the application and database will be secure. 
+Data stored on the database should also be encrypted with at least 128 Bit Advanced Encryption Standard (AES). Advanced Encryption Standard (AES) is a federal information processing standard (FIPS) and is categorized as computer security standard [1]. 
+The current application requires the android operating system to run and cannot run on OS X (apple operating system) for a full production version the application will have to be developed in objective C for OS X. 
 
 
 
