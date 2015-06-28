@@ -2,6 +2,14 @@
 \usepackage{KJN}
 \usepackage[a4paper,top=25mm, bottom=32mm, left=20mm, right=20mm]{geometry}
 \usepackage{pdfpages}
+% Set the page size to be A4 as opposed to the default US Letter
+\usepackage{graphicx} 
+
+% Required for including pictures
+\usepackage{float} 
+
+% Allows putting an [H] in \begin{figure} to specify the exact location of the figure
+\usepackage{wrapfig} 
 \ifpdf
 \pdfinfo{
 % /Title (INSTRUCTIONS AND STYLE GUIDELINES FOR THE PREPARATION OF FINAL YEAR LABORATORY PROJECT PAPERS : 2005 VERSION)
@@ -471,12 +479,34 @@ The executable specifications produced in the requirement specification are dire
 
 \section{Engineering the project solution}
 \subsection{Overall Architecture}
+The project team had created multiple proof of concepts which eventually lead to the final solution which comprises of three major components:
+\begin{itemize}
+\item Web server 
+\item Web client
+\item Android application
+\end{itemize}
 
-% WE GO INTO WEB SERVER + WEB CLIENT + ANDROID 
-considered multiple POCs and selected the most appropriate to meet all requirements
+All communication throughout the platform (web server and client components) are executed using RESTful web services provided by the web server. The platform utilises JSON formatting which is a lightweight representation of data based on key value pairs and ordered lists of values \cite{JSON}. Refer to Figure~\ref{fig:Arch} for a diagram of the overall architecture.
+
+\begin{figure}[H]
+  \center{\includegraphics[width=.75\linewidth]{./images/arch.png}} 
+  \caption{Proposed Architecture diagram of the system.} 
+  \label{fig:Arch}
+\end{figure}
+
+The architecture still comprises of the basic 3-tier fundamental framework which follows the Model-View-Controller design pattern. This is present in the web server, web client and android application (adhering to their specific terminology and practices). This complies with the best practices of each of the technologies where given.
+
 
 \subsection{Web Server}
+\textit{Web Server Technology and Design Considerations:} \\
+The web server utilises a variety of different open source technologies which are all based on Javascript. This allows the entire web stack to be written in one language.
 
+\emph{Technologies used} 
+\begin{itemize}
+  \item \textbf{MongoDB:} This is a non relational database which would be used .
+  \item \textbf{ExpressJS:} This is the actual server API.
+  \item \
+\end{itemize}
 
 \subsection{Web Client}
 %  ANGULAR CAPTURE 
