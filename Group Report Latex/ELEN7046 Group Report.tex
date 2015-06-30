@@ -327,11 +327,15 @@
 \section{Introduction}
 In South Africa there are many services such as electricity, water and healthcare which are freely available to citizens or at low cost. The distribution of these basic resources could be defined as "service delivery". It has been publicised in media that healthcare service delivery has an impact on millions of peoples lives including their mortality \cite{InfantsDie}. Obtaining feedback on the health care system is critical to improving all citizens experiences of the health care system.
 
-The requirement of this project is to obtain feedback from the local community utilising the health care systems in order to improve them, specifically through developing a software application which can be used to conduct surveys. By conducting surveys efficiently and through a software application data can be obtained and analysed to provide appropriate reporting on how efficient the service delivery of health care in a particular area. South Africa as a third world country faces unique challenges such as connectivity to the internet \cite{Internet} which imposes challenges from a application development point of view. 
+The purpose of this project is to produce a means to obtain feedback from local and remote communities utilising the health care systems, specifically through developing a software application which can be used to conduct surveys. 
 
-This project is aimed at providing a means to monitor service delivery in our country through the usage of a software application to conduct surveys and collect feed back from any citizen who utilises any service in healthcare. To achieve this, a software project team is assembled.
+A project team is assembled and tasked with producing a proof of concept (POC) of the survey software application
 
 This report documents the project team's approach in terms of the team organisation, methodology adopted, design decisions and the engineering trade-off considerations in producing the final solution.
+
+%A means to monitor service delivery in our country through the usage of a software application to conduct surveys and collect feed back from any citizen who utilises any service in healthcare will greatly assist both the communities as well as government officials.
+
+%By conducting surveys efficiently and through a software application data can be obtained and analysed to provide appropriate reporting on how efficient the service delivery of health care in a particular area. South Africa as a third world country faces unique challenges such as connectivity to the internet \cite{Internet} which imposes challenges from a application development point of view. 
 
 %\subsection{Project Requirements}
 %The purpose of this project is to design a software application which will be used to gather information on the public health care service delivery and provide appropriate reporting. The surveys will be conducted in areas with little internet connectivity. This means that application must cater for capturing data "offline" and then uploaded centrally for reporting.
@@ -614,7 +618,7 @@ The web client utilizes a variety of technologies that allow for rapid front-end
 \end{itemize}
 
 \textit{Design Considerations} \\\\
-The online documentation and community knowledge of the above mentioned technologies meant that the learning curve could be mitigated quickly thus improving the speed of solution development. All the technologies mentioned above make use of Javascript as a development language which is also used on the server side. The use of a common language further sped up development of the solution as a whole. Highcharts-ng was selected as an appropriate technology for developing the reports due to its compatibility with AngularJS in that it wrapped the functionality of standard highcharts.js in directives which are compatible with AngularJS.. Standard highcharts.js includes the ability to represent data using bar charts, pie charts and many others \cite{Highcharts}.
+The online documentation and community knowledge of the above mentioned technologies meant that the learning curve could be mitigated quickly thus improving the speed of solution development. All the technologies mentioned above make use of Javascript as a development language which is also used on the server side. The use of a common language further sped up development of the solution as a whole. Highcharts-ng was selected as an appropriate technology for developing the reports due to its compatibility with AngularJS in that it wrapped the functionality of standard highcharts.js in directives which are compatible with AngularJS. Standard highcharts.js includes the ability to represent data using bar charts, pie charts and many others \cite{Highcharts}.
 
 \subsection{Android Client}
 
@@ -712,12 +716,41 @@ With the prototype source code freely available within the repository further so
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-\section{CONCLUSION}
+\section{Conclusion}
 
-A conclusion may review the main points of the paper, but do not replicate the
-abstract as the conclusion.
+- team organisation
+- methodology
+- design considerations
+- trade-offs
+- critical analysis
+
+%A conclusion may review the main points of the paper, but do not replicate the abstract as the conclusion.
 
 
+
+
+
+\subsection{Evaluation of Output Solution}
+% SAY DOES IT MEET SUCCESS CRITERIA .....
+
+
+\subsection{Future Work}
+Going forward, the final solution presented in this report is capable of being used in any type of survey and employed in any industry because surveys and questions can be manipulated as required.
+%  PLACE GEOPOSITION IMAGE
+
+The survey questions might be translatable into other languages as an option. This will allow people to describe a situation they have experienced in their mother tongue and assist the customers in understanding the problems better, thus yielding more accurate survey responses.
+
+The final solution also lends itself to source code reuse for others in the community to use freely due to the use of non-proprietary libraries. However, to commercialise the solution as it stands would require the purchase of the Highcharts-ng would be required.
+
+\textbf{Solution Enhancements}\\ \\
+Further solution enhancements have also been considered.
+
+For example, the application might incorporate the application with geospatial information. This would leverage on the GPS units that mobile devices are shipped with.The coordinates can be used to plot the location where every survey has been captured. This information can be plotted onto a map showing the exact location where the survey was captured. This will provide a quick overview of how many surveys have been conducted in a specific area.
+
+The application currently uses the HTTP protocol which is not secure. To be production-ready, the application may be enhanced to rather use the HTTPS protocol. This will assist in the security of the communications between the application and the database.
+
+Data stored on the database could also be encrypted with at least 128 Bit Advanced Encryption Standard (AES). Advanced Encryption Standard (AES) is a federal information processing standard (FIPS) and is categorized as computer security standard \cite{AES}. \\ \\
+The current mobile application requires the Android operating system to run. As the final enhancement, the application could be implemented for other mobile platforms such as Apple's OS X and Windows' Windows Mobile.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 
@@ -877,7 +910,7 @@ and the user can change their password\\
 \includepdf[pages=2-,scale=0.85,pagecommand={\pagestyle{fancy}}]{./Guides/GroupTimeSheet.pdf}
 
 \newpage
-\includepdf[pages=1,pagecommand=\section{Appendix I: MIT License\\}]{./Guides/MIT.pdf}
+\includepdf[pages=1,pagecommand=\section{Appendix I: MIT License}]{./Guides/MIT.pdf}
 
 \newpage
 \section{Appendix K: BurnDown Chart (SCRUM)}
