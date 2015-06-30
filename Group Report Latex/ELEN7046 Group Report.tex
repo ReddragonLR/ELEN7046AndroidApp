@@ -577,36 +577,43 @@ The architecture still comprises of the basic 3-tier fundamental framework which
 \subsection{Web Server}
 The web-server is based on a typical client-server communication pattern. The web-based solution is platform independent and mobile responsive.
 \subsubsection{Web Server Technology and Design Considerations:} 
-The web server utilises a variety of different open source technologies which are all based on Javascript. This allows the entire web stack to be written in one language.
+The web server utilises a variety of different open source technologies which are all based on Javascript. This allows for the entire web stack to be written in one language.
 
 \textit{Technologies used}
 \begin{itemize}
-  \item \textbf{MongoDB:} MongoDB is a document based database that utilises a flexible schema \cite{MongoDB}. It stores data in JSON format where each document is a set of key-value pairs that describe the data. Mongo DB is a free and open-source technology.
-  \item \textbf{NodeJS:} NodeJS uses Google Chrome's V8 runtime engine to compile javascript on the server on which Node JS is installed and running. It uses an event-driven, non-blocking I/O approach that makes it efficient and lightweight \cite{NodeJS}
-  \item \textbf{ExpressJS:} Express JS is a minimal web framework for Node JS applications. It provides libraries that allow the developer to easily develop web solutions using NodeJS \cite{ExpressJS}. The Api created using ExpressJS and NodeJS are represented in Appendix J.
-  \item \textbf{Yeoman:} Yeoman allows you to quickly start-up new projects. It prescribes best practices and tools to allow the developer the ability to create applications as quickly as possible \cite{Yeoman}. It makes use of open-source generators to scaffold sections of code that would otherwise be repetitive in nature and take time from building in the business logic which makes up the crux of any application.
-  \item \textbf{Angular-Fullstack template from Yeoman:} The angular-fullstack generator is a generator adapted from the angular generator initially created by the yeoman team \cite{AngularFullstack}. It links all the layers of the M.E.A.N stack and allows for easy scaffolding of ExpressJS API endpoints and AngularJS routes. From the scaffolded elements, a developer can then adapt the generated elements as they require.
+  \item \textbf{MongoDB:} MongoDB is a document based database that utilises a flexible schema \cite{MongoDB}. It is a free and open-source technology.
+  \item \textbf{NodeJS:} NodeJS is a Javascript. It uses an event-driven, non-blocking I/O approach that makes it efficient and lightweight \cite{NodeJS}
+  \item \textbf{ExpressJS:} Express JS is a minimal web framework for Node JS applications. It provides libraries that allow for the easy development of web solutions using NodeJS \cite{ExpressJS}. The solution api is created using ExpressJS and is represented in Appendix J.
+  \item \textbf{Yeoman:} Yeoman allows you to quickly start-up new projects. It prescribes best practices and tools to allow for the development of applications as quickly as possible \cite{Yeoman}. It makes use of open-source generators to scaffold sections of code that would otherwise be repetitive in nature.
+  \item \textbf{Angular-Fullstack template from Yeoman:} The angular-fullstack generator is adapted from the angular generator initially created by the yeoman team \cite{AngularFullstack}.
 \end{itemize}
 
 \textit{Design Considerations} \\\\
-The time-frame of the given project indicated that speed of development needed to be a consideration when building the solution. The \textit{flexible schema} of the Mongo database allows for a schema to be defined in the actual application code and thus results in improved speed of development. Using Mongo in conjunction with Yeoman and the Angular-Fullstack generator, the team were able to leverage off of the advantages offered by these technologies in terms of speed to improve the time of delivery of the solution. The generated base framework (plumbing) provided by Yeoman and the Angular-Fullstack makes use of the model-view-controller design pattern on both the client and server, this design pattern allows for the separation of concerns by splitting the logic into a model that describes the object, the controller that modifies the object and the view that handles how the object data will be displayed \cite{MVC}. This allowed the developer to further build on top of the generated framework using the same best practices and design patterns.. The use of NodeJS and javascript as the common language across the entire stack also added to the speed of development.
+The time-frame of the given project indicated that speed of development needed to be a consideration when building the solution. The \textit{flexible schema} of the Mongo database allows for a schema to be defined in the application code and thus resulted in improved speed of development. Using Mongo in conjunction with Yeoman and the Angular-Fullstack generator, the team leverage off of the advantages offered by these technologies in terms of speed to improve the time of delivery of the solution.\\\\
+The generated base framework provided by Yeoman and the Angular-Fullstack makes use of the model-view-controller design pattern on both the client and server. This design pattern allows for the separation of concerns by splitting the logic into the following:
+\begin{itemize}
+	\item a model that describes the object
+	\item the controller that modifies the object, and
+	\item the view that handles how the object data will be displayed \cite{MVC}
+\end{itemize}
+This allowed the team to further build on top of the generated framework using the same best practices and design patterns. The creation of a RESTful API allowed for more extensibility of the solution. The Android solution in section 5.4 was integrated using the RESTful API.
 
 \subsection{Web Client}
 %  ANGULAR CAPTURE 
 % ALL FUNCTIONALITY OF WEB CLIENT
 %  ALSO INCLUDE REPORTING
 \subsubsection{Web Client Technology and Design Considerations:}
-The web client utilizes a variety of technologies that allow for rapid front-end development and styling. In using javascript as the common language across the stack, some considerations were made in order to conform to the Javascript usage. Some of the below mentioned technologies also come packaged as part of the Angular-Fullstack generator mentioned above.
+The web client utilizes a variety of technologies that allow for rapid front-end development and styling. In using Javascript as the common language across the stack, some considerations were made in order to conform to the language usage. Some of the below mentioned technologies come packaged as part of the Angular-Fullstack generator mentioned above.
 
 \textit{Technologies used}
 \begin{itemize}
-	\item \textbf{AngularJS:} Angular JS allows the developer to extend the HTML vocabulary. The result of the extended vocabulary is an readable, expressive,  and quick to develop \cite{AngularJS}.
-	\item \textbf{Twitter Bootstrap:} This library utilises HTML, Javascript and CSS to enable the developer to build responsive, mobile first web applications \cite{TwitterBootstrap}.
-	\item \textbf{Highcharts-ng:} The highcharts-ng library exposes AngularJS directives that wrap some of the functionality provided in the HighchartsJS library. This library allows the developer to create expressive web-friendly reports (i.e bar-charts, pie-charts and many more) \cite{HighchartsNg}.
+	\item \textbf{AngularJS:} Angular JS allows for the ability to extend the HTML vocabulary. The result is a more readable and expressive front-end that is quick to develop \cite{AngularJS}.
+	\item \textbf{Twitter Bootstrap:} This library utilises HTML, Javascript and CSS to enable the developer to build responsive, mobile first web applications. \cite{TwitterBootstrap}.
+	\item \textbf{Highcharts-ng:} This library exposes AngularJS directives that wrap some of the functionality provided in the HighchartsJS library. It allows the developer to create expressive reports (for example: bar-charts and pie-charts) \cite{HighchartsNg}.
 \end{itemize}
 
 \textit{Design Considerations} \\\\
-The online documentation and community knowledge of the above mentioned technologies meant that the learning curve could be mitigated quickly thus improving the speed of solution development. All the technologies mentioned above make use of Javascript as a development language which is also used on the server side. The use of a common language further sped up development of the solution as a whole. Highcharts-ng was selected as an appropriate technology for developing the reports due to its compatibility with AngularJS in that it wrapped the functionality of standard highcharts.js in directives which are compatible with AngularJS. Standard highcharts.js includes the ability to represent data using bar charts, pie charts and many others \cite{Highcharts}.
+The online documentation and community knowledge of the above mentioned technologies meant that the learning curve could be mitigated quickly thus improving the speed of solution development. All the technologies mentioned above make use of Javascript as a development language which is also used on the server side. The use of a common language further sped up development of the solution as a whole.\\\\ Highcharts-ng was selected as an appropriate technology for developing the reports due to its compatibility with AngularJS \cite{Highcharts}.
 
 \subsection{Android Client}
 \subsubsection{Architecture}
