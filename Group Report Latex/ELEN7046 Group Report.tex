@@ -10,7 +10,7 @@
 
 
 \usepackage{wrapfig} 
-
+\usepackage{array,booktabs}% http://ctan.org/pkg/{array,booktabs}
 %%%%%%%%%%%%%%%
 \usepackage{fancyhdr}
 \usepackage{pdfpages}
@@ -52,11 +52,11 @@
     \textsc{\Large University of Witwatersrand}\\[0.5cm]
     
     % Major heading such as course name
-    \textsc{\large  Group Project Report}\\[0.5cm]
+    \textsc{\large Software Technologies and Techniques}\\[0.5cm]
     
     % Minor heading such as course title
     \HRule \\[0.4cm]
-    { \huge \bfseries SirVey}\\[0.5cm]
+    { \huge \bfseries Group Project Report: SirVey}\\[0.5cm]
     
     % Title of your document
     \HRule \\[1.5cm]
@@ -119,6 +119,43 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%'
 
+ \thispagestyle{empty}\pagestyle{empty}
+ \begin{center}
+  \textsc{\bfseries APPLICATION DETAILS} \\ [1.0cm]
+ \end{center}
+
+
+  \textsc{Application Name: SirVey} \\
+   \\
+   \textsc{Repo For ELEN7046ServerAndAdmin:} \\https://github.com/ReddragonLR/ELEN7046ServerAndAdmin.git \\
+
+This repo contains the following POC projects for the 2015 ELEN7046 Group Project:
+\begin{itemize}
+\item An MS Access based solution
+\item A java web page solution
+\item A web-based survey using Ruby as a back-end and AngularJS as the front-end
+\item A web-based survey using the MEAN stack. Requirements:
+\item NodeJS (https://nodejs.org/)
+\item MongoDB (https://www.mongodb.org/)
+\item Grunt (http://gruntjs.com/)
+\item Bower (http://bower.io/)
+\item HighCharts-Ng (https://github.com/pablojim/highcharts-ng)
+\end{itemize}
+
+
+
+\textsc{Repo For ELEN7046AndroidApp:} \\https://github.com/ReddragonLR/ELEN7046ServerAndAdmin.git \\
+ 
+The repo here (https://github.com/ReddragonLR/ELEN7046AndroidApp/tree/master/SirVey) contains the Android Mobile Application
+% Signed:\\
+% \rule[1em]{25em}{0.5pt} % This prints a line for the signature
+%  \\ [1.5cm]
+% Date:\\
+% \rule[1em]{25em}{0.5pt} % This prints a line to write the date
+
+
+
+\clearpage % Start a new page
 %----------------------------------------------------------------------------------------
 % DECLARATION PAGE
 % Your institution may give you a different text to place here
@@ -131,16 +168,37 @@
  % \section{DECLARATION}
   \textsc{\bfseries DECLARATION} \\ [1.0cm]
  \end{center}
-I ALTER THIS TO PLEDGEARISM AND GROUP WORK BREAKDOWN, Avanindra Singh, declare that this thesis titled, 'My Thesis' and the work presented in it are my own. I confirm that:
 
-\begin{itemize} 
-\item This work was done wholly or mainly while in candidature for a research degree at this University. \\
-\item Where any part of this thesis has previously been submitted for a degree or any other qualification at this University or any other institution, this has been clearly stated. \\
-\item Where I have consulted the published work of others, this is always clearly attributed. \\
-\item Where I have quoted from the work of others, the source is always given. With the exception of such quotations, this thesis is entirely my own work. \\
-\item I have acknowledged all main sources of help. \\
-\item Where the thesis is based on work done by myself jointly with others, I have made clear exactly what was done by others and what I have contributed myself.\\ [1.5cm]
-\end{itemize}
+This is a declaration that the following students authored this group report and participated in the group assignment: \\
+
+\begin{table}[htb] \label{tbl:DEC} 
+  \begin{center}
+    \begin{tabular}
+       {|c|c|c|} %\textbf{Use} &\textbf{Description}\\
+      % \textbf{Case} &\\
+      \hline \textbf{Student Name} & \textbf{Discretionary Mark} & \textbf{Student Signature} \\[5ex]
+      \hline Avanindra Singh &  5\% &   \\[5ex]
+      \hline Peter Cousins & 5\% & \\[5ex]
+      \hline Leslie Dobrowsky & 5\%& \\[5ex]
+      \hline Bakwanyana Thobela & 5\% & \\[5ex]
+      \hline 
+    \end{tabular}
+  \end{center}
+\end{table}
+
+For the group timesheet please see Appendix H
+
+
+% I ALTER THIS TO PLEDGEARISM AND GROUP WORK BREAKDOWN, Avanindra Singh, declare that this thesis titled, 'My Thesis' and the work presented in it are my own. I confirm that:
+
+% \begin{itemize} 
+% \item This work was done wholly or mainly while in candidature for a research degree at this University. \\
+% \item Where any part of this thesis has previously been submitted for a degree or any other qualification at this University or any other institution, this has been clearly stated. \\
+% \item Where I have consulted the published work of others, this is always clearly attributed. \\
+% \item Where I have quoted from the work of others, the source is always given. With the exception of such quotations, this thesis is entirely my own work. \\
+% \item I have acknowledged all main sources of help. \\
+% \item Where the thesis is based on work done by myself jointly with others, I have made clear exactly what was done by others and what I have contributed myself.\\ [1.5cm]
+% \end{itemize}
 
 % Signed:\\
 % \rule[1em]{25em}{0.5pt} % This prints a line for the signature
@@ -528,40 +586,41 @@ The architecture still comprises of the basic 3-tier fundamental framework which
 
 
 \subsection{Web Server}
+The web-server is based on a typical client-server communication pattern. The web-based solution is platform independent and 
 \subsubsection{Web Server Technology and Design Considerations:} 
 The web server utilises a variety of different open source technologies which are all based on Javascript. This allows the entire web stack to be written in one language.
 
-\emph{Technologies used} 
+\subsubsection{Technologies used} 
 \begin{itemize}
-  \item \textbf{MongoDB:} This is a non relational database which would be used .
-  \item \textbf{ExpressJS:} This is the actual server API.
-  \item \textbf{NodeJS:} This is the actual server API.
-  \item \textbf{Yeoman:} This is the actual server API.
-  \item \textbf{Angular-Fullstack template from Yeoman:} This is the actual server API.
+  \item \textbf{MongoDB:} MongoDB is a document based database that utilises a flexible schema \cite{MongoDB}. It stores data in JSON format where each document is a set of key-value pairs that describe the data. Mongo DB is a free and open-source technology.
+  \item \textbf{NodeJS:} NodeJS uses Google Chrome's V8 runtime engine to compile javascript on the server on which Node JS is installed and running. It uses an event-driven, non-blocking I/O approach that makes it efficient and lightweight \cite{NodeJS}
+  \item \textbf{ExpressJS:} Express JS is a minimal web framework for Node JS applications. It provides libraries that allow the developer to easily develop web solutions using NodeJS \cite{ExpressJS}.
+  \item \textbf{Yeoman:} Yeoman allows you to quickly start-up new projects. It prescribes best practices and tools to allow the developer the ability to create applications as quickly as possible \cite{Yeoman}. It makes use of open-source generators to scaffold sections of code that would otherwise be repetitive in nature and take time from building in the business logic which makes up the crux of any application.
+  \item \textbf{Angular-Fullstack template from Yeoman:} The angular-fullstack generator is a generator adapted from the angular generator initially created by the yeoman team \cite{AngularFullstack}. It links all the layers of the M.E.A.N stack and allows for easy scaffolding of ExpressJS API endpoints and AngularJS routes. From the scaffolded elements, a developer can then adapt the generated elements as they require.
 \end{itemize}
 
-\emph{Design Considerations} 
+\subsubsection{Design Considerations} 
+The time-frame of the given project indicated that speed of development needed to be a consideration when building the solution. The \textit{flexible schema} of the Mongo database allows for a schema to be defined in the actual application code and thus results in improved speed of development. Using Mongo in conjunction with Yeoman and the Angular-Fullstack generator, the team were able to leverage off of the advantages offered by these technologies in terms of speed to improve the time of delivery of the solution. The use of NodeJS and javascript as the common language across the entire stack also added to the speed of development.
 
 \subsection{Web Client}
 %  ANGULAR CAPTURE 
 % ALL FUNCTIONALITY OF WEB CLIENT
 %  ALSO INCLUDE REPORTING
 \textit{Web Client Technology and Design Considerations:} \\
-afasdfasdfasdf
+The web client utilizes a variety of technologies that allow for rapid front-end development and styling. In using javascript as the common language across the stack, some considerations were made in order to conform to the javascript usage. Some of the below mentioned technologies also come packaged as part of the Angular-Fullstack generator mentioned above.
 
-\emph{Technologies used} 
+\subsubsection{Technologies used} 
 \begin{itemize}
-	\item \textbf{AngularJS:} This is a non relational database which would be used .
+	\item \textbf{AngularJS:} Angular JS allows the developer to extend the HTML vocabulary. The result of the extended vocabulary is an readable, expressive,  and quick to develop.
 	\item \textbf{Twitter Bootstrap:} This is the actual server API.
 	\item \textbf{Highcharts-ng:} This is the actual server API.
 \end{itemize}
 
-\emph{Design Considerations} 
+\subsubsection{Design Considerations} 
 
 \subsection{Android Client}
 
 \subsection{Licences used in solution}
- 
 
 \section{Overall Critical Analysis and Evaluation}
 
@@ -593,17 +652,6 @@ While critically analysing the project execution phase of the project the team i
 \item The first being that even though opting to go with many POCs provided valuable insight as to which technology would prove successful as early as possible, time was lost that could have been used to focus on one specific technology stack.
 \item The team underestimated the amount of effort that would go into the development of the final solution and the time required to introduce 
 \end{itemize}
-
-
-%  TRADE OFFS MUST BE MENTIONED
-%  SQL VS MONGO 
-% NATIVE VS HYBRID
-
-% WEB OFFLINE VS ANDROID OFFLINE
-
-% HIGHCHARTS AS REPORTING
-
-
 
 \subsubsection{Project Engineering}
 
@@ -1028,7 +1076,7 @@ abstract as the conclusion.
 % \renewcommand\thesection{\Alph{section}}
 % \setcounter{section}{0}
 
-\section{Appendix A: Requirements  Documentation}
+\section{Appendix A: Requirements Engineering Documentation}
 
 \subsection{Key Examples}
 
