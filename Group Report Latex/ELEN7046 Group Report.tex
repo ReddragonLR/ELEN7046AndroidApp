@@ -155,32 +155,11 @@
  % \setcounter{section}{0}
 
  \thispagestyle{empty}\pagestyle{empty}
- \begin{center}
- % \section{DECLARATION}
-  \textsc{\bfseries DECLARATION} \\ [1.0cm]
- \end{center}
-
-This is a declaration that the following students authored this group report and participated in the group assignment: \\
-
-\begin{table}[htb] \label{tbl:DEC} 
-  \begin{center}
-    \begin{tabular}
-       {|c|c|c|} %\textbf{Use} &\textbf{Description}\\
-      % \textbf{Case} &\\
-      \hline \textbf{Student Name} & \textbf{Discretionary Mark} & \textbf{Student Signature} \\[5ex]
-      \hline Avanindra Singh &  5\% &   \\[5ex]
-      \hline Peter Cousins & 5\% & \\[5ex]
-      \hline Leslie Dobrowsky & 5\%& \\[5ex]
-      \hline Bakwanyana Thobela & 5\% & \\[5ex]
-      \hline Lishen Ramsudh & 5\% & \\[5ex]
-      \hline 
-    \end{tabular}
-  \end{center}
-\end{table}
-
-\begin{center}
-For the individual and group timesheet details see Appendix H.
-\end{center}
+ 
+ \newpage
+ \includepdf[pages=1,pagecommand=\section{DECLARATION\\}]{./Guides/CPDSign.pdf}
+ 
+ 
 
 % I ALTER THIS TO PLEDGEARISM AND GROUP WORK BREAKDOWN, Avanindra Singh, declare that this thesis titled, 'My Thesis' and the work presented in it are my own. I confirm that:
 
@@ -488,7 +467,7 @@ With the preferred methodology chosen the team formed to take the key roles requ
 
 
 \subsection{Sprints}
-With the project vision and project deadline defined the high level planning allowed for eleven sprints \cite{ExpertJudgement} where one sprint would run for seven days or 75 effort hours. While de-constructing the requirements the high level deliverables were prioritized in the backlog and marked for delivery in specific sprints. The product backlog and the detailed sprint planning can be viewed in appendix C.
+With the project vision and project deadline defined the high level planning allowed for eleven sprints \cite{ExpertJudgement} where one sprint would run for seven days or 75 effort hours. While de-constructing the requirements the high level deliverables were prioritized in the backlog and marked for delivery in specific sprints. The product backlog (PBL) and the detailed sprint planning can be viewed in appendix C. To track and report on the sprint progress a burn down chart was created from the project teams timesheets. The time or effort spent was then tracked on a SCRUM Burn Down chart \cite{SCUMMaster} the burn down chart for the SirVey proof of concept is listed in appendix 
 
 
 \subsection{Project Estimation and Costing}
@@ -501,15 +480,31 @@ During the project initiation the business stakeholders will review estimations 
      {|c|c|} %\textbf{Use} &\textbf{Description}\\
     % \textbf{Case} &\\
     \hline Total Project Estimation &825 Hours\\
-    \hline Total Sprint Effort Hours &75 Hours\\
-    \hline Total Cost per Sprint &R 37 500\\
-    \hline Total Cost of POC & R 412 500 \\
+    \hline Estimated Total Sprint Effort Hours &75 Hours\\
+    \hline Estimated Cost per Sprint &R 37 500\\
+    \hline Estimated Total Cost of POC & R 412 500 \\
     \hline 
   \end{tabular}
       \end{center}
 \end{table}
 
-With the POC costing R 412 500 as an estimate the project continued and executed at the required weekly burn rate. However as the requirements become more detailed and clear the project team realized that the estimation had been under quoted. In this scenario depending on the how the contract for this project was drawn up, whether it be a Fixed price or time and materials based contract, would have a direct impact on the teams involved in the project. In the fixed price contract the business stakeholder would pay a single fee regardless of the under or over estimation. The benefit to the software team would be the quicker and cheaper they deliver the working POC the more profit they would make from this software application. If the contract was time and material, specifically with variable requirements the software team will be able to request further funding and the business would need to manage the allocation of additional funding via a formal process (Addition to the Back log, change request or change note).
+With the POC costing R 412 500 as an estimate the project continued and executed at the required weekly burn rate. However as the requirements become more detailed and clear the project team realized that the estimation had been under quoted. In this scenario depending on the how the contract for this project was drawn up, whether it be a Fixed price or time and materials based contract, would have a direct impact on the teams involved in the project. In the fixed price contract the business stakeholder would pay a single fee regardless of the under or over estimation. The benefit to the software team would be the quicker and cheaper they deliver the working POC the more profit they would make from this software application. If the contract was time and material, specifically with variable requirements the software team will be able to request further funding and the business would need to manage the allocation of additional funding via a formal process (Addition to the Back log, change request or change note). The estimate totalled 825 hours however the timesheets showed the estimate was under estimated and the project team spent a total of 1139 hours in total on the project. the project actuals are listed in table ~\ref{tbl:Actual}.
+
+% MAKE THE TABLE LEFT JUSTIFIED
+\begin{table}[htb] \caption{Table showing the actual effort placed into the project and its cost.} \label{tbl:Actual} 
+	\begin{center}
+		\begin{tabular}
+			{|c|c|} %\textbf{Use} &\textbf{Description}\\
+			% \textbf{Case} &\\
+			\hline Actual total project hours & 1139 Hours\\
+			\hline Actual average sprint hours (5 resources) & 103 Hours\\
+			\hline Actual cost per Sprint & R 51 500\\
+			\hline Actual total cost of SirVey POC & R 569 500 \\
+			\hline 
+		\end{tabular}
+	\end{center}
+\end{table}
+
 
 \subsection{Project Tools}
 Various tools were used to enable communication and collaboration within the
@@ -532,6 +527,10 @@ group. A high focus was placed on this as the size of the group, distributed res
 \end{table}
 
 Project Communication was implemented via gathering all the contact details for the project team, these were shared and used to create email and a Whatsapp group for real time feedback. Formal standup Meetings where held weekly to track progress against the sprint planning vs the resource progress and formal meeting minutes where then sent. The formal meeting minutes are detailed in Appendix G. The team Collaboration was controlled by the use of trello boards \cite{Trello} this allowed task assignment, task tracking and progress updates without the need for formal face to face meetings. Managing the developers source code, the development resources agreed to implement GitHub.\cite{GitHubRef} This tool allows the resources to align source code, track changes and backup source code. 
+
+\subsection{Change Management}
+
+Managing the change a solution will introduce to the stakeholders is vital, more so for the users of the application which in this case would be the key users mentioned above \cite{Change}. To assist in the users understanding the change the software team constructed two user guides. The first for the key user community in the form of a User Guide (Appendix E) and for the development team a developers guide (Appendix D).
 
 \subsection{Testing}
 Testing the project is performed from an acceptance testing level, where the project requirements are directly used to create acceptance tests. \cite{AcceptanceTest} In the context of this project, this level of testing was deemed appropriate as the goal of this project is to identify that the software is capable of achieving the desired client functionality.
@@ -560,12 +559,17 @@ In terms of the test execution on the project, acceptance tests are run on each 
 
 
 \subsection{Overall Architecture}
-The project team had created multiple POCs which eventually lead to the final solution which comprises of three major components:
+The project team had created multiple preliminary POCs to isolate the technology of choice, these POC's are listed below:
+
 \begin{itemize}
-\item Web server 
-\item Web client
-\item Android application
+	\item POC 1 – The M.E.A.N Stack
+	\item POC 2 – Ruby on Rails
+	\item POC 3 – Browser solution
+	\item POC 4 – Microsoft Access
 \end{itemize}
+
+ This allowed the team to quickly remove failed POC's and move to the final solution which comprises of three major components. these are the web server, web client and a native Android application.
+
 
 All communication throughout the platform (web server and client components) is executed using RESTful web services provided by the web server. The platform utilises JSON formatting which is a lightweight representation of data based on key value pairs and ordered lists of values \cite{JSON}. Refer to Figure~\ref{fig:Arch} for a diagram of the overall architecture.
 
@@ -1202,6 +1206,15 @@ and the user can change their password\\
 \newpage
 \includepdf[pages=1,pagecommand=\section{Appendix I: MIT License\\}]{./Guides/MIT.pdf}
 
+\newpage
+\section{Appendix K: BurnDown Chart (SCRUM)}
+\begin{figure}[H]
+	\center{\includegraphics[width=.95\linewidth]{./images/BurnDown}} 
+	\caption{Burn Down Chart for the Sirvey POC.} 
+	\label{fig:BurnDown}
+\end{figure}
+
+
 \end{document}
 
 % Appendix
@@ -1216,3 +1229,4 @@ and the user can change their password\\
 %   H - Group Timesheets
 %   I - Licenses
 %	J - Api Design
+% 	K - Burn Down Chart
