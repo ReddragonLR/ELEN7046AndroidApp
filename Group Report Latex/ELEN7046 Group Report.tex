@@ -604,6 +604,16 @@ The web client utilizes a variety of technologies that allow for rapid front-end
 The online documentation and community knowledge of the above mentioned technologies meant that the learning curve could be mitigated quickly thus improving the speed of solution development. All the technologies mentioned above make use of Javascript as a development language which is also used on the server side. The use of a common language further sped up development of the solution as a whole. Highcharts-ng was selected as an appropriate technology for developing the reports due to its compatibility with AngularJS in that it wrapped the functionality of standard highcharts.js in directives which are compatible with AngularJS. Standard highcharts.js includes the ability to represent data using bar charts, pie charts and many others \cite{Highcharts}.
 
 \subsection{Android Client}
+\subsubsection{Architecture}
+The architecture of the Android native application complies with the style, practices and features of the native Android SDK \cite{AndroidSDK}. The native application of SirVey consists of two activities a "MainActivity" and a "AnswerSurveyActivity". The initial view that the user experiences is designed to be user friendly, touch friendly and responsive. The user is presented with a sliding tab menu composed of a fragments which enable the views to be dynamic provide the user with the best experience possible. 
+
+The main screen consists of a "MainActivity" which comprises of a fragment managing object controlling two fragments a Surveys" fragment and a "Settings" fragment. The "Surveys" fragment is responsible for displaying surveys, displaying the number of completed surveys in local storage and providing navigation to a specific survey which is intended to be answered. The "Settings" fragment is responsible for all use cases pertinent to communicating with the server and device specific operations such as configurations. The "AnswerSurvey" activity is responsible for dynamically producing a form which a surveyor can utilise to answer a survey given a community responses. This activity is pragmatically generated based on the survey data that is provided to it. Thus as new answer types are created in the future such as a "image" answer the only extension is to create a view to represent the new answer type. 
+
+\subsubsection{Technologies used}
+The Android application utilises as much of the provided SDK in order to create a dynamic, any screen and user experience which is easy to use and friendly. The local storage also utilises Realm  for local storage which does not use SQLLite but a C++ native hardware storage system that provides faster queries and better performance \cite{RealmPerformance}. Communication utilises RESTful services through Retrofit \cite{retrofit} which enables easily expandable interfaces and complies with web technology.
+
+\subsubsection{Native Application Solution Performance}
+The Android application takes advantage of the features of a native development initiative. It is responsive, provides local storage, features the future possibility of incorporating device hardware features (camera, GPS) and allows for easy distribution through an application store. The application provides surveyors with a fast, easy to use and friendly interface in which to capture responses to surveys. It does aid in meeting the success criteria of the platform.
 
 \section{Overall Critical Analysis and Evaluation}
 
@@ -611,22 +621,16 @@ The online documentation and community knowledge of the above mentioned technolo
 
 
 \subsubsection{Project Execution}
-
-
-% SCRUM VS WATERFALL
-% ESTIMATION ? UNDER ESTIMATED 
-%  COMMS COLLOCATION
-
 While critically analysing the project execution phase of the project the team identified some key positives and negatives. These in retrospect should be used as lessons learnt for the next project and guide the team to repeat the positives and learn from the negatives.
 
 \textit{Positives:}
-
 
 \begin{itemize}
 \item The first of which was how the initial POCs were explored: four concurrent POCs were developed in support of “fail fast” strategy \cite{Fail}. This was done so that a failing technology choice could be identified as soon as possible and resources reallocated efficiently.
 \item The team utilised collocation to its advantage with regards to requirement specifications and refinements, project progress tracking, acceptance testing, misunderstanding resolution and general team development. 
 \item The freedom to attempt any tasks provided self organisation within the team and the collocation assisted in seeing any of the more challenging tasks through.
 \item The skills brought into the team by individuals from different working environments were seen as a major positive. These skills and perspectives are leveraged in order to produce the solution provided.
+\item The SCRUM methodology chosen is highly collaborative, each team member is able to work independently and share work with other team members by using technologies such as Github \cite{GitHub}. 
 \end{itemize}
 
 \textit{Negatives:}
@@ -643,21 +647,19 @@ Critical analysis of the project engineering has identified some positives and n
 \textit{Positives:}
 
 \begin{itemize}
-\item The current application is written in native android sdk which makes the application faster to run on android devices. 
-\item The android and web application are multi-channel architecture which leverage on new technology and can be run on hand held devices. Developing and running the application on an android device makes the GUI very fast and responsive \cite{AndroidNative}.
-\item The application makes use of on device provisioning, there is no setup required or the need for surveyors to go to a central location to install the software. The application can simply be downloaded and installed onto most devices running the android OS. 
-\item The android and web application can easily be deployed to a live or cloud environment. 
-\item The way of working is highly collaborative, each team member is able to work independently and share work with other team members by using technologies such as github \cite{GitHub}. 
-\item The technology stack uses the same language for all the layers within the stack from the front end to the database, a developer with java script knowledge will be able to use the software effectively, there is no need to employ developers with different skill sets. 
+\item The Android application takes advantages of the benefits of native application development such as performance (user experience and application wise), device hardware and provisioning devices for the users as it is available on a central application store.  
+\item The platform provides multiple channels for surveyors to interact with through an Android and web client which leverage on new technology and can be run on hand held devices. 
+\tem The platform provides surveyors with multi-channel access to the server by either being utilised on a web browser or through a device which can utilise an application store, therefore there is very little set-up or installation required by the surveyors to capture surveys. 
+\item The technology stack of the web server and web client uses the same language for all the layers (Javascript) within the stack from the front end to the database.
 \end{itemize}
 
 \textit{Negatives:}
 
 \begin{itemize}
-\item Due to time constraints on the project the delivery of the project superseded the requirement to implement industry best practices and standards.
-\item The API (Application programming interface) has no security and can essentially be called by any browser or web service, security will have to be enforced using token based authentication.
+\item Due to time constraints on the project the delivery of the project super seeded the requirement to implement industry best practices and standards in certain areas.
+\item The API (Application programming interface) has no security and can essentially be called by any browser or web service, security will have to be implemented in a future iteration.
 \item Although the software stack allows for excellent automated testing the application lacks significant automated tests mainly due to time constraints with the project. Most of the testing has been done manually.
-\item The native android application will require constant maintenance to keep it up to date, As soon as a new version of the android OS is released there is a chance that the application be become deprecated. Future sprints will be required to keep the mobile platform up to date. 
+\item The native android application will require constant maintenance to keep it up to date. As soon as a new version of the android OS is released there is a chance that the APIs or libraries which the application uses can become deprecated. Future sprints will be required to keep the mobile platform up to date. 
 \end{itemize}
 
 \subsection{Estimates verses Actual effort}
