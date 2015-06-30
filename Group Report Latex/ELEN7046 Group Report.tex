@@ -403,8 +403,8 @@ Table ~\ref{tbl:use} shows a list of the specifications by example that are appl
   \item The surveyors do not necessarily have internet connectivity when doing surveys in the community.
   \item The surveyors have the equipment and resources necessary to utilise the project solution in order to conduct surveys in the community.
   \item The data is uploaded to a central point for analysis and reporting. This means that it is not required to generate reporting at the point of surveying.
+  \item The blended rate for a software resource is R 500.
 \end{itemize}
-
 
 \subsection{Success Criteria}
 \subsubsection{For the users}
@@ -521,7 +521,14 @@ group. A high focus was placed on this as the size of the group, distributed res
 	\end{center}
 \end{table}
 
-Project Communication was implemented via gathering all the contact details for the project team, these were shared and used to create email and a Whatsapp group for real time feedback. Formal standup Meetings where held weekly to track progress against the sprint planning vs the resource progress and formal meeting minutes where then sent. The formal meeting minutes are detailed in Appendix G. The team Collaboration was controlled by the use of trello boards \cite{Trello} this allowed task assignment, task tracking and progress updates without the need for formal face to face meetings. Managing the developers source code, the development resources agreed to implement GitHub.\cite{GitHubRef} This tool allows the resources to align source code, track changes and backup source code. 
+Project Communication was implemented via gathering all the contact details for the project team, these were shared and used to create email and a Whatsapp group for real time feedback. Formal standup Meetings where held weekly to track progress against the sprint planning vs the resource progress and formal meeting minutes where then sent. The formal meeting minutes are detailed in Appendix G. The team Collaboration was controlled by the use of trello boards \cite{Trello} this allowed task assignment, task tracking and progress updates without the need for formal face to face meetings. Managing the developers source code, the development resources agreed to implement GitHub.\cite{GitHubRef} This tool allows the resources to align source code, track changes and backup source code. See figure ~\ref{fig:Checkin} below for the groups activity on GitHub for the duration of the project.
+
+\begin{figure}[H]
+	\center{\includegraphics[width=.95\linewidth]{./images/Checkin}} 
+	\caption{SirVey team GitHub activity.} 
+	\label{fig:Checkin}
+\end{figure}
+ 
 
 \subsection{Change Management}
 
@@ -532,8 +539,6 @@ Testing the project is performed from an acceptance testing level, where the pro
 The executable specifications produced in the requirement specification are directly utilised in defining the test cases. The advantage noted by executing in this fashion this is that no additional test case creation phase is required at the acceptance level phase and the software is tested using what was jointly agreed upon but all the project stakeholders. The testing is therefore objective in that way.
 
 In terms of the test execution on the project, acceptance tests are run on each of the Sprints in the following manner:
-
-
 
 \begin{itemize}
 	\item Acceptance testing slots where run at the conclusion of each weekly sprint.
@@ -558,7 +563,7 @@ The project team had created multiple preliminary POCs to isolate the technology
  This allowed the team to quickly remove failed POC's and move to the final solution which comprises of three major components. these are the web server, web client and a native Android application.
 
 
-All communication throughout the platform (web server and client components) is executed using RESTful web services provided by the web server. The platform utilises JSON formatting which is a lightweight representation of data based on key value pairs and ordered lists of values \cite{JSON}. Refer to Figure~\ref{fig:Arch} for a diagram of the overall architecture.
+All communication throughout the platform (web server and client components) is executed using RESTful web services provided by the web server. The platform utilises JSON formatting which is a lightweight representation of data based on key value pairs and ordered lists of values \cite{JSON}. Refer to Figure ~\ref{fig:Arch} for a diagram of the overall architecture.
 
 \begin{figure}[H]
   \center{\includegraphics[width=.75\linewidth]{./images/arch.png}} 
