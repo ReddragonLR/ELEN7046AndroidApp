@@ -325,28 +325,21 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 \section{Introduction}
+
 In South Africa there are many services such as electricity, water and healthcare which are freely available to citizens or at low cost. The distribution of these basic resources could be defined as "service delivery". It has been publicised in media that healthcare service delivery has an impact on millions of peoples lives including their mortality \cite{InfantsDie}. Obtaining feedback on the health care system is critical to improving all citizens experiences of the health care system.
 
-The purpose of this project is to produce a means to obtain feedback from local and remote communities utilising the health care systems, specifically through developing a software application which can be used to conduct surveys. 
+The purpose of this project is to produce a means to obtain feedback from local and remote communities utilising the health care systems, specifically through developing a software application which can be used to conduct surveys. By conducting surveys efficiently and through a software application data can be obtained and analysed to provide appropriate reporting on how efficient the service delivery of health care in a particular area. South Africa as a third world country faces unique challenges such as connectivity to the internet \cite{Internet} which imposes challenges from a application development point of view. 
 
-A project team is assembled and tasked with producing a proof of concept (POC) of the survey software application
+To conduct surveys and collect feed back from any citizen who utilises any service in healthcare will greatly assist both the communities as well as government officials. A project team was assembled and tasked with producing a proof of concept (POC) of the survey software application. This report documents the project team's approach in terms of the team organisation, methodology adopted, design decisions and the engineering trade-off considerations in producing the final solution.
 
-This report documents the project team's approach in terms of the team organisation, methodology adopted, design decisions and the engineering trade-off considerations in producing the final solution.
+\subsection{Project Requirements}
 
-%A means to monitor service delivery in our country through the usage of a software application to conduct surveys and collect feed back from any citizen who utilises any service in healthcare will greatly assist both the communities as well as government officials.
-
-%By conducting surveys efficiently and through a software application data can be obtained and analysed to provide appropriate reporting on how efficient the service delivery of health care in a particular area. South Africa as a third world country faces unique challenges such as connectivity to the internet \cite{Internet} which imposes challenges from a application development point of view. 
-
-%\subsection{Project Requirements}
-%The purpose of this project is to design a software application which will be used to gather information on the public health care service delivery and provide appropriate reporting. The surveys will be conducted in areas with little internet connectivity. This means that application must cater for capturing data "offline" and then uploaded centrally for reporting.
+The purpose of this project is to design a software application which will be used to gather information on the public health care service delivery and provide appropriate reporting. The surveys will be conducted in areas with little internet connectivity. This means that application must cater for capturing data "offline" and then uploaded centrally for reporting.\\
 
 \section{Literature Review}
 \subsection{Existing Solutions}
+
 There are a large number of solutions that exist in the market in terms of software applications which can be used to conduct surveys. Some of the solutions on the market do satisfy the basic project requirements \cite{ReviewSurvey}. SurveyGizmo \cite{SurveyGizmo} is a web application (software as a service) platform which features 28 different customizable possible survey question and answer combinations. This solution satisfies all requirements in particular the off-line capability, custom reporting and developer integration. SurveyMonkey \cite{SurveyMonkey} is similar to SurveyGizmo in that it offers a similar feature set. It also offers the ability to create custom reporting with text analysis. SurveyMonkey also features telephonic surveys where users are able to create surveys and have respondents answer using voice. 
-
-% Pricing options for this stuff means that existing solution is more effective than building your own app ???? 
-% Due to Economics of scale therefore pricing lower, verses building specific solution .... Scale is 1 to 1 for client for our POC prototype instead survey monkey supports Every client  Survey features are Customizable price lower due to volume .... 
-
 
 \subsection{Standards, Regulations and Policy}
 Depending on the information that is captured through survey questions there could be standards, regulations and policies which need to be adhered to. An example of this would be in the health care sector where the Act of 1996 (HIPAA) could be applied. The Act of 1996 (HIPAA) is a set of rules to be followed by health plans, doctors, hospitals and other health care providers \cite{HIPAA}. It is essential to adopt the standards for electronic health care transactions and identifiers for providers, health plans, and employers. To date, the implementation of HIPAA standards has increased the use of electronic data interchange \cite{HIPAA}. HIPAA also contains a privacy rule which protects any data gathered from patients in the health care environment. Therefore to comply with HIPAA it essential for any software to have security so that patients are not compromised in terms of the act. Software should comply completely with HIPAA if it is to be used in a health service delivery environment. \\
@@ -377,7 +370,7 @@ The scope of the application progressively changes with each iteration. As an it
 
 \subsection{Project Requirements}
 \subsubsection{Specification By Example}
-Specification by Example (SBE) is a collaborative approach whereby the team defines requirements and business orientated functional tests for software based on capturing and illustrating requirements using realistic examples. This method is utilised to obtain the specific requirements of the project \cite{SBE}.
+Specification by Example (SBE) is a collaborative approach whereby the team defines requirements and business orientated functional tests for software based on capturing and illustrating requirements using realistic examples \cite{SBE}. This method is utilised to obtain the specific requirements of the project.
 Table ~\ref{tbl:use} shows a list of the specifications by example that are applicable to the project. Appendix A features the detailed requirement specifications artefacts including key examples as well as the specifications by example.
 
 \begin{table}[htb] \caption{Table showing a list of the key examples.} \label{tbl:use} 
@@ -447,14 +440,15 @@ This project should utilise MIT licenses and free licences where possible.
 A software project's successful execution relies heavily on the project team meeting all desired success criteria defined in the project requirements. To make sure the project team remains on track a specially role is required within the project team, this is commonly known as a software project manager (PM). \cite{SPM}
 
 The project manager role is to manage all of the organizing and planning of a project. This may entail formalizing task allocation and tracking the estimated effort vs. the actual effort expended.
-While tracking the team’s effort the budget and cost analysis also needs to be considered as business or sponsors of the prototype project require the PM to report back on progress vs. project budget spent. \cite{ExpertJudgement}
+While tracking the team’s effort the budget and cost analysis also needs to be considered as business stakeholders will require the PM to report back on progress vs. project budget spent. \cite{ExpertJudgement}
 
 The effective communication to all project stakeholders forms part of the project manager’s base responsibilities. Clear and regularly communication of the risks, concerns and progress on a project to the appropriate stakeholders, allows for adjustments and decisions to be made in smaller increments thus allowing the team to adapt and remain on track to achieve the project’s goals.
 
 \subsection{Project Methodology}
-Project methodologies in the author's opinion should not be dictated but should rather be discussed and adapted to the team's preferences. During the first meeting, the team members stated numerous technologies that could achieve the business vision and requirements. However this also lead to scope discussions and possible future scope changes as early as the first planning session.
 
-Due to the highly volatile scope discussions within the team the decision to adopt a crafted quality methodology \cite{craft} started to present itself as front runner and methodology of choice. The project team agreed that the SCRUM methodology \cite{ExpertJudgement} would be implemented and the role of the project manager would change to be a SCRUM master. \cite{SCUMMaster}
+Project methodologies in the author's opinion should not be dictated but should rather be discussed and adapted to the projects characteristics. During the first meeting, the team members stated numerous technologies that could achieve the business vision and requirements. However this also lead to scope discussions and possible future scope changes as early as the first planning session.
+
+Due to the highly volatile scope discussions within the team the decision to adopt a crafted quality methodology \cite{craft} started to present itself as a methodology of choice. The project team agreed that the SCRUM methodology \cite{ExpertJudgement} would be implemented and the role of the project manager would change to be a SCRUM master. \cite{SCUMMaster}
 
 \subsection{Project Team}
 
@@ -466,12 +460,9 @@ With the preferred methodology chosen the team formed to take the key roles requ
 	\label{fig:SCRUMTeam}
 \end{figure}
 
-
-\subsection{Technology Selection}
-
-
 \subsection{Sprints}
-With the project vision and project deadline defined the high level planning allowed for eleven sprints \cite{ExpertJudgement} where one sprint would run for seven days or 75 effort hours. While de-constructing the requirements the high level deliverables were prioritized in the backlog and marked for delivery in specific sprints. The product backlog (PBL) and the detailed sprint planning can be viewed in appendix C. To track and report on the sprint progress a burn down chart was created from the project teams timesheets. The time or effort spent was then tracked on a SCRUM Burn Down chart \cite{SCUMMaster} the burn down chart for the SirVey proof of concept is listed in appendix 
+
+With the project vision and project deadline defined the high level planning allowed for eleven sprints \cite{ExpertJudgement} where one sprint would run for seven days or 75 effort hours. While de-constructing the requirements the high level deliverables were prioritized in the backlog and marked for delivery in specific sprints. The product backlog (PBL) and the detailed sprint planning can be viewed in appendix C. Tracking and reporting on the sprint progress was achieved via a burn down chart \cite{SCUMMaster}. This was created from the project teams timesheets. The burn down chart for the SirVey proof of concept is listed in Appendix K.
 
 
 \subsection{Project Estimation and Costing}
@@ -492,7 +483,7 @@ During the project initiation the business stakeholders will review estimations 
       \end{center}
 \end{table}
 
-With the POC costing R 412 500 as an estimate the project continued and executed at the required weekly burn rate. However as the requirements become more detailed and clear the project team realized that the estimation had been under quoted. In this scenario depending on the how the contract for this project was drawn up, whether it be a Fixed price or time and materials based contract, would have a direct impact on the teams involved in the project. In the fixed price contract the business stakeholder would pay a single fee regardless of the under or over estimation. The benefit to the software team would be the quicker and cheaper they deliver the working POC the more profit they would make from this software application. If the contract was time and material, specifically with variable requirements the software team will be able to request further funding and the business would need to manage the allocation of additional funding via a formal process (Addition to the Back log, change request or change note). The estimate totalled 825 hours however the timesheets showed the estimate was under estimated and the project team spent a total of 1139 hours in total on the project. the project actuals are listed in table ~\ref{tbl:Actual}.
+With the POC costing R 412 500 as an estimate the project continued and executed at the required weekly burn rate. However as the requirements become more detailed and clear the project team realized that the estimation had been under quoted. In this scenario depending on the how the contract for this project was drawn up. Be it be a Fixed price or time and materials based contract, it would have a direct impact on the teams involved in the project. In the fixed price contract the business stakeholder would pay a single fee regardless of the under or over estimation. The benefit to the software team would be the quicker and cheaper they deliver the working POC the more profit they would make from this software application. If the contract was time and material, specifically with variable requirements the software team will be able to request further funding and the business would need to manage the allocation of additional funding via a formal process (Add requirement to the Back log, change request or change note process). The estimate totalled 825 hours however the final timesheets showed the estimate was under estimated and the project team spent a total of 1139 hours in total on the project. the project actuals are listed in table ~\ref{tbl:Actual}.
 
 % MAKE THE TABLE LEFT JUSTIFIED
 \begin{table}[htb] \caption{Table showing the actual effort placed into the project and its cost.} \label{tbl:Actual} 
@@ -534,10 +525,10 @@ Project Communication was implemented via gathering all the contact details for 
 
 \subsection{Change Management}
 
-Managing the change a solution will introduce to the stakeholders is vital, more so for the users of the application which in this case would be the key users mentioned above \cite{Change}. To assist in the users understanding the change the software team constructed two user guides. The first for the key user community in the form of a User Guide (Appendix E) and for the development team a developers guide (Appendix D).
+Managing the change a solution will introduce to the stakeholders is vital, more so for the users of the application which in this case would be the key users mentioned above \cite{Change}. To assist in the users understanding of the change, the software team constructed two user guides. The first for the key user community in the form of a User Guide (Appendix E) and for the development team a developers guide (Appendix D).
 
 \subsection{Testing}
-Testing the project is performed from an acceptance testing level, where the project requirements are directly used to create acceptance tests. \cite{AcceptanceTest} In the context of this project, this level of testing was deemed appropriate as the goal of this project is to identify that the software is capable of achieving the desired client functionality.
+Testing the project is performed from an acceptance testing level, where the project requirements are directly used to create acceptance tests \cite{AcceptanceTest}. In the context of this project, this level of testing was deemed appropriate as the goal of this project is to identify that the software is capable of achieving the desired client functionality.
 The executable specifications produced in the requirement specification are directly utilised in defining the test cases. The advantage noted by executing in this fashion this is that no additional test case creation phase is required at the acceptance level phase and the software is tested using what was jointly agreed upon but all the project stakeholders. The testing is therefore objective in that way.
 
 In terms of the test execution on the project, acceptance tests are run on each of the Sprints in the following manner:
@@ -552,15 +543,7 @@ In terms of the test execution on the project, acceptance tests are run on each 
 \end{itemize}
 
 
-%  USER ACCEPTANCE TESTING DONE BY SCRUM TEAM
-%  MEETING ALL REQUIREMENTS SPECIFICATIONS BY EXAMPLES 
-%  USER TESTING  BAKS STUFF GOES HERE
-
-
 \section{Engineering The Project Solution}
-
-
-
 
 \subsection{Overall Architecture}
 The project team had created multiple preliminary POCs to isolate the technology of choice, these POC's are listed below:
@@ -587,7 +570,7 @@ The architecture still comprises of the basic 3-tier fundamental framework which
 
 
 \subsection{Web Server}
-The web-server is based on a typical client-server communication pattern. The web-based solution is platform independent and 
+The web-server is based on a typical client-server communication pattern. The web-based solution is platform independent and mobile responsive.
 \subsubsection{Web Server Technology and Design Considerations:} 
 The web server utilises a variety of different open source technologies which are all based on Javascript. This allows the entire web stack to be written in one language.
 
@@ -634,16 +617,16 @@ The online documentation and community knowledge of the above mentioned technolo
 % ESTIMATION ? UNDER ESTIMATED 
 %  COMMS COLLOCATION
 
-While critically analysing the project execution phase of the project the team identified some key positives and negatives. These in retrospect should be used as lessons learnt for the next project and guide the team to repeat the positives and reduce the negatives.
+While critically analysing the project execution phase of the project the team identified some key positives and negatives. These in retrospect should be used as lessons learnt for the next project and guide the team to repeat the positives and learn from the negatives.
 
 \textit{Positives:}
 
 
 \begin{itemize}
-\item The first of which was how the initial POCs were explored: four concurrent POCs were developed in support of “fail fast” strategy. This was done so that a failing technology choice could be identified as soon as possible and resources reallocated efficiently.
+\item The first of which was how the initial POCs were explored: four concurrent POCs were developed in support of “fail fast” strategy \cite{Fail}. This was done so that a failing technology choice could be identified as soon as possible and resources reallocated efficiently.
 \item The team utilised collocation to its advantage with regards to requirement specifications and refinements, project progress tracking, acceptance testing, misunderstanding resolution and general team development. 
-\item The freedom to attempt any tasks at random provided self organisation within the team and the collocation assisted in seeing any of the more challenging tasks through.
-\item The skills brought into the team by individuals from different working environments are seen as a major positive. These skills and perspectives are leveraged in order to produce the solution provided.
+\item The freedom to attempt any tasks provided self organisation within the team and the collocation assisted in seeing any of the more challenging tasks through.
+\item The skills brought into the team by individuals from different working environments were seen as a major positive. These skills and perspectives are leveraged in order to produce the solution provided.
 \end{itemize}
 
 \textit{Negatives:}
@@ -678,11 +661,11 @@ Critical analysis of the project engineering has identified some positives and n
 \end{itemize}
 
 \subsection{Estimates verses Actual effort}
-The total effort of the POC amounted to 1139 hours, this total was collected from all the timesheets that the resources assigned to the project captured (See Appendix Group Timesheets). This meant the project under estimated by a total of 314 hours and over spent on the budget by R 157 000.  The additional time was due to underestimation of the external factors faced by the software team, such as planned leave, other commitments, family emergencies and the under estimation in attaining the required skills on the new technology. This was the largest contributor as ever team member had to learn the basics of the technology to be able to contribute effectively to the overall solution.
+The total effort of the POC amounted to 1139 hours. This meant the project under estimated by a total of 314 hours and over spent on the budget by R 157 000. The additional time was due to underestimation of the external factors faced by the software team, such as planned leave, other commitments, family emergencies and the under estimation in attaining the required skills on the new technology. New technology was the largest contributor to the additional hours as every team member had to learn the basics of the technology to be able to contribute effectively to the overall solution.
 
 \subsection{Economics and Cost Model}
 
-The last element to the cost model is to look at Commercial Off The Shelf Solutions (COTS),  please refer to the section titled Existing solutions. In this case the business stakeholders should be guided by the software architects as perhaps the cost of starting the POC compared to purchasing a COTS product might not make financial sense. The reason for this is due to the economics of scale, the POC would be a custom application and used only by the business stakeholders. Whereby the COTS products are used by numerous customers globally that have the same basic requirements. In this case the research into the existing solutions has confirmed that they meet the expected minimum requirements therefore the benefit of adopting a COTS would mean that the solution would be available immediately instead of the 825 estimated hours to build the POC and the COTS software teams would be maintain the application and support the business stakeholders via the annual subscription fees. The current assumption is that the business stakeholder would be able to use the COTS products for +-37 years for the same price the POC cost.
+The last element to the cost model is to look at Commercial Off The Shelf Solutions (COTS) solutions (See exisiting solutions section) \cite{ExpertJudgement}. In this case the business stakeholders should be guided by the software architects as perhaps the cost of starting the POC compared to purchasing a COTS product might not make financial sense. The reason for this is due to the economics of scale, the POC would be a custom application and used only by the business stakeholders. Whereby the COTS products are used by numerous customers globally that have the same basic requirements and therefore share in the total application cost. In this case the research into the existing solutions has confirmed that they meet the expected minimum requirements. This meant the benefit of adopting a COTS for this project would mean that the solution would be available immediately instead of the 825 estimated hours to build the POC. Another benefit would be that the vendors software teams would maintain the application and support the business stakeholders via the support agreements included in the subscription fees. The current assumption based on the actual cost for the SirVey POC is that the business stakeholders would have been able to use the COTS products for +-37 years for the same price the total SirVey POC cost.
 
 
 \subsubsection{Prototype Licensing}
@@ -728,29 +711,6 @@ With the prototype source code freely available within the repository further so
 
 
 
-
-
-\subsection{Evaluation of Output Solution}
-% SAY DOES IT MEET SUCCESS CRITERIA .....
-
-
-\subsection{Future Work}
-Going forward, the final solution presented in this report is capable of being used in any type of survey and employed in any industry because surveys and questions can be manipulated as required.
-%  PLACE GEOPOSITION IMAGE
-
-The survey questions might be translatable into other languages as an option. This will allow people to describe a situation they have experienced in their mother tongue and assist the customers in understanding the problems better, thus yielding more accurate survey responses.
-
-The final solution also lends itself to source code reuse for others in the community to use freely due to the use of non-proprietary libraries. However, to commercialise the solution as it stands would require the purchase of the Highcharts-ng would be required.
-
-\textbf{Solution Enhancements}\\ \\
-Further solution enhancements have also been considered.
-
-For example, the application might incorporate the application with geospatial information. This would leverage on the GPS units that mobile devices are shipped with.The coordinates can be used to plot the location where every survey has been captured. This information can be plotted onto a map showing the exact location where the survey was captured. This will provide a quick overview of how many surveys have been conducted in a specific area.
-
-The application currently uses the HTTP protocol which is not secure. To be production-ready, the application may be enhanced to rather use the HTTPS protocol. This will assist in the security of the communications between the application and the database.
-
-Data stored on the database could also be encrypted with at least 128 Bit Advanced Encryption Standard (AES). Advanced Encryption Standard (AES) is a federal information processing standard (FIPS) and is categorized as computer security standard \cite{AES}. \\ \\
-The current mobile application requires the Android operating system to run. As the final enhancement, the application could be implemented for other mobile platforms such as Apple's OS X and Windows' Windows Mobile.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 
