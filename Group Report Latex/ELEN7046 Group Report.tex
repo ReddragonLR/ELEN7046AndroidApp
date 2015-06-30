@@ -157,7 +157,7 @@
  \thispagestyle{empty}\pagestyle{empty}
  
  \newpage
- \includepdf[pages=1,pagecommand=\section{DECLARATION\\}]{./Guides/CPDSign.pdf}
+ \includepdf[pages=1]{./Guides/CPDSign.pdf}
  
  
 
@@ -327,11 +327,15 @@
 \section{Introduction}
 In South Africa there are many services such as electricity, water and healthcare which are freely available to citizens or at low cost. The distribution of these basic resources could be defined as "service delivery". It has been publicised in media that healthcare service delivery has an impact on millions of peoples lives including their mortality \cite{InfantsDie}. Obtaining feedback on the health care system is critical to improving all citizens experiences of the health care system.
 
-The requirement of this project is to obtain feedback from the local community utilising the health care systems in order to improve them, specifically through developing a software application which can be used to conduct surveys. By conducting surveys efficiently and through a software application data can be obtained and analysed to provide appropriate reporting on how efficient the service delivery of health care in a particular area. South Africa as a third world country faces unique challenges such as connectivity to the internet \cite{Internet} which imposes challenges from a application development point of view. 
+The purpose of this project is to produce a means to obtain feedback from local and remote communities utilising the health care systems, specifically through developing a software application which can be used to conduct surveys. 
 
-This project is aimed at providing a means to monitor service delivery in our country through the usage of a software application to conduct surveys and collect feed back from any citizen who utilises any service in healthcare. To achieve this, a software project team is assembled.
+A project team is assembled and tasked with producing a proof of concept (POC) of the survey software application
 
 This report documents the project team's approach in terms of the team organisation, methodology adopted, design decisions and the engineering trade-off considerations in producing the final solution.
+
+%A means to monitor service delivery in our country through the usage of a software application to conduct surveys and collect feed back from any citizen who utilises any service in healthcare will greatly assist both the communities as well as government officials.
+
+%By conducting surveys efficiently and through a software application data can be obtained and analysed to provide appropriate reporting on how efficient the service delivery of health care in a particular area. South Africa as a third world country faces unique challenges such as connectivity to the internet \cite{Internet} which imposes challenges from a application development point of view. 
 
 %\subsection{Project Requirements}
 %The purpose of this project is to design a software application which will be used to gather information on the public health care service delivery and provide appropriate reporting. The surveys will be conducted in areas with little internet connectivity. This means that application must cater for capturing data "offline" and then uploaded centrally for reporting.
@@ -373,7 +377,7 @@ The scope of the application progressively changes with each iteration. As an it
 
 \subsection{Project Requirements}
 \subsubsection{Specification By Example}
-Specification by Example (SBE) is a collaborative approach whereby the team defines requirements and business orientated functional tests for software based on capturing and illustrating requirements using realistic examples. This method is utilised to obtain the specific requirements of the project.
+Specification by Example (SBE) is a collaborative approach whereby the team defines requirements and business orientated functional tests for software based on capturing and illustrating requirements using realistic examples. This method is utilised to obtain the specific requirements of the project \cite{SBE}.
 Table ~\ref{tbl:use} shows a list of the specifications by example that are applicable to the project. Appendix A features the detailed requirement specifications artefacts including key examples as well as the specifications by example.
 
 \begin{table}[htb] \caption{Table showing a list of the key examples.} \label{tbl:use} 
@@ -624,8 +628,6 @@ The Android application utilises as much of the provided SDK in order to create 
 \subsubsection{Native Application Solution Performance}
 The Android application takes advantage of the features of a native development initiative. It is responsive, provides local storage, features the future possibility of incorporating device hardware features (camera, GPS) and allows for easy distribution through an application store. The application provides surveyors with a fast, easy to use and friendly interface in which to capture responses to surveys. It does aid in meeting the success criteria of the platform.
 
-\subsection{Licences used in solution}
-
 \section{Overall Critical Analysis and Evaluation}
 
 \subsection{Critical Analysis}
@@ -677,28 +679,25 @@ Critical analysis of the project engineering has identified some positives and n
 The total effort of the POC amounted to 1139 hours, this total was collected from all the timesheets that the resources assigned to the project captured (See Appendix Group Timesheets). This meant the project under estimated by a total of 314 hours and over spent on the budget by R 157 000.  The additional time was due to underestimation of the external factors faced by the software team, such as planned leave, other commitments, family emergencies and the under estimation in attaining the required skills on the new technology. This was the largest contributor as ever team member had to learn the basics of the technology to be able to contribute effectively to the overall solution.
 
 \subsection{Economics and Cost Model}
-The last element to the cost model is to look at Commercial Off The Shelf Solutions (COTS),  please refer to the section titled Existing solutions. In this case the business stakeholders should be guided by the software architects as perhaps the cost of starting the POC compared to purchasing a COTS product might not make financial sense. The reason for this is due to the economics of scale, the POC would be a custom application and assumingly used by only the business entity. Whereby the COTS products are used by numerous customers globally that have the same basic requirements. In this case the research into the existing solutions has confirmed that they meet the expected minimum requirements therefore the benefit of adopting a COTS would mean that the solution would be available immediately instead of the 825 estimated hours to build the POC and the COTS software teams would be maintain the application and support the business stakeholders via the annual subscription fees. The current assumption is that the business stakeholder would be able to use the COTS products for +-37 years for the same price the POC cost.
+
+The last element to the cost model is to look at Commercial Off The Shelf Solutions (COTS),  please refer to the section titled Existing solutions. In this case the business stakeholders should be guided by the software architects as perhaps the cost of starting the POC compared to purchasing a COTS product might not make financial sense. The reason for this is due to the economics of scale, the POC would be a custom application and used only by the business stakeholders. Whereby the COTS products are used by numerous customers globally that have the same basic requirements. In this case the research into the existing solutions has confirmed that they meet the expected minimum requirements therefore the benefit of adopting a COTS would mean that the solution would be available immediately instead of the 825 estimated hours to build the POC and the COTS software teams would be maintain the application and support the business stakeholders via the annual subscription fees. The current assumption is that the business stakeholder would be able to use the COTS products for +-37 years for the same price the POC cost.
 
 
-\subsubsection{Licensing of Prototype}
+\subsubsection{Prototype Licensing}
 
+The prototype is bound by the following licensing agreements.The first being the MIT license (Appendix I) and second being the non-commercial Highcharts JS license. If this application where to be made commercial the Highcharts JS commercial and government license would need to be procured.
 
 \subsection{Evaluation of Output Solution}
 % SAY DOES IT MEET SUCCESS CRITERIA .....
 
 
 \section{Future Work}
-Going forward, the final solution presented in this report is capable of being used in any type of survey and employed in any industry because surveys and questions can be manipulated as required.
+The final solution presented in this report is by no means complete and further features could be added to the current prototype. Some of the future features the project team explored where as follows:
 
-
-The survey questions might be translatable into other languages as an option. This will allow people to describe a situation they have experienced in their mother tongue and assist the customers in understanding the problems better, thus yielding more accurate survey responses.
-
-The final solution also lends itself to source code reuse for others in the community to use freely due to the use of non-proprietary libraries. However, to commercialise the solution as it stands would require the purchase of the HighCharts would be required.
-
-\textbf{Solution Enhancements}\\ \\
-Further solution enhancements have also been considered.
-
-For example, the application might incorporate with geospatial information. This would leverage on the GPS units that mobile devices are shipped with.The coordinates can be used to plot the location where every survey has been captured. This information can be plotted onto a map showing the exact location where the survey was captured. This will provide a quick overview of how many surveys have been conducted in a specific area.
+\begin{itemize}
+\item Add the ability to translate survey and survey questions into other languages. This will allow people to describe a situation they have experienced in their own language and assist the customers in understanding the problems better, thus yielding more accurate survey responses.
+\\
+\item Incorporate geospatial information into the full application stack. This would leverage the standard GPS units that mobile devices are shipped with. Thus allowing the coordinates to be captured with every survey and used to plot the location. This information can then be plotted onto a map showing the exact location where the survey was captured (see Figure ~\ref{fig:gps}). 
 
 \begin{figure}[H]
 	\center{\includegraphics[width=.85\linewidth]{./images/gps}} 
@@ -706,348 +705,50 @@ For example, the application might incorporate with geospatial information. This
 	\label{fig:gps}
 \end{figure}
 
+\item Add additional security to the application, currently the integration uses the HTTP protocol which is not secure. The application should be enhanced to use the HTTPS secure protocol. Another security enhancement would be to secure the data stored on the mobile devices as well as the master database. Thus could be achieved by encrypting with 128 Bit Advanced Encryption Standard (AES) \cite{AES}. \\ \\
+
+\item The prototype was build exclusively for the Android operating system. As the final enhancement, the application could be extended to other mobile platforms such as Apple's OS X and windows mobile.
+\end{itemize}
+
+With the prototype source code freely available within the repository further software teams could collaborate and build the additional features.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\section{Conclusion}
+
+- team organisation
+- methodology
+- design considerations
+- trade-offs
+- critical analysis
+
+%A conclusion may review the main points of the paper, but do not replicate the abstract as the conclusion.
+
+
+
+
+
+\subsection{Evaluation of Output Solution}
+% SAY DOES IT MEET SUCCESS CRITERIA .....
+
+
+\subsection{Future Work}
+Going forward, the final solution presented in this report is capable of being used in any type of survey and employed in any industry because surveys and questions can be manipulated as required.
+%  PLACE GEOPOSITION IMAGE
+
+The survey questions might be translatable into other languages as an option. This will allow people to describe a situation they have experienced in their mother tongue and assist the customers in understanding the problems better, thus yielding more accurate survey responses.
+
+The final solution also lends itself to source code reuse for others in the community to use freely due to the use of non-proprietary libraries. However, to commercialise the solution as it stands would require the purchase of the Highcharts-ng would be required.
+
+\textbf{Solution Enhancements}\\ \\
+Further solution enhancements have also been considered.
+
+For example, the application might incorporate the application with geospatial information. This would leverage on the GPS units that mobile devices are shipped with.The coordinates can be used to plot the location where every survey has been captured. This information can be plotted onto a map showing the exact location where the survey was captured. This will provide a quick overview of how many surveys have been conducted in a specific area.
 
 The application currently uses the HTTP protocol which is not secure. To be production-ready, the application may be enhanced to rather use the HTTPS protocol. This will assist in the security of the communications between the application and the database.
 
 Data stored on the database could also be encrypted with at least 128 Bit Advanced Encryption Standard (AES). Advanced Encryption Standard (AES) is a federal information processing standard (FIPS) and is categorized as computer security standard \cite{AES}. \\ \\
 The current mobile application requires the Android operating system to run. As the final enhancement, the application could be implemented for other mobile platforms such as Apple's OS X and Windows' Windows Mobile.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% %
-% \section{PAPER FORMAT}
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \subsection{Type sizes and type faces}
-
-% If you are using a typesetting package other than \LaTeX please follow these
-% instructions as closely as possible. The type sizes and fonts are specified in
-% \tabref{tab:fonts}.  Please use Times New Roman font, or other Roman font with
-% serifs, as close as possible in appearance to Times New Roman in which these
-% guidelines have been set.
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \subsection{Format}
-
-% The paper size is A4 (210 mm $\times$ 297 mm). The text length is 250 mm. The
-% left and right margins are 20 mm, the top margin is 25 mm and the bottom margin
-% is 32 mm. Do not use headers and footers. Do not include page numbers.  Apart
-% from the title, authors, affiliation, abstract and key words, the paper is in
-% two column format. The column width is 82 mm with a gutter between the columns
-% of 6mm. Left- and right-justify the columns. There must be no paragraph
-% indentation. All figures should be included electronically.
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \subsection{Title and subtitle}
-
-% The title at the top of the first page should be capitalised in a bold,
-% 12-point, Times New Roman font, with right and left justified text of no more
-% than three lines, as shown above. The title should be followed by a one
-% 12-point line spacing.  To distinguish the contribution made by each group
-% member, the project title may be followed by a colon and an appropriate
-% subtitle. For example, for a project titled ``INTELLIGENT IMPULSE
-% GENERATORS'', the first group member's subtitle could be ``: HARDWARE
-% CONSIDERATIONS'' and the second could be ``: SOFTWARE CONSIDERATIONS''.
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \subsection{Author}
-
-% The full name of the author should be listed as shown above. Use the author's
-% forename, middle initial(s) and surname in bold capital and lower case letters
-% (i.e. {\msbf John S. Smith}). Do not include titles, degrees or qualifications.
-% The author's name and initials should be in a bold, 10-point, Times New Roman
-% font, with right and left justified text. The author's details should be
-% followed by one 12-point line spacing.
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \subsection{Affiliation}
-
-% The affiliation of the author should be listed as shown above. This should be
-% in an italic, 9-point, Times New Roman font, with right and left justified
-% text. The affiliation should be followed by three 9-point line spacings.
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \subsection{Abstract}
-
-% The abstract should commence with the word {\msbf Abstract:} (with a colon), in
-% a bold (not italics), 9-point, Times New Roman font, followed by a maximum of
-% eight lines describing the essence of the paper, in a standard (not bold or
-% italics), 9-point, Times New Roman font, with right and left justified text, as
-% shown above. The abstract should be followed by one 9-point line spacing.
-
-% % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \subsection{Keywords}
-
-% The keywords should commence with the words {\msbf Key words:} (with a colon),
-% in a bold (not italics), 9-point, Times New Roman font, followed by a maximum
-% of two lines of keywords or phrases, separated by commas, in a standard (not
-% bold or italics), 9-point, Times New Roman font, with right and left justified
-% text, as shown above.  The key words should be followed by three 9-point line
-% spacings.
-
-
-% \begin{table}[htb]
-%     \caption{Font size and styles for laboratory project papers.\label{tab:fonts}}
-%     \begin{center}
-%         \begin{tabular}{p{26mm}cp{35mm}}
-%         \hline
-%                                 &   {\msbf Type} & {\msbf Style -- Times New Roman} \\
-%                                 &   {\msbf Size} & \\
-%         \hline
-%           Title : Subtitle      & 12 & Capitals, bold, fully justified \\
-%           Author name           & 10 & Bold, fully justified \\
-%           Author affiliation    &  9 & Italics, fully justified \\
-%           Abstract              &  9 & Fully justified \\Appendix A Figure ~\ref{fig:USECASE}.
-%           Main section heading  & 10 & Bold, capitalised, centred \\
-%           Second heading        & 10 & Italics, fully justified \\
-%           Main text             & 10 & Fully justified \\
-%                                 &    & No indent on 1st line \\
-%           Figure captions       & 10 & Centred below figure \\
-%           Table captions        & 10 & Centred above table \\
-%           References            & 10 & Fully justified \\
-%         \hline
-%         \end{tabular}
-%     \end{center}
-% \end{table}
-
-
-% % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% %
-% \section{HEADINGS AND BODY}
-
-% Number headings and sub-headings as shown. Number the Introduction but do not
-% number the Acknowledgment or References.
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \subsection{Main (first level) headings}
-
-% First level headings, starting with INTRODUCTION and ending with CONCLUSION,
-% should be sequentially numbered (1., 2., 3., etc.) and capitalised, in a bold,
-% 10-point, Times New Roman font, with centred text, as shown above. Each first
-% level heading should be followed by one 10-point line spacing.
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \subsection{Subheadings (second and third level headings)}
-
-% \subsubsection*{Second level headings:} These should be sequentially numbered
-% (e.g. 8.1, 8.2, etc.) and not capitalised, in an italics (not bold), 10-point,
-% Times New Roman font, with left and right justified text, as shown above.
-% Second level headings should not be indented, and each should be followed by
-% one 10-point line spacing.
-
-% \subsubsection*{Third level headings:} These should be in an italics (not bold),
-% 10-point, Times New Roman font, not be numbered, capitalised or indented,
-% followed by a colon and character space, and then immediately by the left and
-% right justified body of the subheading, as shown above.
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \subsection{Body}
-
-% The body of the paper should be in a standard (not bold or italics), 10-point,
-% Times New Roman font, with left and right justified text, as shown above.
-
-% Paragraphs within the body of the paper should be separated by a 10-point line
-% spacing, and the last paragraph under a heading or subheading should be
-% followed by one 10-point line spacing.
-
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% %
-% \section{UNITS}
-
-% Use SI (Standard International - MKS) as a primary unit.  Other units may be
-% used as secondary units (in parenthesis) after the primary unit. One character
-% space should be left between the numerical value and its associated unit(s).
-
-% Care should be taken to ensure that the numerical value and its associated
-% unit(s) appear on the same line (e.g. by the use of a hard character space
-% between the numerical value and its associated units).
-
-% Note that there is a useful package available for \LaTeX~ called \verb|siunits|
-% -- access the nearest CTAN archive to obtain it.
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% %
-% \section{EQUATIONS AND REFERENCES}
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \subsection{Equations}
-
-% Number the equations consecutively with equation numbers in parentheses flush
-% with the right margin as in \eqnref{eqn:In}.
-
-% \begin{equation}
-%     I_n = \sum\limits_{q=1}^\infty \hat{I}_{n} \cos (s_q\omega t - \phi_{bq})
-%     \label{eqn:In}
-% \end{equation}
-
-% Where:
-
-% \begin{tabular}{lll}
-% $\hat{I}_{n}$  & = peak magnitude of current [A] \\
-% $s_{q}$        & = the per unit slip of harmonic $q$ \\
-% $\omega$       & = the supply frequency [rad/s] \\
-% $\phi_{eq} $   & = phase angle for harmonic $q$ [rad] \\
-% \end{tabular}
-
-% And:
-
-% \begin{equation}
-%     \lambda = \sqrt{\left|3.\frac{z_b}{R_c}\right|}
-%     \label{eqn:lambda}
-% \end{equation}
-
-
-% To make your equations more compact you may use the solidus (/), the exp
-% function or appropriate exponents.  Italicise symbols for quantities and
-% variables. Ensure that the symbols in your equation have been defined before or
-% immediately after the equation appears. Refer to \eqnref{eqn:In} rather than ``eq. \eqnref{eqn:In}'' or
-% ``equation \eqnref{eqn:In}'' except at the beginning of a sentence.
-
-% A 1.5-line spacing should be included above and below the equation for clarity.
-% Where possible, indent the equation.
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \subsection{References}
-
-% A testing \cite{muller:2003:dbr} numbered list of references should be provided at the end of the paper. The
-% list should be arranged in the order of citation in the text. List only one
-% reference per reference number. Number citations consecutively in square
-% brackets \cite{muller:2003:dbr}. The sentence punctuation follows the brackets
-% \cite{finn:2003:dip}. Multiple references are each numbered within one pair of
-% brackets \cite{finn:2003:dip,vas:1992:smi}. In sentences, refer to the
-% reference number, as in \cite{vas:1992:smi}. Do not use ``Ref.
-% \cite{vas:1992:smi}'' or ``reference \cite{vas:1992:smi}'' except at the
-% beginning of a sentence: ``Reference \cite{vas:1992:smi} shows \ldots''. Do
-% not use footnotes for references.
-
-% When citing references in the text, the corresponding reference number(s) in
-% square brackets should be given e.g. \cite{muller:2003:dbr},
-% \cite{muller:2003:dbr,vas:1992:smi,abdel-salam:1990:elf} or
-% \cite{muller:2003:dbr,finn:2003:dip,vas:1992:smi,abdel-salam:1990:elf}. Only
-% references that are actually cited in the text should be listed. References
-% should be complete, in IEEE style, and in a 10-point, Times New Roman font.
-
-% \subsubsection*{Style for published papers:} Author(s) (initials and surnames),
-% title (in inverted commas), periodical (italics), volume and issue number, page
-% numbers (inclusive), month and year (optional) \cite{muller:2003:dbr,finn:2003:dip}.
-
-% \subsubsection*{Style for conference papers:} Author(s) (initials and surnames),
-% title (in inverted commas), full conference name (italics), location, page
-% numbers (inclusive), month and year \cite{vas:1992:smi}.
-
-% \subsubsection*{Style for books:} Author(s) (initials and surnames), title
-% (italics), publisher, location, edition number, chapters and/or page numbers
-% (inclusive), month and year (optional) \cite{abdel-salam:1990:elf}.
-
-% The references at the end of this document are in the preferred referencing
-% style.
-
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% %
-% \section{FIGURES AND TABLES}
-
-% Figures, illustrations, tables and graphs should be embedded within the body of
-% the document as close as possible to the first reference to the figure or
-% table. Where possible, these should fit within a single column width.  However,
-% if essential for the appearance and readability of the text, figures and tables
-% may span two column widths. Alternatively, if this is not possible, figures and
-% tables may be included at the end of the paper.  Figures and tables should be
-% sequentially numbered and a title should be included under the figure or above
-% the table in a standard (not bold or italics), 10-point, Times New Roman font,
-% with centred text, as shown in \figref{fig:example} below.
-
-% \inputfig{img\example}{Example figure for laboratory project paper.}
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \subsection{Figures}
-
-% Figures should be centred horizontally in the column.  Large figures may span
-% both columns. Figure captions should be below the figures, which should be
-% numbered consecutively as they appear in the text. Do not abbreviate ``Figure''.
-% The caption should read ``Figure 1: \ldots''. Ensure that the text within the
-% figures is not too small and is legible when printed.
-
-% Figure legends and axes labels should be legible. Use words rather than symbols
-% on figure axes. Put units in parenthesis. Do not label axes only with units.
-% Colour printing is not available. Ensure all figures are clear when printed in
-% greyscale. Photographs and greyscale figures should be prepared with a
-% resolution no greater than 300 dpi. Black and white line art should be prepared
-% with a resolution no greater than 1000 dpi. Avoid including colour photographs.
-
-% If your figure has two parts, include the labels ``(a)'' and ``(b)'' as part of
-% the figure. Do not put captions in text boxes linked to the figures. Do not put
-% borders around the outside of your figures. All figures should be included
-% electronically.
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \subsection{Tables}
-
-% Table captions should be above the tables, which should be numbered
-% consecutively as they appear in the text. Do not abbreviate ``Table.'' Vertical
-% lines in the table are unnecessary. Each column should be clearly headed and
-% appropriate symbols and units included.
-
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% %
-% \section{HELPFUL HINTS}
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \subsection{General}
-
-% Use a zero before the decimal point, and a full-stop (period) for the decimal
-% point, rather than a comma.  Remember to check spelling. If your native
-% language is not English, try to get a native English-speaking colleague to
-% proof-read your paper.
-
-% If you need to include snippets of source code in the paper, have a look at the
-% package for \LaTeX called \verb|listings|.
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \subsection{Abbreviations and Acronyms}
-
-% Define abbreviations and acronyms the first time they are used in the text. Do
-% not use abbreviations in the title unless they are unavoidable. The
-% abbreviation for ``seconds'' is ``s,'' not ``sec.'' Do not mix complete
-% spellings and abbreviations of units: use ``Wb/m$^2$'' or ``Webers per square
-% metre,'' not ``Webers/m$^2$'' .
-
-% %%%
-% % Automatically balance the output of the last page
-% \balance
-% %%%
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% %
-% \section{EDITORIAL POLICY}
-
-% Do not submit a reworked version of a paper you have submitted or published
-% elsewhere. It is the responsibility of the authors to determine whether
-% disclosure of the material requires the prior consent of other parties, such as
-% sponsors, and if so, to obtain it.
-
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% %
-% \section{PAPER SUBMISSION}
-
-% The electronic version of the final paper must be submitted in Portable
-% Document Format (PDF), on or before the project submission deadline, using the
-% submission system available at:
-
-% \begin{center}
-% \ahref{http://dept.ee.wits.ac.za/labproj/submission/}
-% \end{center}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-\section{CONCLUSION}
-
-A conclusion may review the main points of the paper, but do not replicate the
-abstract as the conclusion.
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 
@@ -1207,7 +908,7 @@ and the user can change their password\\
 \includepdf[pages=2-,scale=0.85,pagecommand={\pagestyle{fancy}}]{./Guides/GroupTimeSheet.pdf}
 
 \newpage
-\includepdf[pages=1,pagecommand=\section{Appendix I: MIT License\\}]{./Guides/MIT.pdf}
+\includepdf[pages=1,pagecommand=\section{Appendix I: MIT License}]{./Guides/MIT.pdf}
 
 \newpage
 \section{Appendix K: BurnDown Chart (SCRUM)}
