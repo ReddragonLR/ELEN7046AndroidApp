@@ -693,7 +693,7 @@ The last element to the cost model is to look at Commercial Off The Shelf Soluti
 
 \section{Future Work}
 Going forward, the final solution presented in this report is capable of being used in any type of survey and employed in any industry because surveys and questions can be manipulated as required.
-%  PLACE GEOPOSITION IMAGE
+
 
 The survey questions might be translatable into other languages as an option. This will allow people to describe a situation they have experienced in their mother tongue and assist the customers in understanding the problems better, thus yielding more accurate survey responses.
 
@@ -702,7 +702,14 @@ The final solution also lends itself to source code reuse for others in the comm
 \textbf{Solution Enhancements}\\ \\
 Further solution enhancements have also been considered.
 
-For example, the application might incorporate the application with geospatial information. This would leverage on the GPS units that mobile devices are shipped with.The coordinates can be used to plot the location where every survey has been captured. This information can be plotted onto a map showing the exact location where the survey was captured. This will provide a quick overview of how many surveys have been conducted in a specific area.
+For example, the application might incorporate with geospatial information. This would leverage on the GPS units that mobile devices are shipped with.The coordinates can be used to plot the location where every survey has been captured. This information can be plotted onto a map showing the exact location where the survey was captured. This will provide a quick overview of how many surveys have been conducted in a specific area.
+
+\begin{figure}[H]
+	\center{\includegraphics[width=.85\linewidth]{./images/gps}} 
+	\caption{GPS coordinates where surveys have been captured.} 
+	\label{fig:gps}
+\end{figure}
+
 
 The application currently uses the HTTP protocol which is not secure. To be production-ready, the application may be enhanced to rather use the HTTPS protocol. This will assist in the security of the communications between the application and the database.
 
