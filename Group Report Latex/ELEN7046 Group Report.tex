@@ -90,6 +90,12 @@
     \end{minipage}
     \\[2cm]
     
+    \begin{figure}[H]
+    	\center{\includegraphics[width=.35\linewidth]{./images/Knight-icon}} 
+    	\label{fig:Knight-icon}
+    \end{figure}
+    
+    
     {\large \today}\\[2cm]
     
     % Date, change the \today to a set date if you want to be precise
@@ -434,7 +440,7 @@ Table ~\ref{tbl:use} shows a list of the specifications by example that are appl
 \end{itemize}
 
 \subsection{Licensing Requirements}
-This project should utilise MIT licenses and free licences where possible.
+This project should utilise MIT licenses and free licences where possible.\\
 
 \section{Project Execution}
 A software project's successful execution relies heavily on the project team meeting all desired success criteria defined in the project requirements. To make sure the project team remains on track a specially role is required within the project team, this is commonly known as a software project manager (PM). \cite{SPM}
@@ -544,8 +550,8 @@ In terms of the test execution on the project, acceptance tests are run on each 
 	\item Acceptance testing slots where run at the conclusion of each weekly sprint.
 	\item On completion of each specification, the functionality is produced to the project team and is critiqued using the specifications as test cases.
 	\item Regression tests are run using specifications to ensure new features do not hamper previously tested functionality.
-	\item Failing tests are marked as non-conforming and are re-worked by the developer; re-testing occurs at the next available acceptance testing slot. 
-\end{itemize}
+	\item Failing tests are marked as non-conforming and are re-worked by the developer; re-testing occurs at the next available acceptance testing slot.\\ 
+\end{itemize}	
 
 
 \section{Engineering The Project Solution}
@@ -618,7 +624,7 @@ The main screen consists of a "MainActivity" which comprises of a fragment manag
 The Android application utilises as much of the provided SDK in order to create a dynamic, any screen and user experience which is easy to use and friendly. The local storage also utilises Realm  for local storage which does not use SQLLite but a C++ native hardware storage system that provides faster queries and better performance \cite{RealmPerformance}. Communication utilises RESTful services through Retrofit \cite{retrofit} which enables easily expandable interfaces and complies with web technology.
 
 \subsubsection{Native Application Solution Performance}
-The Android application takes advantage of the features of a native development initiative. It is responsive, provides local storage, features the future possibility of incorporating device hardware features (camera, GPS) and allows for easy distribution through an application store. The application provides surveyors with a fast, easy to use and friendly interface in which to capture responses to surveys. It does aid in meeting the success criteria of the platform.
+The Android application takes advantage of the features of a native development initiative. It is responsive, provides local storage, features the future possibility of incorporating device hardware features (camera, GPS) and allows for easy distribution through an application store. The application provides surveyors with a fast, easy to use and friendly interface in which to capture responses to surveys. It does aid in meeting the success criteria of the platform.\\
 
 \section{Overall Critical Analysis and Evaluation}
 
@@ -692,7 +698,7 @@ The final solution presented in this report is by no means complete and further 
 \item Incorporate geospatial information into the full application stack. This would leverage the standard GPS units that mobile devices are shipped with. Thus allowing the coordinates to be captured with every survey and used to plot the location. This information can then be plotted onto a map showing the exact location where the survey was captured (see Figure ~\ref{fig:gps}). 
 
 \begin{figure}[H]
-	\center{\includegraphics[width=.85\linewidth]{./images/gps}} 
+	\center{\includegraphics[width=.55\linewidth]{./images/gps}} 
 	\caption{GPS coordinates where surveys have been captured.} 
 	\label{fig:gps}
 \end{figure}
